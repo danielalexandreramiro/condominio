@@ -8,32 +8,65 @@ select {
   font-size: 14px;
 }
 
-/* CARDS */
+/* =========================
+   CARDS (CORRIGIDO MOBILE)
+========================= */
+
 .cards {
   display: flex;
-  gap: 20px;
+  gap: 15px;
   margin-bottom: 25px;
 }
 
+/* CARD */
 .card {
   flex: 1;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 16px;
+  border-radius: 12px;
   color: white;
   font-weight: bold;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+  /* 🔥 ESSENCIAL para não quebrar layout */
+  min-width: 0;
 }
 
+/* TITULO */
 .card h4 {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+  font-size: 15px;
 }
 
+/* VALOR */
 .card p {
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: bold;
+
+  /* 🔥 evita quebra feia do número */
+  word-break: break-word;
 }
 
-/* CORES */
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+
+  .cards {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .card p {
+    font-size: 17px;
+  }
+}
+
+/* =========================
+   CORES (MANTIDAS)
+========================= */
+
 .receita {
   background: #2ecc71;
 }
@@ -54,7 +87,10 @@ select {
   background: #e74c3c !important;
 }
 
-/* TABELAS */
+/* =========================
+   TABELAS (INALTERADO)
+========================= */
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -79,7 +115,10 @@ tr:nth-child(even) {
   background: #f9f9f9;
 }
 
-/* TÍTULOS */
+/* =========================
+   TÍTULOS
+========================= */
+
 h2 {
   margin-bottom: 10px;
 }

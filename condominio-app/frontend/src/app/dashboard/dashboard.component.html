@@ -65,23 +65,21 @@
   <hr>
 
   <!-- DESPESAS -->
-  <h3>Despesas</h3>
-  <table class="table table-striped table-hover">
-    <thead>
-      <tr>
-        <th>Categoria</th>
-        <th>Subcategoria</th>
-        <th>Valor</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let d of balancete.despesas">
-        <td>{{ d.categoria }}</td>
-        <td>{{ d.subcategoria }}</td>
-        <td>{{ d.valor | currency:'BRL' }}</td>
-      </tr>
-    </tbody>
-  </table>
+ <h3>Despesas</h3>
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Subcategoria</th>
+      <th>Valor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let d of balancete.despesas">
+      <td>{{ d.subcategoria }}</td>
+      <td>{{ d.valor | currency:'BRL' }}</td>
+    </tr>
+  </tbody>
+</table>
 
 </div>
 
