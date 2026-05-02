@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common'; // 👈 ADICIONAR
 import { PRIVATE } from '../../environments/private';
 
 @Component({
   selector: 'app-entity',
   standalone: true,
-  imports: [FormsModule],
+  imports: [CommonModule, FormsModule], // 👈 AQUI
   templateUrl: './entity.component.html',
   styleUrls: ['./entity.component.scss']   // deixe aqui SE o arquivo existir
 })

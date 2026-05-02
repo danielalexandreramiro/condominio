@@ -1,33 +1,51 @@
-
 <div class="filtro">
   <label for="mes">Selecione o mês:</label>
-  <select id="mes" [(ngModel)]="mesSelecionado" (change)="carregarBalancete()">
-    <option value="202601">Janeiro/2026</option>
-    <option value="202602">Fevereiro/2026</option>
-    <option value="202603">Março/2026</option>
-    <option value="202604">Abril/2026</option>
+
+  <select 
+    id="mes"
+    class="form-select"
+    [(ngModel)]="mesSelecionado"
+    (change)="carregarBalancete()">
+
+    <option *ngFor="let mes of meses" [value]="mes">
+      {{ formatarMes(mes) }}
+    </option>
+
   </select>
 </div>
 
-<h2>Dashboard</h2>
+<h1 class="text-primary text-center">
+  Balancete mensal {{ formatarMes(mesSelecionado) }}
+</h1>
 
-<h2>Balancete {{ mesSelecionado }}</h2>
 
 <div *ngIf="balancete; else carregando">
 
-  <!-- Totais -->
-  <div class="totais">
-    <h3>Totais</h3>
-    <p><strong>Total de Receitas:</strong> {{ balancete.totais.total_receitas | currency:'BRL' }}</p>
-    <p><strong>Total de Despesas:</strong> {{ balancete.totais.total_despesas | currency:'BRL' }}</p>
-    <p><strong>Saldo:</strong> {{ balancete.totais.saldo | currency:'BRL' }}</p>
+  <!-- CARDS -->
+  <div class="cards">
+    <div class="card receita">
+      <h4>Receitas</h4>
+      <p>{{ balancete.totais.total_receitas | currency:'BRL' }}</p>
+    </div>
+
+    <div class="card despesa">
+      <h4>Despesas</h4>
+      <p>{{ balancete.totais.total_despesas | currency:'BRL' }}</p>
+    </div>
+
+    <div 
+      class="card saldo"
+      [ngClass]="balancete.totais.saldo >= 0 ? 'positivo' : 'negativo'">
+      <h4>Saldo</h4>
+      <p>{{ balancete.totais.saldo | currency:'BRL' }}</p>
+    </div>
   </div>
 
   <hr>
 
-  <!-- Receitas -->
+  <!-- RECEITAS -->
   <h3>Receitas</h3>
-  <table>
+  <table class="table table-striped table-hover">
     <thead>
       <tr>
         <th>Categoria</th>
@@ -46,9 +64,9 @@
 
   <hr>
 
-  <!-- Despesas -->
+  <!-- DESPESAS -->
   <h3>Despesas</h3>
-  <table>
+  <table class="table table-striped table-hover">
     <thead>
       <tr>
         <th>Categoria</th>

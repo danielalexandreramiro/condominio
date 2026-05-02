@@ -1,12 +1,4 @@
-<!-- <header class="menu-bar">
-  <nav class="menu">
-    <a routerLink="/dashboard" class="menu-item">Dashboard</a>
-    <a routerLink="/balancete-periodo" class="menu-item">Balancete por Período</a>
-    <a routerLink="/home" class="menu-item">Home</a>
-  </nav>
-</header>
-
-<router-outlet></router-outlet> -->
+<!-- 
 
 <header class="menu-bar">
   <nav class="menu">
@@ -16,5 +8,44 @@
   </nav>
 </header>
 
-<router-outlet></router-outlet>
+<router-outlet></router-outlet> -->
 
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+
+    <a class="navbar-brand" href="#">Condomínio</a>
+
+    <button 
+      class="navbar-toggler" 
+      type="button" 
+      data-bs-toggle="collapse" 
+      data-bs-target="#menuNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menuNavbar">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/entity/dashboard">Balancete Mensal</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/entity/balancete-periodo">
+            Balancete por Período
+          </a>
+        </li>
+
+        <!-- <li class="nav-item">
+          <a class="nav-link" routerLink="/">Home</a>
+        </li> -->
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+<div class="container mt-4">
+  <router-outlet></router-outlet>
+</div>

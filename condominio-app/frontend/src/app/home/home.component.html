@@ -1,13 +1,59 @@
-<!-- <header class="menu-bar">
-  <nav class="menu">
-    <a routerLink="/dashboard" class="menu-item">Dashboard</a>
-    <a routerLink="/balancete-periodo" class="menu-item">Balancete por Período</a>
-    <a routerLink="/" class="menu-item">Home</a>
-  </nav>
-</header> -->
+<div class="container mt-5">
 
-<!-- Conteúdo principal da Home -->
-<section class="content">
-  <h1>Bem-vindo à Home</h1>
-  <p>Escolha uma das opções acima para navegar.</p>
-</section>
+  <div class="text-center mb-5">
+    <h1 class="display-5 fw-bold">Bem-vindo ao Condomínio</h1>
+    <p class="lead text-muted">
+      Acompanhe finanças, relatórios e gestão de forma simples.
+    </p>
+  </div>
+
+  <div class="row g-4">
+
+    <!-- DASHBOARD -->
+    <div class="col-md-4">
+      <div class="card shadow h-100 text-center">
+        <div class="card-body">
+          <h5 class="card-title">Balancete por Mês</h5>
+          <p class="card-text">
+            Visualize receitas, despesas e saldo em tempo real.
+          </p>
+          <a routerLink="/entity/dashboard" class="btn btn-primary">
+            Acessar
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- BALANCETE -->
+    <div class="col-md-4">
+      <div class="card shadow h-100 text-center">
+        <div class="card-body">
+          <h5 class="card-title">Balancete por Período</h5>
+          <p class="card-text">
+            Consulte os dados financeiros mês a mês.
+          </p>
+          <a routerLink="/entity/balancete-periodo" class="btn btn-success">
+            Consultar
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- FUTURO / EXPANSÃO -->
+    <div class="col-md-4">
+      <div class="card shadow h-100 text-center">
+        <div class="card-body">
+          <h5 class="card-title">Relatórios</h5>
+          <p class="card-text">
+            Em breve: relatórios avançados e análises completas.
+          </p>
+          <button class="btn btn-secondary" disabled>
+            Em breve
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
