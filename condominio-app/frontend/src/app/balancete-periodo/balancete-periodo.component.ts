@@ -1,27 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { BalanceteService } from '../services/balancete.service';
-
-interface ItemBalancete {
-  categoria: string;
-  subcategoria: string;
-  descricao: string;
-  valor: number;
-}
-
-interface LinhaComparativa {
-  tipo: string;
-  categoria: string;
-  subcategoria: string;
-  valores: Record<string, number>;
-}
-
-type TotaisMes = {
-  total_receitas: number;
-  total_despesas: number;
-  saldo: number;
-};
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-balancete-periodo',
@@ -35,136 +15,151 @@ export class BalancetePeriodoComponent implements OnInit {
   mesesDisponiveis: string[] = [];
   mesesSelecionados: string[] = [];
 
-  receitas: LinhaComparativa[] = [];
-  despesas: LinhaComparativa[] = [];
+  receitasOriginal: any[] = [];
+  despesasOriginal: any[] = [];
 
-  receitasFiltradas: LinhaComparativa[] = [];
-  despesasFiltradas: LinhaComparativa[] = [];
+  receitasFiltradas: any[] = [];
+  despesasFiltradas: any[] = [];
 
+  totais: any = {};
+
+  filtroTexto: string = '';
   filtroSubcategoria: string = '';
+  subcategorias: string[] = [];
 
-  totais: Record<string, TotaisMes> = {};
-
-  ordemAtual: { [key: string]: 'asc' | 'desc' } = {};
-
-  constructor(private service: BalanceteService) {}
+  constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
-    this.service.getMeses().subscribe(meses => {
-      this.mesesDisponiveis = meses;
-      this.mesesSelecionados = [...meses];
-      this.carregar();
+    this.carregarMeses();
+  }
+
+  carregarMeses() {
+    this.http.get<{ meses: string[] }>('assets/data/index.json')
+      .subscribe(data => {
+        this.mesesDisponiveis = data.meses;
+        this.mesesSelecionados = this.mesesDisponiveis.slice(-3);
+        this.carregar();
+      });
+  }
+
+  carregar() {
+    const requests = this.mesesSelecionados.map(m =>
+      this.http.get<any>(`assets/data/${m}.json`).toPromise()
+    );
+
+    Promise.all(requests).then((dados: any[]) => {
+      this.processarDados(dados);
     });
+  }
+
+  processarDados(dados: any[]) {
+
+    const receitasMap = new Map<string, any>();
+    const despesasMap = new Map<string, any>();
+
+    this.totais = {};
+
+    dados.forEach((mesData, index) => {
+
+      const mes = this.mesesSelecionados[index];
+      this.totais[mes] = mesData.totais;
+
+      mesData.receitas.forEach((r: any) => {
+        const key = `${r.categoria}-${r.subcategoria}`;
+
+        if (!receitasMap.has(key)) {
+          receitasMap.set(key, {
+            subcategoria: r.subcategoria,
+            valores: {}
+          });
+        }
+
+        receitasMap.get(key).valores[mes] = r.valor;
+      });
+
+      mesData.despesas.forEach((d: any) => {
+        const key = `${d.categoria}-${d.subcategoria}`;
+
+        if (!despesasMap.has(key)) {
+          despesasMap.set(key, {
+            subcategoria: d.subcategoria,
+            valores: {}
+          });
+        }
+
+        despesasMap.get(key).valores[mes] = d.valor;
+      });
+
+    });
+
+    this.receitasOriginal = Array.from(receitasMap.values());
+    this.despesasOriginal = Array.from(despesasMap.values());
+
+    this.receitasFiltradas = [...this.receitasOriginal];
+    this.despesasFiltradas = [...this.despesasOriginal];
+
+    this.gerarSubcategorias();
+  }
+
+  gerarSubcategorias() {
+    const set = new Set<string>();
+
+    this.receitasOriginal.forEach(r => set.add(r.subcategoria));
+    this.despesasOriginal.forEach(d => set.add(d.subcategoria));
+
+    this.subcategorias = Array.from(set).sort();
   }
 
   aplicarFiltro() {
-  const texto = this.filtroSubcategoria.toLowerCase();
+    let receitas = [...this.receitasOriginal];
+    let despesas = [...this.despesasOriginal];
 
-  this.receitasFiltradas = this.receitas.filter(l =>
-    l.subcategoria.toLowerCase().includes(texto)
-  );
+    if (this.filtroSubcategoria) {
+      receitas = receitas.filter(r => r.subcategoria === this.filtroSubcategoria);
+      despesas = despesas.filter(d => d.subcategoria === this.filtroSubcategoria);
+    }
 
-  this.despesasFiltradas = this.despesas.filter(l =>
-    l.subcategoria.toLowerCase().includes(texto)
-  );
-}
+    if (this.filtroTexto && this.filtroTexto.trim() !== '') {
+      const texto = this.filtroTexto.toLowerCase();
 
-  async carregar() {
-    const balancetes = await Promise.all(
-      this.mesesSelecionados.map(async m => {
-        try {
-          return await this.service.getBalancete(m).toPromise();
-        } catch {
-          return { receitas: [], despesas: [], totais: {} };
-        }
-      })
-    );
+      receitas = receitas.filter(r =>
+        r.subcategoria.toLowerCase().includes(texto)
+      );
 
-    const mapaReceitas = new Map<string, LinhaComparativa>();
-    const mapaDespesas = new Map<string, LinhaComparativa>();
+      despesas = despesas.filter(d =>
+        d.subcategoria.toLowerCase().includes(texto)
+      );
+    }
 
-    balancetes.forEach((balancete, i) => {
-      const mes = this.mesesSelecionados[i];
+    this.receitasFiltradas = receitas;
+    this.despesasFiltradas = despesas;
+  }
 
-      // RECEITAS
-      (balancete.receitas ?? []).forEach((item: ItemBalancete) => {
-        const chave = `${item.categoria}|${item.subcategoria}`;
+  limparFiltro() {
+    this.filtroTexto = '';
+    this.filtroSubcategoria = '';
+    this.mesesSelecionados = [];
+    this.receitasFiltradas = [];
+    this.despesasFiltradas = [];
+  }
 
-        if (!mapaReceitas.has(chave)) {
-          mapaReceitas.set(chave, {
-            tipo: 'Receita',
-            categoria: item.categoria,
-            subcategoria: item.subcategoria,
-            valores: {} as Record<string, number>
-          });
-        }
+  // 🔥 NOVO BOTÃO
+  selecionarTodosMeses() {
+    this.mesesSelecionados = [...this.mesesDisponiveis];
+  }
 
-        mapaReceitas.get(chave)!.valores[mes] = item.valor;
-      });
+  formatarMesCurto(valor: string): string {
+    const ano = valor.substring(2, 4);
+    const mes = valor.substring(4, 6);
 
-      // DESPESAS
-      (balancete.despesas ?? []).forEach((item: ItemBalancete) => {
-        const chave = `${item.categoria}|${item.subcategoria}`;
-
-        if (!mapaDespesas.has(chave)) {
-          mapaDespesas.set(chave, {
-            tipo: 'Despesa',
-            categoria: item.categoria,
-            subcategoria: item.subcategoria,
-            valores: {} as Record<string, number>
-          });
-        }
-
-        mapaDespesas.get(chave)!.valores[mes] = item.valor;
-      });
-
-      // TOTAIS
-      if (balancete.totais) {
-        this.totais[mes] = {
-          total_receitas: balancete.totais.total_receitas,
-          total_despesas: balancete.totais.total_despesas,
-          saldo: balancete.totais.saldo
-        };
-      }
-    });
-
-    // ORDENAR INICIALMENTE
-    const ordenarCatSub = (a: LinhaComparativa, b: LinhaComparativa) => {
-      const c = a.categoria.localeCompare(b.categoria);
-      return c !== 0 ? c : a.subcategoria.localeCompare(b.subcategoria);
+    const nomes: any = {
+      '01': 'Jan', '02': 'Fev', '03': 'Mar',
+      '04': 'Abr', '05': 'Mai', '06': 'Jun',
+      '07': 'Jul', '08': 'Ago', '09': 'Set',
+      '10': 'Out', '11': 'Nov', '12': 'Dez'
     };
 
-    this.receitas = Array.from(mapaReceitas.values()).sort(ordenarCatSub);
-    this.despesas = Array.from(mapaDespesas.values()).sort(ordenarCatSub);
-
-    this.aplicarFiltro();
+    return `${nomes[mes]}/${ano}`;
   }
 
-  ordenarPorMes(mes: string, tipo: 'receitas' | 'despesas') {
-    const lista = tipo === 'receitas' ? this.receitasFiltradas : this.despesasFiltradas;
-
-    const chave = `${tipo}_${mes}`;
-    const ordem = this.ordemAtual[chave] === 'asc' ? 'desc' : 'asc';
-    this.ordemAtual[chave] = ordem;
-
-    lista.sort((a, b) => {
-      const v1 = a.valores[mes] ?? 0;
-      const v2 = b.valores[mes] ?? 0;
-      return ordem === 'asc' ? v1 - v2 : v2 - v1;
-    });
-  }
-
-  ordenarPorCampo(campo: 'categoria' | 'subcategoria', tipo: 'receitas' | 'despesas') {
-    const lista = tipo === 'receitas' ? this.receitasFiltradas : this.despesasFiltradas;
-
-    const chave = `${tipo}_${campo}`;
-    const ordem = this.ordemAtual[chave] === 'asc' ? 'desc' : 'asc';
-    this.ordemAtual[chave] = ordem;
-
-    lista.sort((a, b) => {
-      const v1 = a[campo].toLowerCase();
-      const v2 = b[campo].toLowerCase();
-      return ordem === 'asc' ? v1.localeCompare(v2) : v2.localeCompare(v1);
-    });
-  }
 }
