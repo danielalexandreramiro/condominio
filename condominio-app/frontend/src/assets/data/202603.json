@@ -1,0 +1,198 @@
+{
+  "arquivo": "202603.xlsx",
+  "receitas": [
+    {
+      "categoria": "Taxa Condomínio",
+      "subcategoria": "Taxa Ordinária",
+      "descricao": "",
+      "valor": 51003.14
+    },
+    {
+      "categoria": "Taxa Condomínio",
+      "subcategoria": "Descontos",
+      "descricao": "",
+      "valor": -4767.81
+    },
+    {
+      "categoria": "Taxa Extraordinária",
+      "subcategoria": "Taxa Extra - Impermeabilização",
+      "descricao": "",
+      "valor": 16578.9
+    },
+    {
+      "categoria": "Outras Taxas",
+      "subcategoria": "Taxa de Água Compesa",
+      "descricao": "",
+      "valor": 6373.62
+    },
+    {
+      "categoria": "Receitas Diversas",
+      "subcategoria": "Multas e Juros p/ atraso",
+      "descricao": "",
+      "valor": 164.21
+    },
+    {
+      "categoria": "Receitas Diversas",
+      "subcategoria": "Estorno",
+      "descricao": "",
+      "valor": 425.0
+    },
+    {
+      "categoria": "Acordo",
+      "subcategoria": "Acordo Administrativo",
+      "descricao": "",
+      "valor": 567.28
+    },
+    {
+      "categoria": "Receita de Aplicação",
+      "subcategoria": "Rendimento Financeiro",
+      "descricao": "",
+      "valor": 11.37
+    }
+  ],
+  "despesas": [
+    {
+      "categoria": "Pessoal",
+      "subcategoria": "Terceirização de mão de obra",
+      "descricao": "",
+      "valor": 25465.66
+    },
+    {
+      "categoria": "Pessoal",
+      "subcategoria": "Dias trabalhados - folguista",
+      "descricao": "",
+      "valor": 300.0
+    },
+    {
+      "categoria": "Pessoal",
+      "subcategoria": "Despesa com alimentação",
+      "descricao": "",
+      "valor": 13.5
+    },
+    {
+      "categoria": "Consumo Predial",
+      "subcategoria": "Compesa",
+      "descricao": "",
+      "valor": 11859.84
+    },
+    {
+      "categoria": "Consumo Predial",
+      "subcategoria": "Celpe",
+      "descricao": "",
+      "valor": 680.93
+    },
+    {
+      "categoria": "Consumo Predial",
+      "subcategoria": "Gás coletivo",
+      "descricao": "",
+      "valor": 2192.4
+    },
+    {
+      "categoria": "Consumo Predial",
+      "subcategoria": "Energia solar",
+      "descricao": "",
+      "valor": 2578.28
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Elevadores",
+      "descricao": "",
+      "valor": 2239.66
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Piscina",
+      "descricao": "",
+      "valor": 1500.0
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Assessoria administrativa",
+      "descricao": "",
+      "valor": 3210.0
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Gerador mensalidade",
+      "descricao": "",
+      "valor": 200.0
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Leitura de consumo de água",
+      "descricao": "",
+      "valor": 687.8
+    },
+    {
+      "categoria": "Conservação",
+      "subcategoria": "Serviços hidráulico",
+      "descricao": "",
+      "valor": 850.0
+    },
+    {
+      "categoria": "Conservação",
+      "subcategoria": "Material de manutenção",
+      "descricao": "",
+      "valor": 820.8
+    },
+    {
+      "categoria": "Administrativas",
+      "subcategoria": "Água dos funcionários",
+      "descricao": "",
+      "valor": 82.5
+    },
+    {
+      "categoria": "Administrativas",
+      "subcategoria": "Telefonia",
+      "descricao": "",
+      "valor": 77.73
+    },
+    {
+      "categoria": "Administrativas",
+      "subcategoria": "Seguro de vida",
+      "descricao": "",
+      "valor": 143.89
+    },
+    {
+      "categoria": "Administrativas",
+      "subcategoria": "Despesas com alimentação",
+      "descricao": "",
+      "valor": 16.98
+    },
+    {
+      "categoria": "Obras/Reformas",
+      "subcategoria": "Despesas taxa extra",
+      "descricao": "",
+      "valor": 17500.0
+    },
+    {
+      "categoria": "Financeiras",
+      "subcategoria": "Tarifas de cobranças",
+      "descricao": "",
+      "valor": 404.0
+    },
+    {
+      "categoria": "Financeiras",
+      "subcategoria": "Despesas bancárias",
+      "descricao": "",
+      "valor": 53.5
+    },
+    {
+      "categoria": "Financeiras",
+      "subcategoria": "Cesta de serviço manut. de conta",
+      "descricao": "",
+      "valor": 125.0
+    },
+    {
+      "categoria": "Outras",
+      "subcategoria": "IRRF",
+      "descricao": "",
+      "valor": 2.16
+    }
+  ],
+  "totais": {
+    "total_receitas": 70355.71,
+    "total_despesas": 71004.63,
+    "saldo": -648.92
+  }
+}

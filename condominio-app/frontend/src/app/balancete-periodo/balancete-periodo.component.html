@@ -1,0 +1,112 @@
+<div class="container">
+
+  <h2 class="titulo">Balancete por Período</h2>
+
+  <!-- FILTRO POR SUBCATEGORIA -->
+  <div class="card filtro-card">
+    <label class="label">Filtrar por Subcategoria:</label>
+    <input type="text"
+           class="input-filtro"
+           [(ngModel)]="filtroSubcategoria"
+           (input)="aplicarFiltro()"
+           placeholder="Digite para filtrar... ex: Acor">
+  </div>
+
+  <!-- SELEÇÃO DE MESES -->
+  <div class="card filtro-card">
+    <label class="label">Selecione os meses:</label>
+    <div class="select-wrapper">
+      <select multiple [(ngModel)]="mesesSelecionados" class="select-meses">
+        <option *ngFor="let mes of mesesDisponiveis" [value]="mes">{{ mes }}</option>
+      </select>
+    </div>
+    <button class="btn" (click)="carregar()">Aplicar Filtro</button>
+  </div>
+
+  <!-- RECEITAS -->
+  <div class="card">
+    <h3 class="subtitulo">Receitas</h3>
+
+    <table class="tabela">
+      <thead>
+        <tr>
+          <th class="ordenavel" (click)="ordenarPorCampo('categoria','receitas')">Categoria</th>
+          <th class="ordenavel" (click)="ordenarPorCampo('subcategoria','receitas')">Subcategoria</th>
+          <th *ngFor="let mes of mesesSelecionados"
+              class="ordenavel"
+              (click)="ordenarPorMes(mes, 'receitas')">
+            {{ mes }}
+          </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let linha of receitasFiltradas">
+          <td>{{ linha.categoria }}</td>
+          <td>{{ linha.subcategoria }}</td>
+          <td *ngFor="let mes of mesesSelecionados">
+            {{ linha.valores[mes] | number:'1.2-2' }}
+          </td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <th colspan="2">Total Receitas</th>
+          <th *ngFor="let mes of mesesSelecionados">
+            {{ totais[mes].total_receitas | number:'1.2-2' }}
+          </th>
+        </tr>
+        <tr>
+          <th colspan="2">Saldo</th>
+          <th *ngFor="let mes of mesesSelecionados"
+              [ngClass]="{
+                'positivo': totais[mes].saldo > 0,
+                'negativo': totais[mes].saldo < 0
+              }">
+            {{ totais[mes].saldo | number:'1.2-2' }}
+          </th>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <!-- DESPESAS -->
+  <div class="card">
+    <h3 class="subtitulo">Despesas</h3>
+
+    <table class="tabela">
+      <thead>
+        <tr>
+          <th class="ordenavel" (click)="ordenarPorCampo('categoria','despesas')">Categoria</th>
+          <th class="ordenavel" (click)="ordenarPorCampo('subcategoria','despesas')">Subcategoria</th>
+          <th *ngFor="let mes of mesesSelecionados"
+              class="ordenavel"
+              (click)="ordenarPorMes(mes, 'despesas')">
+            {{ mes }}
+          </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let linha of despesasFiltradas">
+          <td>{{ linha.categoria }}</td>
+          <td>{{ linha.subcategoria }}</td>
+          <td *ngFor="let mes of mesesSelecionados">
+            {{ linha.valores[mes] | number:'1.2-2' }}
+          </td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <th colspan="2">Total Despesas</th>
+          <th *ngFor="let mes of mesesSelecionados">
+            {{ totais[mes].total_despesas | number:'1.2-2' }}
+          </th>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+</div>

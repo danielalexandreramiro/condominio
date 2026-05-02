@@ -1,0 +1,29 @@
+.menu {
+  display: flex;
+  gap: 20px;
+  background: #0078d4;
+  padding: 15px 25px;
+  border-bottom: 4px solid #005fa3;
+}
+
+.menu a {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.menu a:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+.menu a.ativo {
+  background: white;
+  color: #0078d4;
+}
+
+.conteudo {
+  padding: 25px;
+}
