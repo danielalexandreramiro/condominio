@@ -1,0 +1,210 @@
+{
+  "arquivo": "202509.xlsx",
+  "receitas": [
+    {
+      "categoria": "Taxa Condomínio",
+      "subcategoria": "Taxa Ordinária",
+      "descricao": "",
+      "valor": 53920.66
+    },
+    {
+      "categoria": "Taxa Condomínio",
+      "subcategoria": "Descontos",
+      "descricao": "",
+      "valor": -5292.56
+    },
+    {
+      "categoria": "Outras Taxas",
+      "subcategoria": "Taxa Salão de Festas",
+      "descricao": "",
+      "valor": 152.0
+    },
+    {
+      "categoria": "Outras Taxas",
+      "subcategoria": "Taxa de Água Compesa",
+      "descricao": "",
+      "valor": 7165.01
+    },
+    {
+      "categoria": "Receitas Diversas",
+      "subcategoria": "Multas e Juros p/ atraso",
+      "descricao": "",
+      "valor": 78.44
+    },
+    {
+      "categoria": "Receita de Aplicação",
+      "subcategoria": "Rendimento Financeiro",
+      "descricao": "",
+      "valor": 21.3
+    }
+  ],
+  "despesas": [
+    {
+      "categoria": "Pessoal",
+      "subcategoria": "Terceirização de mão de obra",
+      "descricao": "",
+      "valor": 25465.66
+    },
+    {
+      "categoria": "Pessoal",
+      "subcategoria": "Fardamentos",
+      "descricao": "",
+      "valor": 120.0
+    },
+    {
+      "categoria": "Pessoal",
+      "subcategoria": "Dias trabalhados - folguista",
+      "descricao": "",
+      "valor": 1520.4
+    },
+    {
+      "categoria": "Consumo Predial",
+      "subcategoria": "Compesa",
+      "descricao": "",
+      "valor": 11859.84
+    },
+    {
+      "categoria": "Consumo Predial",
+      "subcategoria": "Celpe",
+      "descricao": "",
+      "valor": 1185.8
+    },
+    {
+      "categoria": "Consumo Predial",
+      "subcategoria": "Gás coletivo",
+      "descricao": "",
+      "valor": 2176.16
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Jardim",
+      "descricao": "",
+      "valor": 350.0
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Elevadores",
+      "descricao": "",
+      "valor": 2690.19
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Piscina",
+      "descricao": "",
+      "valor": 500.0
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Assessoria administrativa",
+      "descricao": "",
+      "valor": 1605.0
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Leitura de consumo de água",
+      "descricao": "",
+      "valor": 687.8
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Assessoria síndico Profissional",
+      "descricao": "",
+      "valor": 1700.0
+    },
+    {
+      "categoria": "Conservação",
+      "subcategoria": "Material de limpeza",
+      "descricao": "",
+      "valor": 689.8
+    },
+    {
+      "categoria": "Conservação",
+      "subcategoria": "Elevadores peças",
+      "descricao": "",
+      "valor": 472.09
+    },
+    {
+      "categoria": "Conservação",
+      "subcategoria": "Seguro predial",
+      "descricao": "",
+      "valor": 919.66
+    },
+    {
+      "categoria": "Conservação",
+      "subcategoria": "Extintor recarga",
+      "descricao": "",
+      "valor": 905.5
+    },
+    {
+      "categoria": "Conservação",
+      "subcategoria": "Material elétrico",
+      "descricao": "",
+      "valor": 999.2
+    },
+    {
+      "categoria": "Conservação",
+      "subcategoria": "Serviços prestados",
+      "descricao": "",
+      "valor": 1430.0
+    },
+    {
+      "categoria": "Conservação",
+      "subcategoria": "Material de manutenção",
+      "descricao": "",
+      "valor": 701.94
+    },
+    {
+      "categoria": "Administrativas",
+      "subcategoria": "Material expediente",
+      "descricao": "",
+      "valor": 78.1
+    },
+    {
+      "categoria": "Administrativas",
+      "subcategoria": "Transporte - taxi - onibus",
+      "descricao": "",
+      "valor": 50.0
+    },
+    {
+      "categoria": "Administrativas",
+      "subcategoria": "Água dos funcionários",
+      "descricao": "",
+      "valor": 55.0
+    },
+    {
+      "categoria": "Administrativas",
+      "subcategoria": "Devolução taxa pago à maior",
+      "descricao": "",
+      "valor": 49.83
+    },
+    {
+      "categoria": "Administrativas",
+      "subcategoria": "Telefonia",
+      "descricao": "",
+      "valor": 86.19
+    },
+    {
+      "categoria": "Administrativas",
+      "subcategoria": "Seguro de vida",
+      "descricao": "",
+      "valor": 143.89
+    },
+    {
+      "categoria": "Financeiras",
+      "subcategoria": "Tarifas de cobranças",
+      "descricao": "",
+      "valor": 599.34
+    },
+    {
+      "categoria": "Outras",
+      "subcategoria": "PIS-COFINS-CSLL",
+      "descricao": "",
+      "valor": 46.18
+    }
+  ],
+  "totais": {
+    "total_receitas": 56044.85,
+    "total_despesas": 57087.57,
+    "saldo": -1042.72
+  }
+}

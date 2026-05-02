@@ -1,0 +1,264 @@
+{
+  "arquivo": "202412.xlsx",
+  "receitas": [
+    {
+      "categoria": "Taxa Condomínio",
+      "subcategoria": "Taxa Ordinária",
+      "descricao": "",
+      "valor": 50793.18
+    },
+    {
+      "categoria": "Taxa Condomínio",
+      "subcategoria": "Descontos",
+      "descricao": "",
+      "valor": -4861.33
+    },
+    {
+      "categoria": "Taxa Extraordinária",
+      "subcategoria": "Taxa Extra",
+      "descricao": "",
+      "valor": 300.0
+    },
+    {
+      "categoria": "Outras Taxas",
+      "subcategoria": "Taxa Salão de Festas",
+      "descricao": "",
+      "valor": 304.0
+    },
+    {
+      "categoria": "Outras Taxas",
+      "subcategoria": "Taxa de Água Compesa",
+      "descricao": "",
+      "valor": 6054.53
+    },
+    {
+      "categoria": "Receitas Diversas",
+      "subcategoria": "Multas e Juros p/ atraso",
+      "descricao": "",
+      "valor": 64.54
+    },
+    {
+      "categoria": "Receitas Diversas",
+      "subcategoria": "Ressarcimento",
+      "descricao": "",
+      "valor": 509.82
+    },
+    {
+      "categoria": "Receita de Aplicação",
+      "subcategoria": "Rendimento Financeiro",
+      "descricao": "",
+      "valor": 6.6
+    }
+  ],
+  "despesas": [
+    {
+      "categoria": "Pessoal",
+      "subcategoria": "Adiantamento quinzenal",
+      "descricao": "",
+      "valor": 750.0
+    },
+    {
+      "categoria": "Pessoal",
+      "subcategoria": "Terceirização de mão de obra",
+      "descricao": "",
+      "valor": 23150.6
+    },
+    {
+      "categoria": "Pessoal",
+      "subcategoria": "Vale transporte",
+      "descricao": "",
+      "valor": 123.0
+    },
+    {
+      "categoria": "Pessoal",
+      "subcategoria": "Exame admissional-demissional",
+      "descricao": "",
+      "valor": 50.0
+    },
+    {
+      "categoria": "Pessoal",
+      "subcategoria": "Dias trabalhados - folguista",
+      "descricao": "",
+      "valor": 1100.0
+    },
+    {
+      "categoria": "Pessoal",
+      "subcategoria": "Vale alimentação",
+      "descricao": "",
+      "valor": 395.0
+    },
+    {
+      "categoria": "Consumo Predial",
+      "subcategoria": "Compesa",
+      "descricao": "",
+      "valor": 10782.72
+    },
+    {
+      "categoria": "Consumo Predial",
+      "subcategoria": "Celpe",
+      "descricao": "",
+      "valor": 776.2
+    },
+    {
+      "categoria": "Consumo Predial",
+      "subcategoria": "Gás coletivo",
+      "descricao": "",
+      "valor": 1443.3
+    },
+    {
+      "categoria": "Consumo Predial",
+      "subcategoria": "Energia solar",
+      "descricao": "",
+      "valor": 1324.3
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Antena/Portões/Interfones/CFTV",
+      "descricao": "",
+      "valor": 395.29
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Jardim",
+      "descricao": "",
+      "valor": 350.0
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Elevadores",
+      "descricao": "",
+      "valor": 2471.74
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Piscina",
+      "descricao": "",
+      "valor": 500.0
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Assessoria administrativa",
+      "descricao": "",
+      "valor": 1462.0
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Gerador mensalidade",
+      "descricao": "",
+      "valor": 200.0
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Leitura de consumo de água",
+      "descricao": "",
+      "valor": 646.0
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Serviços prestados",
+      "descricao": "",
+      "valor": 1571.68
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Assessoria síndico Profissional",
+      "descricao": "",
+      "valor": 3500.0
+    },
+    {
+      "categoria": "Conservação",
+      "subcategoria": "Jardim material",
+      "descricao": "",
+      "valor": 50.0
+    },
+    {
+      "categoria": "Conservação",
+      "subcategoria": "Material de limpeza",
+      "descricao": "",
+      "valor": 528.3
+    },
+    {
+      "categoria": "Conservação",
+      "subcategoria": "Seguro predial",
+      "descricao": "",
+      "valor": 866.35
+    },
+    {
+      "categoria": "Conservação",
+      "subcategoria": "Material elétrico",
+      "descricao": "",
+      "valor": 205.4
+    },
+    {
+      "categoria": "Conservação",
+      "subcategoria": "Materiais diversos",
+      "descricao": "",
+      "valor": 438.94
+    },
+    {
+      "categoria": "Administrativas",
+      "subcategoria": "Material expediente",
+      "descricao": "",
+      "valor": 230.0
+    },
+    {
+      "categoria": "Administrativas",
+      "subcategoria": "Água dos funcionários",
+      "descricao": "",
+      "valor": 40.0
+    },
+    {
+      "categoria": "Administrativas",
+      "subcategoria": "Telefonia",
+      "descricao": "",
+      "valor": 81.49
+    },
+    {
+      "categoria": "Administrativas",
+      "subcategoria": "Seguro de vida",
+      "descricao": "",
+      "valor": 132.06
+    },
+    {
+      "categoria": "Administrativas",
+      "subcategoria": "Honorários advocatícios",
+      "descricao": "",
+      "valor": 1276.35
+    },
+    {
+      "categoria": "Obras/Reformas",
+      "subcategoria": "Investimentos",
+      "descricao": "",
+      "valor": 199.8
+    },
+    {
+      "categoria": "Obras/Reformas",
+      "subcategoria": "Despesas taxa extra",
+      "descricao": "",
+      "valor": 1720.0
+    },
+    {
+      "categoria": "Financeiras",
+      "subcategoria": "Tarifas de cobranças",
+      "descricao": "",
+      "valor": 618.62
+    },
+    {
+      "categoria": "Outras",
+      "subcategoria": "PIS-COFINS-CSLL",
+      "descricao": "",
+      "valor": 120.54
+    },
+    {
+      "categoria": "Outras",
+      "subcategoria": "IRRF",
+      "descricao": "",
+      "valor": 14.0
+    }
+  ],
+  "totais": {
+    "total_receitas": 53171.34,
+    "total_despesas": 57513.68,
+    "saldo": -4342.34
+  }
+}

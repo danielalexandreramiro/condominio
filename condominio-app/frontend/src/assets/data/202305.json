@@ -1,0 +1,186 @@
+{
+  "arquivo": "202305.xlsx",
+  "receitas": [
+    {
+      "categoria": "Taxa Condomínio",
+      "subcategoria": "Taxa Ordinária",
+      "descricao": "",
+      "valor": 45905.4
+    },
+    {
+      "categoria": "Taxa Condomínio",
+      "subcategoria": "Descontos",
+      "descricao": "",
+      "valor": -4417.92
+    },
+    {
+      "categoria": "Outras Taxas",
+      "subcategoria": "Taxa de Água Compesa",
+      "descricao": "",
+      "valor": 6061.55
+    },
+    {
+      "categoria": "Receitas Diversas",
+      "subcategoria": "Multas e Juros p/ atraso",
+      "descricao": "",
+      "valor": 104.38
+    },
+    {
+      "categoria": "Receita de Aplicação",
+      "subcategoria": "Rendimento Financeiro",
+      "descricao": "",
+      "valor": 140.35
+    }
+  ],
+  "despesas": [
+    {
+      "categoria": "Pessoal",
+      "subcategoria": "Terceirização de mão de obra",
+      "descricao": "",
+      "valor": 21046.0
+    },
+    {
+      "categoria": "Pessoal",
+      "subcategoria": "Folguista",
+      "descricao": "",
+      "valor": 1600.0
+    },
+    {
+      "categoria": "Consumo Predial",
+      "subcategoria": "Compesa",
+      "descricao": "",
+      "valor": 9696.0
+    },
+    {
+      "categoria": "Consumo Predial",
+      "subcategoria": "Celpe",
+      "descricao": "",
+      "valor": 2742.36
+    },
+    {
+      "categoria": "Consumo Predial",
+      "subcategoria": "Gás coletivo",
+      "descricao": "",
+      "valor": 1576.8
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Antena/Portões/Interfones/CFTV",
+      "descricao": "",
+      "valor": 380.09
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Jardim",
+      "descricao": "",
+      "valor": 350.0
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Elevadores",
+      "descricao": "",
+      "valor": 2471.74
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Piscina",
+      "descricao": "",
+      "valor": 500.0
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Assessoria administrativa",
+      "descricao": "",
+      "valor": 1331.0
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Gerador mensalidade",
+      "descricao": "",
+      "valor": 200.0
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Leitura de consumo de água",
+      "descricao": "",
+      "valor": 646.0
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Assessoria síndico Profissional",
+      "descricao": "",
+      "valor": 1320.0
+    },
+    {
+      "categoria": "Conservação",
+      "subcategoria": "Dedetização e sanitização",
+      "descricao": "",
+      "valor": 236.67
+    },
+    {
+      "categoria": "Conservação",
+      "subcategoria": "Material de limpeza",
+      "descricao": "",
+      "valor": 658.9
+    },
+    {
+      "categoria": "Conservação",
+      "subcategoria": "Água Portaria",
+      "descricao": "",
+      "valor": 40.5
+    },
+    {
+      "categoria": "Conservação",
+      "subcategoria": "Serviços prestados",
+      "descricao": "",
+      "valor": 1812.33
+    },
+    {
+      "categoria": "Administrativas",
+      "subcategoria": "Telefonia",
+      "descricao": "",
+      "valor": 97.8
+    },
+    {
+      "categoria": "Administrativas",
+      "subcategoria": "Seguro de vida",
+      "descricao": "",
+      "valor": 124.75
+    },
+    {
+      "categoria": "Obras/Reformas",
+      "subcategoria": "Móveis e Utensílios",
+      "descricao": "",
+      "valor": 476.55
+    },
+    {
+      "categoria": "Outras",
+      "subcategoria": "PIS-COFINS-CSLL",
+      "descricao": "",
+      "valor": 120.54
+    },
+    {
+      "categoria": "Outras",
+      "subcategoria": "IOF",
+      "descricao": "",
+      "valor": 16.73
+    },
+    {
+      "categoria": "Outras",
+      "subcategoria": "IRRF",
+      "descricao": "",
+      "valor": 9.29
+    },
+    {
+      "categoria": "Financeiras",
+      "subcategoria": "Tarifas de cobranças",
+      "descricao": "",
+      "valor": 519.9
+    }
+  ],
+  "totais": {
+    "total_receitas": 47793.76,
+    "total_despesas": 47973.95,
+    "saldo": -180.19
+  }
+}

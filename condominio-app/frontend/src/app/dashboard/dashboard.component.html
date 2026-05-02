@@ -1,0 +1,70 @@
+
+<div class="filtro">
+  <label for="mes">Selecione o mês:</label>
+  <select id="mes" [(ngModel)]="mesSelecionado" (change)="carregarBalancete()">
+    <option value="202601">Janeiro/2026</option>
+    <option value="202602">Fevereiro/2026</option>
+    <option value="202603">Março/2026</option>
+    <option value="202604">Abril/2026</option>
+  </select>
+</div>
+
+<h2>Balancete {{ mesSelecionado }}</h2>
+
+<div *ngIf="balancete; else carregando">
+
+  <!-- Totais -->
+  <div class="totais">
+    <h3>Totais</h3>
+    <p><strong>Total de Receitas:</strong> {{ balancete.totais.total_receitas | currency:'BRL' }}</p>
+    <p><strong>Total de Despesas:</strong> {{ balancete.totais.total_despesas | currency:'BRL' }}</p>
+    <p><strong>Saldo:</strong> {{ balancete.totais.saldo | currency:'BRL' }}</p>
+  </div>
+
+  <hr>
+
+  <!-- Receitas -->
+  <h3>Receitas</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Categoria</th>
+        <th>Subcategoria</th>
+        <th>Valor</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let r of balancete.receitas">
+        <td>{{ r.categoria }}</td>
+        <td>{{ r.subcategoria }}</td>
+        <td>{{ r.valor | currency:'BRL' }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <!-- Despesas -->
+  <h3>Despesas</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Categoria</th>
+        <th>Subcategoria</th>
+        <th>Valor</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let d of balancete.despesas">
+        <td>{{ d.categoria }}</td>
+        <td>{{ d.subcategoria }}</td>
+        <td>{{ d.valor | currency:'BRL' }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<ng-template #carregando>
+  <p>Carregando dados...</p>
+</ng-template>
