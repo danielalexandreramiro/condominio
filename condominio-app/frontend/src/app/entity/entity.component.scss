@@ -1,0 +1,12 @@
+.entity-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 300px;
+  margin: 40px auto;
+}
+
+.erro {
+  color: red;
+  font-weight: bold;
+}

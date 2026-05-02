@@ -1,0 +1,15 @@
+<div class="entity-container">
+  <h2>Digite a entidade</h2>
+
+  <input
+    type="password"
+    [(ngModel)]="entity"
+    placeholder="Informe o código para acessar a página"
+  />
+
+  <button (click)="validarEntity()">Entrar</button>
+
+ @if (erro) {
+  <p class="erro">Incorreta</p>
+}
+</div>

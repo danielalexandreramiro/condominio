@@ -1,8 +1,20 @@
-<nav class="menu">
-  <a routerLink="/dashboard" routerLinkActive="ativo">Dashboard</a>
-  <a routerLink="/balancete-periodo" routerLinkActive="ativo">Balancete por Período</a>
-</nav>
+<!-- <header class="menu-bar">
+  <nav class="menu">
+    <a routerLink="/dashboard" class="menu-item">Dashboard</a>
+    <a routerLink="/balancete-periodo" class="menu-item">Balancete por Período</a>
+    <a routerLink="/home" class="menu-item">Home</a>
+  </nav>
+</header>
 
-<div class="conteudo">
-  <router-outlet></router-outlet>
-</div>
+<router-outlet></router-outlet> -->
+
+<header class="menu-bar">
+  <nav class="menu">
+    <a routerLink="/entity/dashboard" class="menu-item">Dashboard</a>
+    <a routerLink="/entity/balancete-periodo" class="menu-item">Balancete por Período</a>
+    <a routerLink="/" class="menu-item">Home</a>
+  </nav>
+</header>
+
+<router-outlet></router-outlet>
+
