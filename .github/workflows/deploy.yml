@@ -26,25 +26,14 @@ jobs:
         run: npm install -g @angular/cli
 
       - name: Build Angular app
-        run: ng build --output-path ../docs --base-href /condominio/
+        run: ng build --base-href /condominio/
         working-directory: condominio-app/frontend
 
-      - name: Fix base href if Angular generated wrong
-        run: sed -i 's|<base href=".*">|<base href="/condominio/">|' condominio-app/docs/index.html
-
-      - name: Move files from browser folder
-        run: |
-          cd condominio-app/docs
-          if [ -d "browser" ]; then
-            mv browser/* .
-            rm -rf browser
-          fi
-
-      - name: Move build to root docs folder
+      - name: Move Angular dist to root docs folder
         run: |
           rm -rf docs
           mkdir docs
-          cp -r condominio-app/docs/* docs/
+          cp -r condominio-app/frontend/dist/*/browser/* docs/
           echo "" > docs/.nojekyll
 
       - name: Commit and push changes
