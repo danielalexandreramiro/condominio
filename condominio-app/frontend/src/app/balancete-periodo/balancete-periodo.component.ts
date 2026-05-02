@@ -111,6 +111,7 @@ export class BalancetePeriodoComponent implements OnInit {
   }
 
   aplicarFiltro() {
+
     let receitas = [...this.receitasOriginal];
     let despesas = [...this.despesasOriginal];
 
@@ -143,7 +144,6 @@ export class BalancetePeriodoComponent implements OnInit {
     this.despesasFiltradas = [];
   }
 
-  // 🔥 NOVO BOTÃO
   selecionarTodosMeses() {
     this.mesesSelecionados = [...this.mesesDisponiveis];
   }
