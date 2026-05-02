@@ -35,16 +35,17 @@ jobs:
       - name: Move files from browser folder
         run: |
           cd condominio-app/docs
-          mv browser/* .
-          rm -rf browser
+          if [ -d "browser" ]; then
+            mv browser/* .
+            rm -rf browser
+          fi
 
-      - name: Move docs to repository root
+      - name: Move build to root docs folder
         run: |
           rm -rf docs
-          mv condominio-app/docs ./docs
-
-      - name: Disable Jekyll
-        run: echo "" > docs/.nojekyll
+          mkdir docs
+          cp -r condominio-app/docs/* docs/
+          echo "" > docs/.nojekyll
 
       - name: Commit and push changes
         run: |
