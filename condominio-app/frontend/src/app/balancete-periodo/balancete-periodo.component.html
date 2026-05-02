@@ -2,6 +2,7 @@
 
   <h2 class="text-primary mb-4">Balancete por Período</h2>
 
+  <!-- FILTROS (INALTERADO) -->
   <div class="card shadow mb-4">
     <div class="card-body">
       <div class="row g-3">
@@ -34,16 +35,11 @@
           </select>
         </div>
 
-       <div class="col-md-2 d-grid gap-2">
-  <button class="btn btn-primary" (click)="carregar()">Aplicar</button>
-
-  <button class="btn btn-secondary" (click)="limparFiltro()">Limpar</button>
-
-  <!-- 🔥 NOVO BOTÃO -->
-  <button class="btn btn-success" (click)="selecionarTodosMeses()">
-    Todos os Meses
-  </button>
-</div>
+        <div class="col-md-2 d-grid gap-2">
+          <button class="btn btn-primary" (click)="carregar()">Aplicar</button>
+          <button class="btn btn-secondary" (click)="limparFiltro()">Limpar</button>
+          <button class="btn btn-success" (click)="selecionarTodosMeses()">Todos</button>
+        </div>
 
       </div>
     </div>
@@ -57,7 +53,7 @@
       <table class="table table-striped">
         <thead>
           <tr>
-            <th class="fixa">Subcategoria</th>
+            <th>Subcategoria</th>
             <th *ngFor="let mes of mesesSelecionados">
               {{ formatarMesCurto(mes) }}
             </th>
@@ -66,7 +62,7 @@
 
         <tbody>
           <tr *ngFor="let linha of receitasFiltradas">
-            <td class="fixa">{{ linha.subcategoria }}</td>
+            <td>{{ linha.subcategoria }}</td>
             <td *ngFor="let mes of mesesSelecionados">
               {{ linha.valores[mes] | number:'1.2-2' }}
             </td>
@@ -75,14 +71,14 @@
 
         <tfoot class="table-primary">
           <tr>
-            <th class="fixa">Total Receitas</th>
+            <th>Total Receitas</th>
             <th *ngFor="let mes of mesesSelecionados">
               {{ totais[mes].total_receitas | number:'1.2-2' }}
             </th>
           </tr>
 
           <tr>
-            <th class="fixa">Saldo</th>
+            <th>Saldo</th>
             <th *ngFor="let mes of mesesSelecionados"
                 [ngClass]="{
                   'table-success': totais[mes].saldo > 0,
@@ -104,7 +100,7 @@
       <table class="table table-striped">
         <thead>
           <tr>
-            <th class="fixa">Subcategoria</th>
+            <th>Subcategoria</th>
             <th *ngFor="let mes of mesesSelecionados">
               {{ formatarMesCurto(mes) }}
             </th>
@@ -113,7 +109,7 @@
 
         <tbody>
           <tr *ngFor="let linha of despesasFiltradas">
-            <td class="fixa">{{ linha.subcategoria }}</td>
+            <td>{{ linha.subcategoria }}</td>
             <td *ngFor="let mes of mesesSelecionados">
               {{ linha.valores[mes] | number:'1.2-2' }}
             </td>
@@ -122,7 +118,7 @@
 
         <tfoot class="table-warning">
           <tr>
-            <th class="fixa">Total Despesas</th>
+            <th>Total Despesas</th>
             <th *ngFor="let mes of mesesSelecionados">
               {{ totais[mes].total_despesas | number:'1.2-2' }}
             </th>
@@ -131,6 +127,5 @@
       </table>
     </div>
   </div>
-  
 
 </div>
