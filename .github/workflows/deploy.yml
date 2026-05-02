@@ -39,7 +39,9 @@ jobs:
           rm -rf browser
 
       - name: Move docs to repository root
-        run: mv condominio-app/docs ./docs
+        run: |
+          rm -rf docs
+          mv condominio-app/docs ./docs
 
       - name: Disable Jekyll
         run: echo "" > docs/.nojekyll
