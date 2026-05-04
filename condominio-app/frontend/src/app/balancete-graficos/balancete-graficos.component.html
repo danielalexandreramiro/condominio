@@ -1,0 +1,25 @@
+<div class="mb-4">
+  <h5 class="text-danger">Despesas</h5>
+
+  <div class="grafico-container">
+    <canvas *ngIf="despesasChart"
+            baseChart
+            [data]="despesasChart.data"
+            [options]="despesasChart.options"
+            [type]="'line'">
+    </canvas>
+  </div>
+</div>
+
+<div>
+  <h5 class="text-success">Receitas</h5>
+
+  <div class="grafico-container">
+    <canvas *ngIf="receitasChart"
+            baseChart
+            [data]="receitasChart.data"
+            [options]="receitasChart.options"
+            [type]="'line'">
+    </canvas>
+  </div>
+</div>
