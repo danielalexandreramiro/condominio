@@ -1,0 +1,106 @@
+<div class="container mt-4">
+
+  <h2 class="text-primary text-center mb-4">Análise Gráfica</h2>
+
+  <!-- FILTROS -->
+  <div class="card shadow-sm mb-4">
+    <div class="card-body">
+      <div class="row g-3">
+
+        <div class="col-md-4">
+          <label class="form-label">Buscar</label>
+          <input type="text" class="form-control"
+                 [(ngModel)]="filtroTexto"
+                 (input)="aplicarFiltro()">
+        </div>
+
+        <div class="col-md-3">
+          <label class="form-label">Subcategoria</label>
+          <select class="form-select"
+                  [(ngModel)]="filtroSubcategoria"
+                  (change)="aplicarFiltro()">
+            <option value="">Todas</option>
+            <option *ngFor="let sub of subcategorias" [value]="sub">
+              {{ sub }}
+            </option>
+          </select>
+        </div>
+
+        <div class="col-md-3">
+          <label class="form-label">Meses</label>
+          <select multiple [(ngModel)]="mesesSelecionados"
+                  class="form-select" style="height:120px;">
+            <option *ngFor="let mes of mesesDisponiveis" [value]="mes">
+              {{ formatarMesCurto(mes) }}
+            </option>
+          </select>
+        </div>
+
+        <div class="col-md-2 d-grid gap-2">
+          <button class="btn btn-primary" (click)="carregar()">Aplicar</button>
+          <button class="btn btn-secondary" (click)="limparFiltro()">Limpar</button>
+          <button class="btn btn-success" (click)="selecionarTodosMeses()">Todos</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ALERTAS -->
+  <div *ngIf="alertas.length" class="alert alert-warning">
+    <div *ngFor="let a of alertas">{{ a }}</div>
+  </div>
+
+  <!-- GRÁFICO LINHA -->
+  <div class="card mb-4">
+    <div class="card-header bg-dark text-white">Evolução</div>
+    <div class="card-body">
+      <app-balancete-graficos
+        [receitas]="receitasFiltradas"
+        [despesas]="despesasFiltradas"
+        [meses]="mesesSelecionados">
+      </app-balancete-graficos>
+    </div>
+  </div>
+
+  <!-- PIZZA -->
+  <div class="card mb-4">
+    <div class="card-header bg-primary text-white">Distribuição das Despesas</div>
+    <div class="card-body">
+      <canvas baseChart
+              [data]="pizzaChart.data"
+              [type]="'pie'">
+      </canvas>
+    </div>
+  </div>
+
+  <!-- RANKING -->
+  <div class="card mb-4">
+    <div class="card-header bg-success text-white">Top 5 Despesas</div>
+    <div class="card-body">
+      <ul class="list-group">
+        <li *ngFor="let r of ranking"
+            class="list-group-item d-flex justify-content-between">
+          {{ r.subcategoria }}
+          <strong>{{ r.valor | currency:'BRL' }}</strong>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- COMPARATIVO -->
+  <div class="card">
+    <div class="card-header bg-secondary text-white">Comparação</div>
+    <div class="card-body">
+      <table class="table">
+        <tr *ngFor="let c of comparativo">
+          <td>{{ c.subcategoria }}</td>
+          <td [ngClass]="c.diferenca > 0 ? 'text-danger' : 'text-success'">
+            {{ c.diferenca | currency:'BRL' }}
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+</div>

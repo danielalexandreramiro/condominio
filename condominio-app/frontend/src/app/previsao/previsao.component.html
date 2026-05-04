@@ -1,0 +1,89 @@
+<div class="container mt-4">
+
+  <h2 class="text-primary text-center mb-4">Previsão de Despesas</h2>
+
+  <!-- FILTROS -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <div class="row g-3">
+
+        <div class="col-md-3">
+          <input type="text" class="form-control"
+                 placeholder="Buscar"
+                 [(ngModel)]="filtroTexto"
+                 (input)="aplicarFiltro()">
+        </div>
+
+        <div class="col-md-3">
+          <select class="form-select"
+                  [(ngModel)]="filtroSubcategoria"
+                  (change)="aplicarFiltro()">
+            <option value="">Todas</option>
+            <option *ngFor="let s of subcategorias">{{ s }}</option>
+          </select>
+        </div>
+
+        <div class="col-md-3">
+          <select multiple [(ngModel)]="mesesSelecionados"
+                  class="form-select">
+            <option *ngFor="let mes of mesesDisponiveis">{{ mes }}</option>
+          </select>
+        </div>
+
+        <div class="col-md-3">
+          <input type="number"
+                 class="form-control"
+                 placeholder="Simular aumento (%)"
+                 [(ngModel)]="percentualAumento"
+                 (input)="calcularPrevisao()">
+        </div>
+
+      </div>
+
+      <div class="mt-3 d-flex gap-2">
+        <button class="btn btn-primary" (click)="carregar()">Aplicar</button>
+        <button class="btn btn-secondary" (click)="limparFiltro()">Limpar</button>
+        <button class="btn btn-success" (click)="selecionarTodosMeses()">Todos</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ALERTAS -->
+  <div *ngIf="alertas.length" class="alert alert-warning">
+    <div *ngFor="let a of alertas">{{ a }}</div>
+  </div>
+
+  <!-- TOTAL -->
+  <div class="alert alert-info text-center">
+    <strong>Total previsto:</strong>
+    {{ totalPrevisto | currency:'BRL' }}
+  </div>
+
+  <!-- GRÁFICO -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <canvas *ngIf="chart"
+              baseChart
+              [data]="chart.data"
+              [options]="chart.options"
+              [type]="'line'">
+      </canvas>
+    </div>
+  </div>
+
+  <!-- PREVISÕES -->
+  <div class="card">
+    <div class="card-header">Previsão por Subcategoria</div>
+    <div class="card-body">
+
+      <div *ngFor="let p of previsoes"
+           class="d-flex justify-content-between border-bottom py-1">
+        <span>{{ p.subcategoria }}</span>
+        <strong>{{ p.valor | currency:'BRL' }}</strong>
+      </div>
+
+    </div>
+  </div>
+
+</div>
