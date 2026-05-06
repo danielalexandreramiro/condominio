@@ -1,0 +1,204 @@
+{
+  "arquivo": "202605.xlsx",
+  "receitas": [
+    {
+      "categoria": "Taxa Condomínio",
+      "subcategoria": "Taxa Ordinária",
+      "descricao": "",
+      "valor": 51800.39
+    },
+    {
+      "categoria": "Taxa Condomínio",
+      "subcategoria": "Descontos",
+      "descricao": "",
+      "valor": -5080.53
+    },
+    {
+      "categoria": "Taxa Extraordinária",
+      "subcategoria": "Taxa Extra - Impermeabilização",
+      "descricao": "",
+      "valor": 9716.33
+    },
+    {
+      "categoria": "Outras Taxas",
+      "subcategoria": "Taxa de Água",
+      "descricao": "",
+      "valor": 7159.37
+    },
+    {
+      "categoria": "Receitas Diversas",
+      "subcategoria": "Multas e Juros p/ atraso",
+      "descricao": "",
+      "valor": 86.22
+    },
+    {
+      "categoria": "Acordo",
+      "subcategoria": "Acordo Administrativo",
+      "descricao": "",
+      "valor": 1063.62
+    }
+  ],
+  "despesas": [
+    {
+      "categoria": "Pessoal",
+      "subcategoria": "Terceirização de mão de obra",
+      "descricao": "",
+      "valor": 25465.66
+    },
+    {
+      "categoria": "Pessoal",
+      "subcategoria": "Dias trabalhados - folguista",
+      "descricao": "",
+      "valor": 110.0
+    },
+    {
+      "categoria": "Consumo Predial",
+      "subcategoria": "Compesa",
+      "descricao": "",
+      "valor": 11859.84
+    },
+    {
+      "categoria": "Consumo Predial",
+      "subcategoria": "Celpe",
+      "descricao": "",
+      "valor": 2008.57
+    },
+    {
+      "categoria": "Consumo Predial",
+      "subcategoria": "Gás coletivo",
+      "descricao": "",
+      "valor": 2864.98
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Antena/Portões/Interfones/CFTV",
+      "descricao": "",
+      "valor": 433.98
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Jardim",
+      "descricao": "",
+      "valor": 350.0
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Elevadores",
+      "descricao": "",
+      "valor": 2750.53
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Piscina",
+      "descricao": "",
+      "valor": 500.0
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Assessoria administrativa",
+      "descricao": "",
+      "valor": 3531.0
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Leitura de consumo de água",
+      "descricao": "",
+      "valor": 708.7
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Assessoria síndico profissional",
+      "descricao": "",
+      "valor": 1700.0
+    },
+    {
+      "categoria": "Conservação",
+      "subcategoria": "Segurança eletrônica - peças",
+      "descricao": "",
+      "valor": 170.0
+    },
+    {
+      "categoria": "Conservação",
+      "subcategoria": "Material de limpeza",
+      "descricao": "",
+      "valor": 664.6
+    },
+    {
+      "categoria": "Conservação",
+      "subcategoria": "Material elétrico",
+      "descricao": "",
+      "valor": 56.62
+    },
+    {
+      "categoria": "Conservação",
+      "subcategoria": "Serviços prestados",
+      "descricao": "",
+      "valor": 200.0
+    },
+    {
+      "categoria": "Conservação",
+      "subcategoria": "Material de manutenção",
+      "descricao": "",
+      "valor": 49.3
+    },
+    {
+      "categoria": "Administrativas",
+      "subcategoria": "Xerox/Correios",
+      "descricao": "",
+      "valor": 7.0
+    },
+    {
+      "categoria": "Administrativas",
+      "subcategoria": "Material expediente",
+      "descricao": "",
+      "valor": 29.6
+    },
+    {
+      "categoria": "Administrativas",
+      "subcategoria": "Transporte - Taxi - Ônibus",
+      "descricao": "",
+      "valor": 50.0
+    },
+    {
+      "categoria": "Administrativas",
+      "subcategoria": "Cartório e custas judiciais",
+      "descricao": "",
+      "valor": 186.1
+    },
+    {
+      "categoria": "Administrativas",
+      "subcategoria": "Água dos funcionários",
+      "descricao": "",
+      "valor": 82.5
+    },
+    {
+      "categoria": "Administrativas",
+      "subcategoria": "Telefonia",
+      "descricao": "",
+      "valor": 97.1
+    },
+    {
+      "categoria": "Administrativas",
+      "subcategoria": "Seguro de vida",
+      "descricao": "",
+      "valor": 143.89
+    },
+    {
+      "categoria": "Obras/Reformas",
+      "subcategoria": "Despesas taxa extra",
+      "descricao": "",
+      "valor": 10000.0
+    },
+    {
+      "categoria": "Financeiras",
+      "subcategoria": "Tarifas de cobranças",
+      "descricao": "",
+      "valor": 537.0
+    }
+  ],
+  "totais": {
+    "total_receitas": 64745.4,
+    "total_despesas": 64556.97,
+    "saldo": 188.43
+  }
+}
