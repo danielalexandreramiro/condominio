@@ -21,7 +21,7 @@
     },
     {
       "categoria": "Outras Taxas",
-      "subcategoria": "Taxa de Água Compesa",
+      "subcategoria": "Taxa de Água",
       "descricao": "",
       "valor": 5735.34
     },
@@ -53,7 +53,7 @@
     },
     {
       "categoria": "Pessoal",
-      "subcategoria": "Cesta natalina",
+      "subcategoria": "Cesta Natalina",
       "descricao": "",
       "valor": 448.35
     },
@@ -71,13 +71,13 @@
     },
     {
       "categoria": "Consumo Predial",
-      "subcategoria": "Energia solar",
+      "subcategoria": "Energia Solar",
       "descricao": "",
       "valor": 2236.93
     },
     {
       "categoria": "Contratos",
-      "subcategoria": "Antena/Portões/Interfones/CFTV",
+      "subcategoria": "Antena-Portões-Interfones-CFTV",
       "descricao": "",
       "valor": 380.09
     },
@@ -119,13 +119,13 @@
     },
     {
       "categoria": "Contratos",
-      "subcategoria": "Assessoria síndico Profissional",
+      "subcategoria": "Assessoria síndico profissional",
       "descricao": "",
       "valor": 1500.0
     },
     {
       "categoria": "Conservação",
-      "subcategoria": "Antena/Portão/Interfone/CFTV - peças",
+      "subcategoria": "Antena-Portão-Interfone-CFTV - peças",
       "descricao": "",
       "valor": 141.54
     },
@@ -196,39 +196,81 @@
       "valor": 129.1
     },
     {
-      "categoria": "Financeiras",
-      "subcategoria": "Tarifas de cobranças",
-      "descricao": "",
-      "valor": 511.9
-    },
-    {
-      "categoria": "Outras",
+      "categoria": "Outras Despesas",
       "subcategoria": "PIS-COFINS-CSLL",
       "descricao": "",
       "valor": 120.54
     },
     {
-      "categoria": "Outras",
+      "categoria": "Outras Despesas",
       "subcategoria": "IOF",
       "descricao": "",
       "valor": 1.19
     },
     {
-      "categoria": "Outras",
+      "categoria": "Outras Despesas",
       "subcategoria": "IRRF",
       "descricao": "",
       "valor": 10.42
     },
     {
-      "categoria": "Outras",
+      "categoria": "Outras Despesas",
       "subcategoria": "Decoração festas",
       "descricao": "",
       "valor": 350.0
+    },
+    {
+      "categoria": "Financeiras",
+      "subcategoria": "Tarifas de cobranças",
+      "descricao": "",
+      "valor": 511.9
     }
   ],
   "totais": {
     "total_receitas": 50596.03,
     "total_despesas": 52173.61,
     "saldo": -1577.58
+  },
+  "resumo_financeiro": {
+    "periodo": {
+      "inicio": "2023-12-01",
+      "fim": "2023-12-31"
+    },
+    "contas": [
+      {
+        "nome": "CEF 1031 / 00004005-0",
+        "saldo_anterior": 4401.45,
+        "creditos": 62129.73,
+        "debitos": 61676.0,
+        "saldo_final": 4855.18
+      },
+      {
+        "nome": "Aplicação",
+        "saldo_anterior": 5018.95,
+        "creditos": 21.77,
+        "debitos": 4694.52,
+        "saldo_final": 346.2
+      },
+      {
+        "nome": "Conta Investimento CDB Flex",
+        "saldo_anterior": 20614.51,
+        "creditos": 9641.44,
+        "debitos": 7000.0,
+        "saldo_final": 23255.95
+      },
+      {
+        "nome": "Caixa - Fundo Fixo",
+        "saldo_anterior": 58.14,
+        "creditos": 0.0,
+        "debitos": 0.0,
+        "saldo_final": 58.14
+      }
+    ],
+    "total": {
+      "saldo_anterior": 30093.05,
+      "creditos": 71792.94,
+      "debitos": 73370.52,
+      "saldo_final": 28515.47
+    }
   }
 }

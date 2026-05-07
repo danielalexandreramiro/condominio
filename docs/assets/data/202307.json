@@ -15,7 +15,7 @@
     },
     {
       "categoria": "Outras Taxas",
-      "subcategoria": "Taxa de Água Compesa",
+      "subcategoria": "Taxa de Água",
       "descricao": "",
       "valor": 6083.9
     },
@@ -47,7 +47,7 @@
     },
     {
       "categoria": "Pessoal",
-      "subcategoria": "Folguista",
+      "subcategoria": "Dias trabalhados - folguista",
       "descricao": "",
       "valor": 1300.0
     },
@@ -71,7 +71,7 @@
     },
     {
       "categoria": "Contratos",
-      "subcategoria": "Antena/Portões/Interfones/CFTV",
+      "subcategoria": "Antena-Portões-Interfones-CFTV",
       "descricao": "",
       "valor": 380.09
     },
@@ -113,13 +113,13 @@
     },
     {
       "categoria": "Contratos",
-      "subcategoria": "Assessoria síndico Profissional",
+      "subcategoria": "Assessoria síndico profissional",
       "descricao": "",
       "valor": 1320.0
     },
     {
       "categoria": "Conservação",
-      "subcategoria": "Antena/Portão/Interfone/CFTV - peças",
+      "subcategoria": "Antena-Portão-Interfone-CFTV - peças",
       "descricao": "",
       "valor": 1122.4
     },
@@ -179,30 +179,30 @@
     },
     {
       "categoria": "Administrativas",
-      "subcategoria": "Outras Despesas",
+      "subcategoria": "Outras despesas administrativas",
       "descricao": "",
       "valor": 100.0
     },
     {
       "categoria": "Obras/Reformas",
-      "subcategoria": "Móveis e Utensílios",
+      "subcategoria": "Móveis e utensílios",
       "descricao": "",
       "valor": 311.65
     },
     {
-      "categoria": "Outras",
+      "categoria": "Outras Despesas",
       "subcategoria": "PIS-COFINS-CSLL",
       "descricao": "",
       "valor": 120.54
     },
     {
-      "categoria": "Outras",
+      "categoria": "Outras Despesas",
       "subcategoria": "IOF",
       "descricao": "",
       "valor": 17.65
     },
     {
-      "categoria": "Outras",
+      "categoria": "Outras Despesas",
       "subcategoria": "IRRF",
       "descricao": "",
       "valor": 26.92
@@ -218,5 +218,40 @@
     "total_receitas": 53794.37,
     "total_despesas": 49925.85,
     "saldo": 3868.52
+  },
+  "resumo_financeiro": {
+    "periodo": {
+      "inicio": "2023-05-01",
+      "fim": "2023-05-31"
+    },
+    "contas": [
+      {
+        "nome": "Caixa - Fundo Fixo",
+        "saldo_anterior": 58.14,
+        "creditos": 0.0,
+        "debitos": 0.0,
+        "saldo_final": 58.14
+      },
+      {
+        "nome": "CEF 1031 / 00004005-0",
+        "saldo_anterior": 1051.65,
+        "creditos": 66826.8,
+        "debitos": 64881.28,
+        "saldo_final": 2997.17
+      },
+      {
+        "nome": "Aplicação",
+        "saldo_anterior": 18014.55,
+        "creditos": 15128.19,
+        "debitos": 13205.19,
+        "saldo_final": 19937.55
+      }
+    ],
+    "total": {
+      "saldo_anterior": 19124.34,
+      "creditos": 81954.99,
+      "debitos": 78086.47,
+      "saldo_final": 22992.86
+    }
   }
 }

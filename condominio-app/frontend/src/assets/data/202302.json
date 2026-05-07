@@ -21,7 +21,7 @@
     },
     {
       "categoria": "Outras Taxas",
-      "subcategoria": "Taxa de Água Compesa",
+      "subcategoria": "Taxa de Água",
       "descricao": "",
       "valor": 5310.17
     },
@@ -71,7 +71,7 @@
     },
     {
       "categoria": "Contratos",
-      "subcategoria": "Antena/Portões/Interfones/CFTV",
+      "subcategoria": "Antena-Portões-Interfones-CFTV",
       "descricao": "",
       "valor": 380.09
     },
@@ -107,13 +107,13 @@
     },
     {
       "categoria": "Contratos",
-      "subcategoria": "Serviços Prestados",
+      "subcategoria": "Serviços prestados",
       "descricao": "",
       "valor": 1300.0
     },
     {
       "categoria": "Contratos",
-      "subcategoria": "Assessoria síndico Profissional",
+      "subcategoria": "Assessoria síndico profissional",
       "descricao": "",
       "valor": 1212.0
     },
@@ -125,7 +125,7 @@
     },
     {
       "categoria": "Conservação",
-      "subcategoria": "Água Portaria",
+      "subcategoria": "Água portaria",
       "descricao": "",
       "valor": 45.0
     },
@@ -148,19 +148,19 @@
       "valor": 124.75
     },
     {
-      "categoria": "Outras",
+      "categoria": "Outras Despesas",
       "subcategoria": "PIS-COFINS-CSLL",
       "descricao": "",
       "valor": 120.54
     },
     {
-      "categoria": "Outras",
+      "categoria": "Outras Despesas",
       "subcategoria": "IOF",
       "descricao": "",
       "valor": 15.97
     },
     {
-      "categoria": "Outras",
+      "categoria": "Outras Despesas",
       "subcategoria": "IRRF",
       "descricao": "",
       "valor": 9.43
@@ -173,7 +173,7 @@
     },
     {
       "categoria": "Financeiras",
-      "subcategoria": "Juros-multas",
+      "subcategoria": "Juros-Multas",
       "descricao": "",
       "valor": 0.06
     }
@@ -182,5 +182,40 @@
     "total_receitas": 46364.54,
     "total_despesas": 47644.81,
     "saldo": -1280.27
+  },
+  "resumo_financeiro": {
+    "periodo": {
+      "inicio": "2022-12-01",
+      "fim": "2022-12-31"
+    },
+    "contas": [
+      {
+        "nome": "Caixa - Fundo Fixo",
+        "saldo_anterior": 80.64,
+        "creditos": 0.0,
+        "debitos": 0.0,
+        "saldo_final": 80.64
+      },
+      {
+        "nome": "CEF 1031 / 00004005-0",
+        "saldo_anterior": 1916.78,
+        "creditos": 55780.48,
+        "debitos": 47619.41,
+        "saldo_final": 10077.85
+      },
+      {
+        "nome": "Aplicação",
+        "saldo_anterior": 20728.82,
+        "creditos": 144.35,
+        "debitos": 9585.69,
+        "saldo_final": 11287.48
+      }
+    ],
+    "total": {
+      "saldo_anterior": 22726.24,
+      "creditos": 55924.83,
+      "debitos": 57205.1,
+      "saldo_final": 21445.97
+    }
   }
 }

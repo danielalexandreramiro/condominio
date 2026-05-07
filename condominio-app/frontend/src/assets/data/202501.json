@@ -21,7 +21,7 @@
     },
     {
       "categoria": "Outras Taxas",
-      "subcategoria": "Taxa de Água Compesa",
+      "subcategoria": "Taxa de Água",
       "descricao": "",
       "valor": 5971.21
     },
@@ -71,7 +71,7 @@
     },
     {
       "categoria": "Consumo Predial",
-      "subcategoria": "Energia solar",
+      "subcategoria": "Energia Solar",
       "descricao": "",
       "valor": 1407.12
     },
@@ -119,7 +119,7 @@
     },
     {
       "categoria": "Contratos",
-      "subcategoria": "Assessoria síndico Profissional",
+      "subcategoria": "Assessoria síndico profissional",
       "descricao": "",
       "valor": 1500.0
     },
@@ -131,7 +131,7 @@
     },
     {
       "categoria": "Conservação",
-      "subcategoria": "Antena/Portão/Interfone/CFTV - peças",
+      "subcategoria": "Antena-Portão-Interfone-CFTV - peças",
       "descricao": "",
       "valor": 96.0
     },
@@ -185,7 +185,7 @@
     },
     {
       "categoria": "Administrativas",
-      "subcategoria": "Transporte - taxi - onibus",
+      "subcategoria": "Transporte - Taxi - Ônibus",
       "descricao": "",
       "valor": 117.75
     },
@@ -220,33 +220,75 @@
       "valor": 46.86
     },
     {
-      "categoria": "Financeiras",
-      "subcategoria": "Tarifas de cobranças",
-      "descricao": "",
-      "valor": 613.13
-    },
-    {
-      "categoria": "Outras",
+      "categoria": "Outras Despesas",
       "subcategoria": "PIS-COFINS-CSLL",
       "descricao": "",
       "valor": 120.54
     },
     {
-      "categoria": "Outras",
+      "categoria": "Outras Despesas",
       "subcategoria": "IRRF",
       "descricao": "",
       "valor": 6.4
     },
     {
-      "categoria": "Outras",
+      "categoria": "Outras Despesas",
       "subcategoria": "Decoração festas",
       "descricao": "",
       "valor": 241.46
+    },
+    {
+      "categoria": "Financeiras",
+      "subcategoria": "Tarifas de cobranças",
+      "descricao": "",
+      "valor": 613.13
     }
   ],
   "totais": {
     "total_receitas": 50169.18,
     "total_despesas": 52289.33,
     "saldo": -2120.15
+  },
+  "resumo_financeiro": {
+    "periodo": {
+      "inicio": "2024-11-01",
+      "fim": "2024-11-30"
+    },
+    "contas": [
+      {
+        "nome": "CEF 1031 / 00004005-0",
+        "saldo_anterior": 15312.07,
+        "creditos": 50147.66,
+        "debitos": 53175.05,
+        "saldo_final": 12284.68
+      },
+      {
+        "nome": "Aplicação",
+        "saldo_anterior": 2277.93,
+        "creditos": 15.84,
+        "debitos": 6.4,
+        "saldo_final": 2287.37
+      },
+      {
+        "nome": "Conta Investimento CDB Flex",
+        "saldo_anterior": 914.16,
+        "creditos": 5.68,
+        "debitos": 0.0,
+        "saldo_final": 919.84
+      },
+      {
+        "nome": "Caixa - Fundo Fixo",
+        "saldo_anterior": 58.14,
+        "creditos": 0.0,
+        "debitos": 0.0,
+        "saldo_final": 58.14
+      }
+    ],
+    "total": {
+      "saldo_anterior": 18562.3,
+      "creditos": 50169.18,
+      "debitos": 53181.45,
+      "saldo_final": 15550.03
+    }
   }
 }

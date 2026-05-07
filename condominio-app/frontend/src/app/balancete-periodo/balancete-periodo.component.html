@@ -43,9 +43,11 @@
           <button class="btn btn-primary" (click)="carregar()">
             Aplicar
           </button>
+
           <button class="btn btn-outline-secondary" (click)="limparFiltro()">
             Limpar
           </button>
+
           <button class="btn btn-success" (click)="selecionarTodosMeses()">
             Todos
           </button>
@@ -57,15 +59,19 @@
 
   <!-- RECEITAS -->
   <div class="card shadow-sm mb-4">
+
     <div class="card-header bg-success text-white fw-bold">
       Receitas
     </div>
 
     <div class="table-responsive">
+
       <table class="table table-striped table-hover align-middle mb-0">
+
         <thead class="table-light">
           <tr>
             <th>Subcategoria</th>
+
             <th *ngFor="let mes of mesesSelecionados">
               {{ formatarMesCurto(mes) }}
             </th>
@@ -73,88 +79,288 @@
         </thead>
 
         <tbody>
+
           <tr *ngFor="let linha of receitasFiltradas">
-            <td class="fw-semibold">{{ linha.subcategoria }}</td>
+
+            <td class="fw-semibold">
+              {{ linha.subcategoria }}
+            </td>
+
             <td *ngFor="let mes of mesesSelecionados">
               {{ linha.valores[mes] | number:'1.2-2' }}
             </td>
+
           </tr>
+
         </tbody>
 
         <tfoot class="table-primary fw-bold">
+
           <tr>
+
             <td>Total Receitas</td>
+
             <td *ngFor="let mes of mesesSelecionados">
               {{ totais[mes].total_receitas | number:'1.2-2' }}
             </td>
+
           </tr>
 
           <tr>
+
             <td>Saldo</td>
+
             <td *ngFor="let mes of mesesSelecionados"
                 [ngClass]="{
                   'text-success': totais[mes].saldo > 0,
                   'text-danger': totais[mes].saldo < 0
                 }">
+
               {{ totais[mes].saldo | number:'1.2-2' }}
+
             </td>
+
           </tr>
+
         </tfoot>
+
       </table>
+
     </div>
+
   </div>
 
   <!-- DESPESAS -->
   <div class="card shadow-sm mb-4">
+
     <div class="card-header bg-danger text-white fw-bold">
       Despesas
     </div>
 
     <div class="table-responsive">
+
       <table class="table table-striped table-hover align-middle mb-0">
+
         <thead class="table-light">
+
           <tr>
+
             <th>Subcategoria</th>
+
             <th *ngFor="let mes of mesesSelecionados">
               {{ formatarMesCurto(mes) }}
             </th>
+
           </tr>
+
         </thead>
 
         <tbody>
+
           <tr *ngFor="let linha of despesasFiltradas">
-            <td class="fw-semibold">{{ linha.subcategoria }}</td>
+
+            <td class="fw-semibold">
+              {{ linha.subcategoria }}
+            </td>
+
             <td *ngFor="let mes of mesesSelecionados">
               {{ linha.valores[mes] | number:'1.2-2' }}
             </td>
+
           </tr>
+
         </tbody>
 
         <tfoot class="table-warning fw-bold">
+
           <tr>
+
             <td>Total Despesas</td>
+
             <td *ngFor="let mes of mesesSelecionados">
               {{ totais[mes].total_despesas | number:'1.2-2' }}
             </td>
+
           </tr>
+
         </tfoot>
+
       </table>
+
     </div>
+
   </div>
+
+  <!-- DESPESAS FINANCEIRAS POR MÊS -->
+  <div class="card shadow-sm mb-4"
+       *ngIf="mesesSelecionados.length === 1">
+
+    <div class="card-header bg-warning text-dark fw-bold">
+      Despesas Financeiras - {{ formatarMesCurto(mesesSelecionados[0]) }}
+    </div>
+
+    <div class="table-responsive"
+         *ngIf="despesasFinanceirasData[mesesSelecionados[0]] 
+                && despesasFinanceirasData[mesesSelecionados[0]].length > 0;
+                else semDespesasFinanceiras">
+
+      <table class="table table-striped table-hover align-middle mb-0">
+
+        <thead class="table-light">
+
+          <tr>
+            <th>Subcategoria</th>
+            <th>Valor</th>
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr *ngFor="let despesa of despesasFinanceirasData[mesesSelecionados[0]]">
+
+            <td class="fw-semibold">
+              {{ despesa.subcategoria }}
+            </td>
+
+            <td class="text-warning">
+              <strong>
+                {{ despesa.valor | currency:'BRL' }}
+              </strong>
+            </td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+    <ng-template #semDespesasFinanceiras>
+
+      <div class="alert alert-info m-3 mb-0">
+        Sem despesas financeiras neste período
+      </div>
+
+    </ng-template>
+
+  </div>
+
+  <!-- SALDOS DAS CONTAS -->
+  <div class="card shadow-sm mb-4"
+       *ngIf="mesesSelecionados.length > 0">
+
+    <div class="card-header bg-info text-white fw-bold">
+      Saldo das Contas Bancárias
+    </div>
+
+    <div class="table-responsive">
+
+      <table class="table table-striped table-hover align-middle mb-0">
+
+        <thead class="table-light">
+
+          <tr>
+
+            <th>Conta</th>
+
+            <th *ngFor="let mes of mesesSelecionados">
+              {{ formatarMesCurto(mes) }}
+            </th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr *ngFor="let conta of saldosContasAgrupados">
+
+            <td class="fw-semibold">
+              {{ conta.nome }}
+            </td>
+
+            <td *ngFor="let mes of mesesSelecionados"
+                [ngClass]="
+                  (conta.valores[mes] || 0) >= 0
+                  ? 'text-success'
+                  : 'text-danger'
+                ">
+
+              <strong>
+                {{ (conta.valores[mes] || 0) | currency:'BRL' }}
+              </strong>
+
+            </td>
+
+          </tr>
+
+        </tbody>
+
+        <tfoot class="table-primary fw-bold">
+
+          <tr>
+
+            <td>TOTAL</td>
+
+            <td *ngFor="let mes of mesesSelecionados"
+                [ngClass]="
+                  resumosFinanceiros[mes]?.total?.saldo_final >= 0
+                  ? 'text-success'
+                  : 'text-danger'
+                ">
+
+              {{
+                resumosFinanceiros[mes]?.total?.saldo_final
+                | currency:'BRL'
+              }}
+
+            </td>
+
+          </tr>
+
+        </tfoot>
+
+      </table>
+
+    </div>
+
+  </div>
+
+  <!-- GRÁFICO SALDO DAS CONTAS -->
+<div class="card shadow-sm mb-4"
+     *ngIf="mesesSelecionados.length > 0">
+
+  <div class="card-header bg-primary text-white fw-bold">
+    Evolução do Saldo das Contas
+  </div>
+
+  <div class="card-body">
+
+    <canvas id="graficoSaldoContas"></canvas>
+
+  </div>
+
+</div>
 
   <!-- GRÁFICOS -->
   <div class="card shadow-sm">
+
     <div class="card-header bg-dark text-white fw-bold">
       Análise Gráfica
     </div>
 
     <div class="card-body">
+
       <app-balancete-graficos
         [receitas]="receitasFiltradas"
         [despesas]="despesasFiltradas"
         [meses]="mesesSelecionados">
       </app-balancete-graficos>
+
     </div>
+
   </div>
 
 </div>

@@ -1,0 +1,202 @@
+{
+  "arquivo": "202204.xlsx",
+  "receitas": [
+    {
+      "categoria": "Taxa Condomínio",
+      "subcategoria": "Taxa Ordinária",
+      "descricao": "",
+      "valor": 36142.0
+    },
+    {
+      "categoria": "Taxa Condomínio",
+      "subcategoria": "Descontos",
+      "descricao": "",
+      "valor": -3576.0
+    },
+    {
+      "categoria": "Outras Taxas",
+      "subcategoria": "Taxa de Água",
+      "descricao": "",
+      "valor": 5618.0
+    },
+    {
+      "categoria": "Receitas Diversas",
+      "subcategoria": "Receitas Financeiras",
+      "descricao": "",
+      "valor": 29.0
+    },
+    {
+      "categoria": "Receitas Diversas",
+      "subcategoria": "Multas e Juros p/ atraso",
+      "descricao": "",
+      "valor": 11.15
+    }
+  ],
+  "despesas": [
+    {
+      "categoria": "Pessoal",
+      "subcategoria": "Terceirização de mão de obra",
+      "descricao": "",
+      "valor": 20381.0
+    },
+    {
+      "categoria": "Pessoal",
+      "subcategoria": "Fardamento",
+      "descricao": "",
+      "valor": 100.0
+    },
+    {
+      "categoria": "Pessoal",
+      "subcategoria": "Dias trabalhados - folguista",
+      "descricao": "",
+      "valor": 1200.0
+    },
+    {
+      "categoria": "Consumo Predial",
+      "subcategoria": "Compesa",
+      "descricao": "",
+      "valor": 9696.0
+    },
+    {
+      "categoria": "Consumo Predial",
+      "subcategoria": "Celpe",
+      "descricao": "",
+      "valor": 2608.41
+    },
+    {
+      "categoria": "Consumo Predial",
+      "subcategoria": "Gás coletivo",
+      "descricao": "",
+      "valor": 1244.78
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Piscina",
+      "descricao": "",
+      "valor": 230.0
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Assessoria administrativa",
+      "descricao": "",
+      "valor": 1210.0
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Gerador mensalidade",
+      "descricao": "",
+      "valor": 200.0
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Leitura de consumo de água",
+      "descricao": "",
+      "valor": 616.55
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Assessoria síndico profissional",
+      "descricao": "",
+      "valor": 1212.0
+    },
+    {
+      "categoria": "Conservação",
+      "subcategoria": "Antena-Portões-Interfones-CFTV-Manutenção",
+      "descricao": "",
+      "valor": 342.97
+    },
+    {
+      "categoria": "Conservação",
+      "subcategoria": "Jardim",
+      "descricao": "",
+      "valor": 350.0
+    },
+    {
+      "categoria": "Conservação",
+      "subcategoria": "Material de limpeza",
+      "descricao": "",
+      "valor": 527.18
+    },
+    {
+      "categoria": "Conservação",
+      "subcategoria": "Piscina peças e material",
+      "descricao": "",
+      "valor": 1039.3
+    },
+    {
+      "categoria": "Conservação",
+      "subcategoria": "Prestador de serviços",
+      "descricao": "",
+      "valor": 400.0
+    },
+    {
+      "categoria": "Conservação",
+      "subcategoria": "Água portaria",
+      "descricao": "",
+      "valor": 36.0
+    },
+    {
+      "categoria": "Conservação",
+      "subcategoria": "Manutenções diversas",
+      "descricao": "",
+      "valor": 170.0
+    },
+    {
+      "categoria": "Administrativas",
+      "subcategoria": "Transporte - Taxi - Ônibus",
+      "descricao": "",
+      "valor": 140.0
+    },
+    {
+      "categoria": "Administrativas",
+      "subcategoria": "Telefonia",
+      "descricao": "",
+      "valor": 87.67
+    },
+    {
+      "categoria": "Administrativas",
+      "subcategoria": "Seguro de vida",
+      "descricao": "",
+      "valor": 108.0
+    },
+    {
+      "categoria": "Financeiras",
+      "subcategoria": "Tarifas de cobranças",
+      "descricao": "",
+      "valor": 508.4
+    }
+  ],
+  "totais": {
+    "total_receitas": 38224.15,
+    "total_despesas": 42408.26,
+    "saldo": -4184.11
+  },
+  "resumo_financeiro": {
+    "periodo": {
+      "inicio": "2022-02-01",
+      "fim": "2022-02-28"
+    },
+    "contas": [
+      {
+        "nome": "Caixa - Fundo Fixo",
+        "saldo_anterior": 70.41,
+        "creditos": 0.0,
+        "debitos": 0.0,
+        "saldo_final": 70.41
+      },
+      {
+        "nome": "CEF 1031 / 00004005-0",
+        "saldo_anterior": 6061.11,
+        "creditos": 38215.15,
+        "debitos": 42908.26,
+        "saldo_final": 1438.41
+      }
+    ],
+    "total": {
+      "saldo_anterior": 6131.52,
+      "creditos": 38215.15,
+      "debitos": 42908.26,
+      "saldo_final": 1438.41
+    }
+  }
+}

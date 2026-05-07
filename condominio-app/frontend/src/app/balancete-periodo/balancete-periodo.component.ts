@@ -4,6 +4,17 @@ import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { BalanceteGraficosComponent } from '../balancete-graficos/balancete-graficos.component';
 
+import {
+  Chart,
+  LineController,
+  LineElement,
+  PointElement,
+  LinearScale,
+  CategoryScale,
+  Legend,
+  Tooltip
+} from 'chart.js';
+
 @Component({
   selector: 'app-balancete-periodo',
   standalone: true,
@@ -23,14 +34,31 @@ export class BalancetePeriodoComponent implements OnInit {
   despesasFiltradas: any[] = [];
 
   totais: any = {};
+  resumosFinanceiros: any = {};
+  despesasFinanceirasData: any = {};
 
   filtroTexto: string = '';
   filtroSubcategoria: string = '';
   subcategorias: string[] = [];
 
+  saldosContasAgrupados: any[] = [];
+
+  graficoSaldoContas: any;
+
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
+
+    Chart.register(
+      LineController,
+      LineElement,
+      PointElement,
+      LinearScale,
+      CategoryScale,
+      Legend,
+      Tooltip
+    );
+
     this.carregarMeses();
   }
 
@@ -59,11 +87,22 @@ export class BalancetePeriodoComponent implements OnInit {
     const despesasMap = new Map<string, any>();
 
     this.totais = {};
+    this.resumosFinanceiros = {};
+    this.despesasFinanceirasData = {};
 
     dados.forEach((mesData, index) => {
 
       const mes = this.mesesSelecionados[index];
       this.totais[mes] = mesData.totais;
+      
+      // Armazenar resumo financeiro
+      if (mesData.resumo_financeiro) {
+        this.resumosFinanceiros[mes] = mesData.resumo_financeiro;
+      }
+      
+      // Extrair despesas financeiras por mês
+      const despesasFinanceiras = mesData.despesas.filter((d: any) => d.categoria === 'Financeiras');
+      this.despesasFinanceirasData[mes] = despesasFinanceiras;
 
       mesData.receitas.forEach((r: any) => {
         const key = `${r.categoria}-${r.subcategoria}`;
@@ -100,6 +139,122 @@ export class BalancetePeriodoComponent implements OnInit {
     this.despesasFiltradas = [...this.despesasOriginal];
 
     this.gerarSubcategorias();
+
+    this.montarSaldosContasAgrupados();
+
+    this.criarGraficoSaldoContas();
+  }
+
+  montarSaldosContasAgrupados() {
+
+    const mapa = new Map<string, any>();
+
+    for (const mes of this.mesesSelecionados) {
+
+      const resumo = this.resumosFinanceiros[mes];
+
+      if (!resumo || !resumo.contas) {
+        continue;
+      }
+
+      for (const conta of resumo.contas) {
+
+        if (!mapa.has(conta.nome)) {
+
+          mapa.set(conta.nome, {
+            nome: conta.nome,
+            valores: {}
+          });
+
+        }
+
+        mapa.get(conta.nome).valores[mes] =
+          conta.saldo_final;
+
+      }
+
+    }
+
+    this.saldosContasAgrupados =
+      Array.from(mapa.values());
+
+  }
+
+  criarGraficoSaldoContas() {
+
+    if (this.graficoSaldoContas) {
+      this.graficoSaldoContas.destroy();
+    }
+
+    const labels =
+      this.mesesSelecionados.map(m =>
+        this.formatarMesCurto(m)
+      );
+
+    const datasets =
+      this.saldosContasAgrupados.map(conta => {
+
+        return {
+
+          label: conta.nome,
+
+          data: this.mesesSelecionados.map(m =>
+            conta.valores[m] || 0
+          ),
+
+          tension: 0.3
+
+        };
+
+      });
+
+    this.graficoSaldoContas = new Chart(
+      'graficoSaldoContas',
+      {
+
+        type: 'line',
+
+        data: {
+          labels,
+          datasets
+        },
+
+        options: {
+
+          responsive: true,
+
+          plugins: {
+
+            legend: {
+              position: 'bottom'
+            }
+
+          },
+
+          scales: {
+
+            y: {
+
+              ticks: {
+
+                callback: function(value: any) {
+
+                  return 'R$ ' +
+                    Number(value).toLocaleString('pt-BR');
+
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+    );
+
   }
 
   gerarSubcategorias() {

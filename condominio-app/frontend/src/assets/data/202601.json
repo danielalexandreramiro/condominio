@@ -15,7 +15,7 @@
     },
     {
       "categoria": "Outras Taxas",
-      "subcategoria": "Taxa de Água Compesa",
+      "subcategoria": "Taxa de Água",
       "descricao": "",
       "valor": 6420.9
     },
@@ -83,7 +83,7 @@
     },
     {
       "categoria": "Consumo Predial",
-      "subcategoria": "Energia solar",
+      "subcategoria": "Energia Solar",
       "descricao": "",
       "valor": 1572.88
     },
@@ -119,7 +119,7 @@
     },
     {
       "categoria": "Contratos",
-      "subcategoria": "Assessoria síndico Profissional",
+      "subcategoria": "Assessoria síndico profissional",
       "descricao": "",
       "valor": 1700.0
     },
@@ -196,6 +196,18 @@
       "valor": 143.89
     },
     {
+      "categoria": "Outras Despesas",
+      "subcategoria": "IRRF",
+      "descricao": "",
+      "valor": 4.68
+    },
+    {
+      "categoria": "Outras Despesas",
+      "subcategoria": "Decoração festas",
+      "descricao": "",
+      "valor": 48.0
+    },
+    {
       "categoria": "Financeiras",
       "subcategoria": "Tarifas de cobranças",
       "descricao": "",
@@ -206,23 +218,53 @@
       "subcategoria": "Despesas bancárias",
       "descricao": "",
       "valor": 167.91
-    },
-    {
-      "categoria": "Outras",
-      "subcategoria": "IRRF",
-      "descricao": "",
-      "valor": 4.68
-    },
-    {
-      "categoria": "Outras",
-      "subcategoria": "Decoração festas",
-      "descricao": "",
-      "valor": 48.0
     }
   ],
   "totais": {
     "total_receitas": 52592.4,
     "total_despesas": 53928.65,
     "saldo": -1336.25
+  },
+  "resumo_financeiro": {
+    "periodo": {
+      "inicio": "2025-11-01",
+      "fim": "2025-11-30"
+    },
+    "contas": [
+      {
+        "nome": "Conta Digital PJBank",
+        "saldo_anterior": 0.0,
+        "creditos": 0.0,
+        "debitos": 0.0,
+        "saldo_final": 0.0
+      },
+      {
+        "nome": "CEF 1031 / 00004005-0",
+        "saldo_anterior": 3690.51,
+        "creditos": 52574.51,
+        "debitos": 53923.97,
+        "saldo_final": 2341.05
+      },
+      {
+        "nome": "Aplicação",
+        "saldo_anterior": 962.29,
+        "creditos": 9.12,
+        "debitos": 4.68,
+        "saldo_final": 966.73
+      },
+      {
+        "nome": "Conta Investimento CDB Flex",
+        "saldo_anterior": 1017.84,
+        "creditos": 8.77,
+        "debitos": 0.0,
+        "saldo_final": 1026.61
+      }
+    ],
+    "total": {
+      "saldo_anterior": 5670.64,
+      "creditos": 52592.4,
+      "debitos": 53928.65,
+      "saldo_final": 4334.39
+    }
   }
 }

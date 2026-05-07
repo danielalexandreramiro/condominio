@@ -41,6 +41,77 @@
     </div>
   </div>
 
+
+  
+  <hr>
+
+  <!-- DESPESAS FINANCEIRAS (destacadas) -->
+  <!-- <div *ngIf="getDespesasFinanceiras().length > 0">
+    <h3 class="text-warning">Despesas Financeiras</h3>
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th>Subcategoria</th>
+          <th>Valor</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let d of getDespesasFinanceiras()">
+          <td>{{ d.subcategoria }}</td>
+          <td class="text-warning"><strong>{{ d.valor | currency:'BRL' }}</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <hr> -->
+
+  <!-- RESUMO FINANCEIRO -->
+  <div *ngIf="balancete.resumo_financeiro">
+    <h3>Resumo Financeiro das Contas</h3>
+    
+    <p class="text-muted">
+      <strong>Período:</strong> 
+      {{ balancete.resumo_financeiro.periodo.inicio | date:'dd/MM/yyyy' }} 
+      a 
+      {{ balancete.resumo_financeiro.periodo.fim | date:'dd/MM/yyyy' }}
+    </p>
+    
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th>Conta</th>
+          <th>Saldo Anterior</th>
+          <th>Créditos</th>
+          <th>Débitos</th>
+          <th>Saldo Final</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let conta of balancete.resumo_financeiro.contas">
+          <td>{{ conta.nome }}</td>
+          <td>{{ conta.saldo_anterior | currency:'BRL' }}</td>
+          <td class="text-success">{{ conta.creditos | currency:'BRL' }}</td>
+          <td class="text-danger">{{ conta.debitos | currency:'BRL' }}</td>
+          <td [ngClass]="conta.saldo_final >= 0 ? 'text-success' : 'text-danger'">
+            {{ conta.saldo_final | currency:'BRL' }}
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td><strong>TOTAL</strong></td>
+          <td><strong>{{ balancete.resumo_financeiro.total.saldo_anterior | currency:'BRL' }}</strong></td>
+          <td class="text-success"><strong>{{ balancete.resumo_financeiro.total.creditos | currency:'BRL' }}</strong></td>
+          <td class="text-danger"><strong>{{ balancete.resumo_financeiro.total.debitos | currency:'BRL' }}</strong></td>
+          <td [ngClass]="balancete.resumo_financeiro.total.saldo_final >= 0 ? 'text-success' : 'text-danger'">
+            <strong>{{ balancete.resumo_financeiro.total.saldo_final | currency:'BRL' }}</strong>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
   <hr>
 
   <!-- RECEITAS -->
@@ -80,6 +151,7 @@
     </tr>
   </tbody>
 </table>
+
 
 </div>
 

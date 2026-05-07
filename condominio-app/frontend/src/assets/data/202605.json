@@ -200,5 +200,47 @@
     "total_receitas": 64745.4,
     "total_despesas": 64556.97,
     "saldo": 188.43
+  },
+  "resumo_financeiro": {
+    "periodo": {
+      "inicio": "2026-03-01",
+      "fim": "2026-03-31"
+    },
+    "contas": [
+      {
+        "nome": "Conta Digital PJBank",
+        "saldo_anterior": 0.0,
+        "creditos": 0.0,
+        "debitos": 0.0,
+        "saldo_final": 0.0
+      },
+      {
+        "nome": "CEF 1031 / 00004005-0",
+        "saldo_anterior": 571.42,
+        "creditos": 64745.4,
+        "debitos": 64556.97,
+        "saldo_final": 759.85
+      },
+      {
+        "nome": "Aplicação",
+        "saldo_anterior": 103.51,
+        "creditos": 0.0,
+        "debitos": 0.0,
+        "saldo_final": 103.51
+      },
+      {
+        "nome": "Conta Investimento CDB Flex",
+        "saldo_anterior": 1055.33,
+        "creditos": 0.0,
+        "debitos": 0.0,
+        "saldo_final": 1055.33
+      }
+    ],
+    "total": {
+      "saldo_anterior": 1730.26,
+      "creditos": 64745.4,
+      "debitos": 64556.97,
+      "saldo_final": 1918.69
+    }
   }
 }

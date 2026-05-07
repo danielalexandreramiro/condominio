@@ -21,7 +21,7 @@
     },
     {
       "categoria": "Outras Taxas",
-      "subcategoria": "Taxa de Água Compesa",
+      "subcategoria": "Taxa de Água",
       "descricao": "",
       "valor": 7165.01
     },
@@ -107,7 +107,7 @@
     },
     {
       "categoria": "Contratos",
-      "subcategoria": "Assessoria síndico Profissional",
+      "subcategoria": "Assessoria síndico profissional",
       "descricao": "",
       "valor": 1700.0
     },
@@ -161,7 +161,7 @@
     },
     {
       "categoria": "Administrativas",
-      "subcategoria": "Transporte - taxi - onibus",
+      "subcategoria": "Transporte - Taxi - Ônibus",
       "descricao": "",
       "valor": 50.0
     },
@@ -190,21 +190,63 @@
       "valor": 143.89
     },
     {
+      "categoria": "Outras Despesas",
+      "subcategoria": "PIS-COFINS-CSLL",
+      "descricao": "",
+      "valor": 46.18
+    },
+    {
       "categoria": "Financeiras",
       "subcategoria": "Tarifas de cobranças",
       "descricao": "",
       "valor": 599.34
-    },
-    {
-      "categoria": "Outras",
-      "subcategoria": "PIS-COFINS-CSLL",
-      "descricao": "",
-      "valor": 46.18
     }
   ],
   "totais": {
     "total_receitas": 56044.85,
     "total_despesas": 57087.57,
     "saldo": -1042.72
+  },
+  "resumo_financeiro": {
+    "periodo": {
+      "inicio": "2025-07-01",
+      "fim": "2025-07-31"
+    },
+    "contas": [
+      {
+        "nome": "CEF 1031 / 00004005-0",
+        "saldo_anterior": 5131.48,
+        "creditos": 56023.55,
+        "debitos": 57087.57,
+        "saldo_final": 4067.46
+      },
+      {
+        "nome": "Aplicação",
+        "saldo_anterior": 967.36,
+        "creditos": 11.15,
+        "debitos": 0.0,
+        "saldo_final": 978.51
+      },
+      {
+        "nome": "Conta Investimento CDB Flex",
+        "saldo_anterior": 977.91,
+        "creditos": 10.15,
+        "debitos": 0.0,
+        "saldo_final": 988.06
+      },
+      {
+        "nome": "Caixa - Fundo Fixo",
+        "saldo_anterior": 58.14,
+        "creditos": 0.0,
+        "debitos": 0.0,
+        "saldo_final": 58.14
+      }
+    ],
+    "total": {
+      "saldo_anterior": 7134.89,
+      "creditos": 56044.85,
+      "debitos": 57087.57,
+      "saldo_final": 6092.17
+    }
   }
 }

@@ -15,7 +15,7 @@
     },
     {
       "categoria": "Outras Taxas",
-      "subcategoria": "Taxa de Água Compesa",
+      "subcategoria": "Taxa de Água",
       "descricao": "",
       "valor": 5510.89
     },
@@ -59,7 +59,7 @@
     },
     {
       "categoria": "Consumo Predial",
-      "subcategoria": "Energia solar",
+      "subcategoria": "Energia Solar",
       "descricao": "",
       "valor": 1431.94
     },
@@ -107,7 +107,7 @@
     },
     {
       "categoria": "Contratos",
-      "subcategoria": "Assessoria síndico Profissional",
+      "subcategoria": "Assessoria síndico profissional",
       "descricao": "",
       "valor": 1500.0
     },
@@ -119,7 +119,7 @@
     },
     {
       "categoria": "Conservação",
-      "subcategoria": "Antena/Portão/Interfone/CFTV - peças",
+      "subcategoria": "Antena-Portão-Interfone-CFTV - peças",
       "descricao": "",
       "valor": 449.44
     },
@@ -196,21 +196,63 @@
       "valor": 2561.8
     },
     {
+      "categoria": "Outras Despesas",
+      "subcategoria": "PIS-COFINS-CSLL",
+      "descricao": "",
+      "valor": 120.54
+    },
+    {
       "categoria": "Financeiras",
       "subcategoria": "Tarifas de cobranças",
       "descricao": "",
       "valor": 579.4
-    },
-    {
-      "categoria": "Outras",
-      "subcategoria": "PIS-COFINS-CSLL",
-      "descricao": "",
-      "valor": 120.54
     }
   ],
   "totais": {
     "total_receitas": 51694.93,
     "total_despesas": 57692.31,
     "saldo": -5997.38
+  },
+  "resumo_financeiro": {
+    "periodo": {
+      "inicio": "2025-02-01",
+      "fim": "2025-02-28"
+    },
+    "contas": [
+      {
+        "nome": "CEF 1031 / 00004005-0",
+        "saldo_anterior": 8279.46,
+        "creditos": 51667.35,
+        "debitos": 57692.31,
+        "saldo_final": 2254.5
+      },
+      {
+        "nome": "Aplicação",
+        "saldo_anterior": 2326.41,
+        "creditos": 20.33,
+        "debitos": 0.0,
+        "saldo_final": 2346.74
+      },
+      {
+        "nome": "Conta Investimento CDB Flex",
+        "saldo_anterior": 933.9,
+        "creditos": 7.25,
+        "debitos": 0.0,
+        "saldo_final": 941.15
+      },
+      {
+        "nome": "Caixa - Fundo Fixo",
+        "saldo_anterior": 58.14,
+        "creditos": 0.0,
+        "debitos": 0.0,
+        "saldo_final": 58.14
+      }
+    ],
+    "total": {
+      "saldo_anterior": 11597.91,
+      "creditos": 51694.93,
+      "debitos": 57692.31,
+      "saldo_final": 5600.53
+    }
   }
 }

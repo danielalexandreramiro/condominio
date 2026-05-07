@@ -15,13 +15,13 @@
     },
     {
       "categoria": "Outras Taxas",
-      "subcategoria": "Taxa de Água Compesa",
+      "subcategoria": "Taxa de Água",
       "descricao": "",
       "valor": 5071.58
     },
     {
       "categoria": "Receitas Diversas",
-      "subcategoria": "Receitas Diversas",
+      "subcategoria": "Multas e Juros p/ atraso",
       "descricao": "",
       "valor": 41.05
     },
@@ -37,11 +37,11 @@
       "categoria": "Pessoal",
       "subcategoria": "Terceirização de mão de obra",
       "descricao": "",
-      "valor": 22959.86
+      "valor": 21046.0
     },
     {
       "categoria": "Pessoal",
-      "subcategoria": "Folguista",
+      "subcategoria": "Dias trabalhados - folguista",
       "descricao": "",
       "valor": 1200.0
     },
@@ -65,7 +65,7 @@
     },
     {
       "categoria": "Contratos",
-      "subcategoria": "Antena/Portões/Interfones/CFTV",
+      "subcategoria": "Antena-Portões-Interfones-CFTV",
       "descricao": "",
       "valor": 380.09
     },
@@ -103,17 +103,17 @@
       "categoria": "Contratos",
       "subcategoria": "Leitura de consumo de água",
       "descricao": "",
-      "valor": 616.55
+      "valor": 646.0
     },
     {
       "categoria": "Contratos",
-      "subcategoria": "Assessoria síndico Profissional",
+      "subcategoria": "Assessoria síndico profissional",
       "descricao": "",
       "valor": 1320.0
     },
     {
       "categoria": "Conservação",
-      "subcategoria": "Dedetização e sanitização",
+      "subcategoria": "Dedetização e sanatização",
       "descricao": "",
       "valor": 236.67
     },
@@ -137,7 +137,7 @@
     },
     {
       "categoria": "Administrativas",
-      "subcategoria": "Transportes / Ônibus",
+      "subcategoria": "Transporte - Taxi - Ônibus",
       "descricao": "",
       "valor": 220.0
     },
@@ -145,7 +145,7 @@
       "categoria": "Administrativas",
       "subcategoria": "Água dos funcionários",
       "descricao": "",
-      "valor": 9.08
+      "valor": 89.0
     },
     {
       "categoria": "Administrativas",
@@ -155,7 +155,7 @@
     },
     {
       "categoria": "Administrativas",
-      "subcategoria": "Certificado Digital",
+      "subcategoria": "Certificado digital",
       "descricao": "",
       "valor": 217.5
     },
@@ -167,24 +167,24 @@
     },
     {
       "categoria": "Obras/Reformas",
-      "subcategoria": "Móveis e Utensílios",
+      "subcategoria": "Móveis e utensílios",
       "descricao": "",
       "valor": 311.65
     },
     {
-      "categoria": "Outras",
+      "categoria": "Outras Despesas",
       "subcategoria": "PIS-COFINS-CSLL",
       "descricao": "",
       "valor": 120.54
     },
     {
-      "categoria": "Outras",
+      "categoria": "Outras Despesas",
       "subcategoria": "IOF",
       "descricao": "",
       "valor": 42.88
     },
     {
-      "categoria": "Outras",
+      "categoria": "Outras Despesas",
       "subcategoria": "IRRF",
       "descricao": "",
       "valor": 19.45
@@ -193,12 +193,47 @@
       "categoria": "Financeiras",
       "subcategoria": "Tarifas de cobranças",
       "descricao": "",
-      "valor": 526.88
+      "valor": 526.8
     }
   ],
   "totais": {
     "total_receitas": 46861.46,
-    "total_despesas": 50529.34,
-    "saldo": -3667.88
+    "total_despesas": 48724.77,
+    "saldo": -1863.31
+  },
+  "resumo_financeiro": {
+    "periodo": {
+      "inicio": "2023-02-01",
+      "fim": "2023-02-28"
+    },
+    "contas": [
+      {
+        "nome": "Caixa - Fundo Fixo",
+        "saldo_anterior": 80.64,
+        "creditos": 0.0,
+        "debitos": 0.0,
+        "saldo_final": 80.64
+      },
+      {
+        "nome": "CEF 1031 / 00004005-0",
+        "saldo_anterior": 821.04,
+        "creditos": 67431.25,
+        "debitos": 56495.44,
+        "saldo_final": 17756.85
+      },
+      {
+        "nome": "Aplicação",
+        "saldo_anterior": 22753.48,
+        "creditos": 35.14,
+        "debitos": 26567.26,
+        "saldo_final": 2121.36
+      }
+    ],
+    "total": {
+      "saldo_anterior": 23655.16,
+      "creditos": 67466.39,
+      "debitos": 83062.7,
+      "saldo_final": 19958.85
+    }
   }
 }

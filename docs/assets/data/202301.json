@@ -21,7 +21,7 @@
     },
     {
       "categoria": "Outras Taxas",
-      "subcategoria": "Taxa de Água Compesa",
+      "subcategoria": "Taxa de Água",
       "descricao": "",
       "valor": 5788.48
     },
@@ -65,7 +65,7 @@
     },
     {
       "categoria": "Contratos",
-      "subcategoria": "Antena/Portões/Interfones/CFTV",
+      "subcategoria": "Antena-Portões-Interfones-CFTV",
       "descricao": "",
       "valor": 380.09
     },
@@ -107,13 +107,13 @@
     },
     {
       "categoria": "Contratos",
-      "subcategoria": "Serviços Prestados",
+      "subcategoria": "Serviços prestados",
       "descricao": "",
       "valor": 1200.0
     },
     {
       "categoria": "Conservação",
-      "subcategoria": "Antena/Portão/Interfone/CFTV - peças",
+      "subcategoria": "Antena-Portão-Interfone-CFTV - peças",
       "descricao": "",
       "valor": 601.0
     },
@@ -131,19 +131,19 @@
     },
     {
       "categoria": "Conservação",
-      "subcategoria": "Água Portaria",
+      "subcategoria": "Água portaria",
       "descricao": "",
       "valor": 36.0
     },
     {
       "categoria": "Conservação",
-      "subcategoria": "Material elétrico",
+      "subcategoria": "Material e serviços elétricos",
       "descricao": "",
       "valor": 129.6
     },
     {
       "categoria": "Conservação",
-      "subcategoria": "Despesas Diversas",
+      "subcategoria": "Despesas diversas",
       "descricao": "",
       "valor": 449.0
     },
@@ -173,24 +173,24 @@
     },
     {
       "categoria": "Administrativas",
-      "subcategoria": "Outras Despesas",
+      "subcategoria": "Outras despesas administrativas",
       "descricao": "",
       "valor": 21.0
     },
     {
-      "categoria": "Outras",
+      "categoria": "Outras Despesas",
       "subcategoria": "PIS-COFINS-CSLL",
       "descricao": "",
       "valor": 120.54
     },
     {
-      "categoria": "Outras",
+      "categoria": "Outras Despesas",
       "subcategoria": "IOF",
       "descricao": "",
       "valor": 46.75
     },
     {
-      "categoria": "Outras",
+      "categoria": "Outras Despesas",
       "subcategoria": "IRRF",
       "descricao": "",
       "valor": 31.54
@@ -206,5 +206,40 @@
     "total_receitas": 47016.94,
     "total_despesas": 47682.48,
     "saldo": -665.54
+  },
+  "resumo_financeiro": {
+    "periodo": {
+      "inicio": "2022-11-01",
+      "fim": "2022-11-30"
+    },
+    "contas": [
+      {
+        "nome": "Caixa - Fundo Fixo",
+        "saldo_anterior": 80.64,
+        "creditos": 0.0,
+        "debitos": 0.0,
+        "saldo_final": 80.64
+      },
+      {
+        "nome": "CEF 1031 / 00004005-0",
+        "saldo_anterior": 1689.64,
+        "creditos": 77831.33,
+        "debitos": 77604.19,
+        "saldo_final": 1916.78
+      },
+      {
+        "nome": "Aplicação",
+        "saldo_anterior": 21621.5,
+        "creditos": 30142.66,
+        "debitos": 31035.34,
+        "saldo_final": 20728.82
+      }
+    ],
+    "total": {
+      "saldo_anterior": 23391.78,
+      "creditos": 107973.99,
+      "debitos": 108639.53,
+      "saldo_final": 22726.24
+    }
   }
 }

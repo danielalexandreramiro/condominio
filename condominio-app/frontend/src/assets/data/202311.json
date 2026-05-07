@@ -21,7 +21,7 @@
     },
     {
       "categoria": "Outras Taxas",
-      "subcategoria": "Taxa de Água Compesa",
+      "subcategoria": "Taxa de Água",
       "descricao": "",
       "valor": 5996.04
     },
@@ -47,7 +47,7 @@
     },
     {
       "categoria": "Pessoal",
-      "subcategoria": "Folguista",
+      "subcategoria": "Dias trabalhados - folguista",
       "descricao": "",
       "valor": 1200.0
     },
@@ -65,7 +65,7 @@
     },
     {
       "categoria": "Contratos",
-      "subcategoria": "Antena/Portões/Interfones/CFTV",
+      "subcategoria": "Antena-Portões-Interfones-CFTV",
       "descricao": "",
       "valor": 380.09
     },
@@ -101,7 +101,7 @@
     },
     {
       "categoria": "Contratos",
-      "subcategoria": "Assessoria síndico Profissional",
+      "subcategoria": "Assessoria síndico profissional",
       "descricao": "",
       "valor": 1500.0
     },
@@ -113,7 +113,7 @@
     },
     {
       "categoria": "Conservação",
-      "subcategoria": "Antena/Portão/Interfone/CFTV - peças",
+      "subcategoria": "Antena-Portão-Interfone-CFTV - peças",
       "descricao": "",
       "valor": 730.84
     },
@@ -131,7 +131,7 @@
     },
     {
       "categoria": "Conservação",
-      "subcategoria": "Gerador Peças e Diesel",
+      "subcategoria": "Gerador - peças e óleo diesel",
       "descricao": "",
       "valor": 3498.33
     },
@@ -161,7 +161,7 @@
     },
     {
       "categoria": "Administrativas",
-      "subcategoria": "Xerox/Correios",
+      "subcategoria": "Xerox-Correios",
       "descricao": "",
       "valor": 106.65
     },
@@ -190,19 +190,19 @@
       "valor": 7800.0
     },
     {
-      "categoria": "Outras",
+      "categoria": "Outras Despesas",
       "subcategoria": "PIS-COFINS-CSLL",
       "descricao": "",
       "valor": 131.05
     },
     {
-      "categoria": "Outras",
+      "categoria": "Outras Despesas",
       "subcategoria": "IOF",
       "descricao": "",
       "valor": 10.37
     },
     {
-      "categoria": "Outras",
+      "categoria": "Outras Despesas",
       "subcategoria": "IRRF",
       "descricao": "",
       "valor": 6.4
@@ -218,5 +218,47 @@
     "total_receitas": 56022.84,
     "total_despesas": 58845.63,
     "saldo": -2822.79
+  },
+  "resumo_financeiro": {
+    "periodo": {
+      "inicio": "2023-09-01",
+      "fim": "2023-09-30"
+    },
+    "contas": [
+      {
+        "nome": "CEF 1031 / 00004005-0",
+        "saldo_anterior": 2127.6,
+        "creditos": 61548.51,
+        "debitos": 61342.86,
+        "saldo_final": 2333.25
+      },
+      {
+        "nome": "Aplicação",
+        "saldo_anterior": 9299.89,
+        "creditos": 38.33,
+        "debitos": 5679.56,
+        "saldo_final": 3658.66
+      },
+      {
+        "nome": "Conta Investimento CDB Flex",
+        "saldo_anterior": 12729.35,
+        "creditos": 2612.79,
+        "debitos": 0.0,
+        "saldo_final": 15342.14
+      },
+      {
+        "nome": "Caixa - Fundo Fixo",
+        "saldo_anterior": 58.14,
+        "creditos": 0.0,
+        "debitos": 0.0,
+        "saldo_final": 58.14
+      }
+    ],
+    "total": {
+      "saldo_anterior": 24214.98,
+      "creditos": 64199.63,
+      "debitos": 67022.42,
+      "saldo_final": 21392.19
+    }
   }
 }

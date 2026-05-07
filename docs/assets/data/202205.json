@@ -1,0 +1,250 @@
+{
+  "arquivo": "202205.xlsx",
+  "receitas": [
+    {
+      "categoria": "Taxa Condomínio",
+      "subcategoria": "Taxa Ordinária",
+      "descricao": "",
+      "valor": 48723.28
+    },
+    {
+      "categoria": "Taxa Condomínio",
+      "subcategoria": "Descontos",
+      "descricao": "",
+      "valor": -4439.97
+    },
+    {
+      "categoria": "Outras Taxas",
+      "subcategoria": "Taxa de Água",
+      "descricao": "",
+      "valor": 5879.17
+    },
+    {
+      "categoria": "Receitas Diversas",
+      "subcategoria": "Receitas Financeiras",
+      "descricao": "",
+      "valor": 40.58
+    },
+    {
+      "categoria": "Receitas Diversas",
+      "subcategoria": "Multas e Juros p/ atraso",
+      "descricao": "",
+      "valor": 40.57
+    }
+  ],
+  "despesas": [
+    {
+      "categoria": "Pessoal",
+      "subcategoria": "Terceirização de mão de obra",
+      "descricao": "",
+      "valor": 18683.0
+    },
+    {
+      "categoria": "Pessoal",
+      "subcategoria": "Dias trabalhados - folguista",
+      "descricao": "",
+      "valor": 1200.0
+    },
+    {
+      "categoria": "Consumo Predial",
+      "subcategoria": "Compesa",
+      "descricao": "",
+      "valor": 2380.33
+    },
+    {
+      "categoria": "Consumo Predial",
+      "subcategoria": "Gás coletivo",
+      "descricao": "",
+      "valor": 1827.2
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Antena-Portões-Interfones-CFTV",
+      "descricao": "",
+      "valor": 342.97
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Jardim",
+      "descricao": "",
+      "valor": 590.0
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Elevadores",
+      "descricao": "",
+      "valor": 2592.28
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Piscina",
+      "descricao": "",
+      "valor": 500.0
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Assessoria administrativa",
+      "descricao": "",
+      "valor": 1210.0
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Gerador mensalidade",
+      "descricao": "",
+      "valor": 200.0
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Leitura de consumo de água",
+      "descricao": "",
+      "valor": 616.55
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Serviços prestados",
+      "descricao": "",
+      "valor": 125.0
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Assessoria síndico profissional",
+      "descricao": "",
+      "valor": 1210.0
+    },
+    {
+      "categoria": "Conservação",
+      "subcategoria": "Bomba de água",
+      "descricao": "",
+      "valor": 850.0
+    },
+    {
+      "categoria": "Conservação",
+      "subcategoria": "Antena-Portão-Interfone-CFTV - peças",
+      "descricao": "",
+      "valor": 453.5
+    },
+    {
+      "categoria": "Conservação",
+      "subcategoria": "Material de limpeza",
+      "descricao": "",
+      "valor": 573.69
+    },
+    {
+      "categoria": "Conservação",
+      "subcategoria": "Piscina peças e material",
+      "descricao": "",
+      "valor": 1089.3
+    },
+    {
+      "categoria": "Conservação",
+      "subcategoria": "Água portaria",
+      "descricao": "",
+      "valor": 36.0
+    },
+    {
+      "categoria": "Conservação",
+      "subcategoria": "Extintor recarga",
+      "descricao": "",
+      "valor": 886.66
+    },
+    {
+      "categoria": "Conservação",
+      "subcategoria": "Material e serviços de pintura",
+      "descricao": "",
+      "valor": 64.7
+    },
+    {
+      "categoria": "Conservação",
+      "subcategoria": "Material e serviços elétricos",
+      "descricao": "",
+      "valor": 23.5
+    },
+    {
+      "categoria": "Administrativas",
+      "subcategoria": "Transporte - Taxi - Ônibus",
+      "descricao": "",
+      "valor": 158.5
+    },
+    {
+      "categoria": "Administrativas",
+      "subcategoria": "Descontos",
+      "descricao": "",
+      "valor": -5.0
+    },
+    {
+      "categoria": "Administrativas",
+      "subcategoria": "Cartório e custas judiciais",
+      "descricao": "",
+      "valor": 72.92
+    },
+    {
+      "categoria": "Administrativas",
+      "subcategoria": "Devolução taxa pago à maior",
+      "descricao": "",
+      "valor": 126.98
+    },
+    {
+      "categoria": "Administrativas",
+      "subcategoria": "Telefonia",
+      "descricao": "",
+      "valor": 147.46
+    },
+    {
+      "categoria": "Administrativas",
+      "subcategoria": "Seguro de vida",
+      "descricao": "",
+      "valor": 108.0
+    },
+    {
+      "categoria": "Obras/Reformas",
+      "subcategoria": "Locação equipamentos",
+      "descricao": "",
+      "valor": 200.0
+    },
+    {
+      "categoria": "Financeiras",
+      "subcategoria": "Tarifas de cobranças",
+      "descricao": "",
+      "valor": 527.1
+    },
+    {
+      "categoria": "Financeiras",
+      "subcategoria": "Juros-Multas",
+      "descricao": "",
+      "valor": 63.37
+    }
+  ],
+  "totais": {
+    "total_receitas": 50243.63,
+    "total_despesas": 36854.01,
+    "saldo": 13389.62
+  },
+  "resumo_financeiro": {
+    "periodo": {
+      "inicio": "2022-03-01",
+      "fim": "2022-03-31"
+    },
+    "contas": [
+      {
+        "nome": "Caixa - Fundo Fixo",
+        "saldo_anterior": 70.41,
+        "creditos": 0.0,
+        "debitos": 0.0,
+        "saldo_final": 70.41
+      },
+      {
+        "nome": "CEF 1031 / 00004005-0",
+        "saldo_anterior": 1366.0,
+        "creditos": 42212.03,
+        "debitos": 37284.91,
+        "saldo_final": 6295.12
+      }
+    ],
+    "total": {
+      "saldo_anterior": 1436.41,
+      "creditos": 42212.03,
+      "debitos": 37284.91,
+      "saldo_final": 6365.53
+    }
+  }
+}

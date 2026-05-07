@@ -21,7 +21,7 @@
     },
     {
       "categoria": "Outras Taxas",
-      "subcategoria": "Taxa de Água Compesa",
+      "subcategoria": "Taxa de Água",
       "descricao": "",
       "valor": 6373.62
     },
@@ -89,7 +89,7 @@
     },
     {
       "categoria": "Consumo Predial",
-      "subcategoria": "Energia solar",
+      "subcategoria": "Energia Solar",
       "descricao": "",
       "valor": 2578.28
     },
@@ -166,6 +166,12 @@
       "valor": 17500.0
     },
     {
+      "categoria": "Outras Despesas",
+      "subcategoria": "IRRF",
+      "descricao": "",
+      "valor": 2.16
+    },
+    {
       "categoria": "Financeiras",
       "subcategoria": "Tarifas de cobranças",
       "descricao": "",
@@ -182,17 +188,53 @@
       "subcategoria": "Cesta de serviço manut. de conta",
       "descricao": "",
       "valor": 125.0
-    },
-    {
-      "categoria": "Outras",
-      "subcategoria": "IRRF",
-      "descricao": "",
-      "valor": 2.16
     }
   ],
   "totais": {
     "total_receitas": 70355.71,
     "total_despesas": 71004.63,
     "saldo": -648.92
+  },
+  "resumo_financeiro": {
+    "periodo": {
+      "inicio": "2026-01-01",
+      "fim": "2026-01-31"
+    },
+    "contas": [
+      {
+        "nome": "Conta Digital PJBank",
+        "saldo_anterior": 0.0,
+        "creditos": 0.0,
+        "debitos": 0.0,
+        "saldo_final": 0.0
+      },
+      {
+        "nome": "CEF 1031 / 00004005-0",
+        "saldo_anterior": 349.46,
+        "creditos": 70759.8,
+        "debitos": 71002.47,
+        "saldo_final": 106.79
+      },
+      {
+        "nome": "Aplicação",
+        "saldo_anterior": 518.73,
+        "creditos": 1.48,
+        "debitos": 417.62,
+        "saldo_final": 102.59
+      },
+      {
+        "nome": "Conta Investimento CDB Flex",
+        "saldo_anterior": 1036.87,
+        "creditos": 9.89,
+        "debitos": 0.0,
+        "saldo_final": 1046.76
+      }
+    ],
+    "total": {
+      "saldo_anterior": 1905.06,
+      "creditos": 70771.17,
+      "debitos": 71420.09,
+      "saldo_final": 1256.14
+    }
   }
 }

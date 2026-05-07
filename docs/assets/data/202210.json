@@ -1,0 +1,287 @@
+{
+  "arquivo": "202210.xlsx",
+  "receitas": [
+    {
+      "categoria": "Taxa Condomínio",
+      "subcategoria": "Taxa Ordinária",
+      "descricao": "",
+      "valor": 47470.18
+    },
+    {
+      "categoria": "Taxa Condomínio",
+      "subcategoria": "Descontos",
+      "descricao": "",
+      "valor": -4634.79
+    },
+    {
+      "categoria": "Outras Taxas",
+      "subcategoria": "Taxa Salão de Festas",
+      "descricao": "",
+      "valor": 138.05
+    },
+    {
+      "categoria": "Outras Taxas",
+      "subcategoria": "Taxa de Água",
+      "descricao": "",
+      "valor": 5561.21
+    },
+    {
+      "categoria": "Receitas Diversas",
+      "subcategoria": "Multas e Juros p/ atraso",
+      "descricao": "",
+      "valor": 113.09
+    },
+    {
+      "categoria": "Acordo",
+      "subcategoria": "Acordo Extrajudicial",
+      "descricao": "",
+      "valor": 196.0
+    },
+    {
+      "categoria": "Receita de Aplicação",
+      "subcategoria": "Rendimento Financeiro",
+      "descricao": "",
+      "valor": 111.32
+    }
+  ],
+  "despesas": [
+    {
+      "categoria": "Pessoal",
+      "subcategoria": "Terceirização de mão de obra",
+      "descricao": "",
+      "valor": 19033.0
+    },
+    {
+      "categoria": "Pessoal",
+      "subcategoria": "Fardamentos",
+      "descricao": "",
+      "valor": 75.0
+    },
+    {
+      "categoria": "Pessoal",
+      "subcategoria": "Dias trabalhados - folguista",
+      "descricao": "",
+      "valor": 1200.0
+    },
+    {
+      "categoria": "Consumo Predial",
+      "subcategoria": "Compesa",
+      "descricao": "",
+      "valor": 12684.33
+    },
+    {
+      "categoria": "Consumo Predial",
+      "subcategoria": "Celpe",
+      "descricao": "",
+      "valor": 2826.15
+    },
+    {
+      "categoria": "Consumo Predial",
+      "subcategoria": "Gás coletivo",
+      "descricao": "",
+      "valor": 3143.64
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Antena-Portões-Interfones-CFTV",
+      "descricao": "",
+      "valor": 380.09
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Jardim",
+      "descricao": "",
+      "valor": 620.0
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Elevadores",
+      "descricao": "",
+      "valor": 2471.74
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Piscina",
+      "descricao": "",
+      "valor": 1050.0
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Assessoria administrativa",
+      "descricao": "",
+      "valor": 1210.0
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Gerador mensalidade",
+      "descricao": "",
+      "valor": 200.0
+    },
+    {
+      "categoria": "Contratos",
+      "subcategoria": "Leitura de consumo de água",
+      "descricao": "",
+      "valor": 616.55
+    },
+    {
+      "categoria": "Conservação",
+      "subcategoria": "Dedetização e sanatização",
+      "descricao": "",
+      "valor": 236.67
+    },
+    {
+      "categoria": "Conservação",
+      "subcategoria": "Antena-Portão-Interfone-CFTV - peças",
+      "descricao": "",
+      "valor": 92.0
+    },
+    {
+      "categoria": "Conservação",
+      "subcategoria": "Material de limpeza",
+      "descricao": "",
+      "valor": 305.99
+    },
+    {
+      "categoria": "Conservação",
+      "subcategoria": "Prestador de serviços",
+      "descricao": "",
+      "valor": 1350.0
+    },
+    {
+      "categoria": "Conservação",
+      "subcategoria": "Seguro predial",
+      "descricao": "",
+      "valor": 518.07
+    },
+    {
+      "categoria": "Conservação",
+      "subcategoria": "Água portaria",
+      "descricao": "",
+      "valor": 36.0
+    },
+    {
+      "categoria": "Conservação",
+      "subcategoria": "Gerador - peças e óleo diesel",
+      "descricao": "",
+      "valor": 243.0
+    },
+    {
+      "categoria": "Conservação",
+      "subcategoria": "Material e serviços elétricos",
+      "descricao": "",
+      "valor": 121.8
+    },
+    {
+      "categoria": "Conservação",
+      "subcategoria": "Serviços elétricos",
+      "descricao": "",
+      "valor": 250.0
+    },
+    {
+      "categoria": "Conservação",
+      "subcategoria": "Materiais diversos",
+      "descricao": "",
+      "valor": 149.7
+    },
+    {
+      "categoria": "Administrativas",
+      "subcategoria": "Material expediente",
+      "descricao": "",
+      "valor": 12.4
+    },
+    {
+      "categoria": "Administrativas",
+      "subcategoria": "Transporte - Taxi - Ônibus",
+      "descricao": "",
+      "valor": 70.0
+    },
+    {
+      "categoria": "Administrativas",
+      "subcategoria": "Descontos",
+      "descricao": "",
+      "valor": -0.01
+    },
+    {
+      "categoria": "Administrativas",
+      "subcategoria": "Telefonia",
+      "descricao": "",
+      "valor": 146.7
+    },
+    {
+      "categoria": "Administrativas",
+      "subcategoria": "Seguro de vida",
+      "descricao": "",
+      "valor": 124.75
+    },
+    {
+      "categoria": "Outras Despesas",
+      "subcategoria": "PIS-COFINS-CSLL",
+      "descricao": "",
+      "valor": 120.54
+    },
+    {
+      "categoria": "Outras Despesas",
+      "subcategoria": "IOF",
+      "descricao": "",
+      "valor": 34.21
+    },
+    {
+      "categoria": "Outras Despesas",
+      "subcategoria": "IRRF",
+      "descricao": "",
+      "valor": 17.73
+    },
+    {
+      "categoria": "Financeiras",
+      "subcategoria": "Tarifas de cobranças",
+      "descricao": "",
+      "valor": 440.0
+    },
+    {
+      "categoria": "Financeiras",
+      "subcategoria": "Juros-Multas",
+      "descricao": "",
+      "valor": 0.01
+    }
+  ],
+  "totais": {
+    "total_receitas": 48955.06,
+    "total_despesas": 49780.06,
+    "saldo": -825.0
+  },
+  "resumo_financeiro": {
+    "periodo": {
+      "inicio": "2022-08-01",
+      "fim": "2022-08-31"
+    },
+    "contas": [
+      {
+        "nome": "Caixa - Fundo Fixo",
+        "saldo_anterior": 80.64,
+        "creditos": 0.0,
+        "debitos": 0.0,
+        "saldo_final": 80.64
+      },
+      {
+        "nome": "CEF 1031 / 00004005-0",
+        "saldo_anterior": 2897.08,
+        "creditos": 66460.01,
+        "debitos": 49728.12,
+        "saldo_final": 19628.97
+      },
+      {
+        "nome": "Aplicação",
+        "saldo_anterior": 26252.27,
+        "creditos": 111.32,
+        "debitos": 17668.21,
+        "saldo_final": 8695.38
+      }
+    ],
+    "total": {
+      "saldo_anterior": 29229.99,
+      "creditos": 66571.33,
+      "debitos": 67396.33,
+      "saldo_final": 28404.99
+    }
+  }
+}

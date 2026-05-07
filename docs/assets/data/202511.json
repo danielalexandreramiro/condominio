@@ -15,7 +15,7 @@
     },
     {
       "categoria": "Outras Taxas",
-      "subcategoria": "Taxa de Água Compesa",
+      "subcategoria": "Taxa de Água",
       "descricao": "",
       "valor": 6423.55
     },
@@ -89,7 +89,7 @@
     },
     {
       "categoria": "Contratos",
-      "subcategoria": "Assessoria síndico Profissional",
+      "subcategoria": "Assessoria síndico profissional",
       "descricao": "",
       "valor": 3400.0
     },
@@ -154,21 +154,63 @@
       "valor": 143.89
     },
     {
+      "categoria": "Outras Despesas",
+      "subcategoria": "IRRF",
+      "descricao": "",
+      "valor": 6.17
+    },
+    {
       "categoria": "Financeiras",
       "subcategoria": "Tarifas de cobranças",
       "descricao": "",
       "valor": 605.37
-    },
-    {
-      "categoria": "Outras",
-      "subcategoria": "IRRF",
-      "descricao": "",
-      "valor": 6.17
     }
   ],
   "totais": {
     "total_receitas": 53902.07,
     "total_despesas": 55711.04,
     "saldo": -1808.97
+  },
+  "resumo_financeiro": {
+    "periodo": {
+      "inicio": "2025-09-01",
+      "fim": "2025-09-30"
+    },
+    "contas": [
+      {
+        "nome": "Conta Digital PJBank",
+        "saldo_anterior": 0.0,
+        "creditos": 0.0,
+        "debitos": 0.0,
+        "saldo_final": 0.0
+      },
+      {
+        "nome": "CEF 1031 / 00004005-0",
+        "saldo_anterior": 2217.46,
+        "creditos": 54477.0,
+        "debitos": 55704.87,
+        "saldo_final": 989.59
+      },
+      {
+        "nome": "Aplicação",
+        "saldo_anterior": 3911.27,
+        "creditos": 36.3,
+        "debitos": 627.32,
+        "saldo_final": 3320.25
+      },
+      {
+        "nome": "Conta Investimento CDB Flex",
+        "saldo_anterior": 997.43,
+        "creditos": 9.92,
+        "debitos": 0.0,
+        "saldo_final": 1007.35
+      }
+    ],
+    "total": {
+      "saldo_anterior": 7126.16,
+      "creditos": 54523.22,
+      "debitos": 56332.19,
+      "saldo_final": 5317.19
+    }
   }
 }
