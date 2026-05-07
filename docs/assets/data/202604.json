@@ -27,7 +27,7 @@
     },
     {
       "categoria": "Outras Taxas",
-      "subcategoria": "Taxa de Água Compesa",
+      "subcategoria": "Taxa de Água",
       "descricao": "",
       "valor": 5652.96
     },
@@ -83,7 +83,7 @@
     },
     {
       "categoria": "Consumo Predial",
-      "subcategoria": "Energia solar",
+      "subcategoria": "Energia Solar",
       "descricao": "",
       "valor": 2332.21
     },
@@ -131,7 +131,7 @@
     },
     {
       "categoria": "Contratos",
-      "subcategoria": "Assessoria síndico Profissional",
+      "subcategoria": "Assessoria síndico profissional",
       "descricao": "",
       "valor": 2700.0
     },
@@ -230,5 +230,47 @@
     "total_receitas": 61399.58,
     "total_despesas": 60925.46,
     "saldo": 474.12
+  },
+  "resumo_financeiro": {
+    "periodo": {
+      "inicio": "2026-02-01",
+      "fim": "2026-02-28"
+    },
+    "contas": [
+      {
+        "nome": "Conta Digital PJBank",
+        "saldo_anterior": 0.0,
+        "creditos": 0.0,
+        "debitos": 0.0,
+        "saldo_final": 0.0
+      },
+      {
+        "nome": "CEF 1031 / 00004005-0",
+        "saldo_anterior": 106.79,
+        "creditos": 61390.09,
+        "debitos": 60925.46,
+        "saldo_final": 571.42
+      },
+      {
+        "nome": "Aplicação",
+        "saldo_anterior": 102.59,
+        "creditos": 0.92,
+        "debitos": 0.0,
+        "saldo_final": 103.51
+      },
+      {
+        "nome": "Conta Investimento CDB Flex",
+        "saldo_anterior": 1046.76,
+        "creditos": 8.57,
+        "debitos": 0.0,
+        "saldo_final": 1055.33
+      }
+    ],
+    "total": {
+      "saldo_anterior": 1256.14,
+      "creditos": 61399.58,
+      "debitos": 60925.46,
+      "saldo_final": 1730.26
+    }
   }
 }

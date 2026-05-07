@@ -48,6 +48,11 @@ export class DashboardComponent implements OnInit {
       });
   }
 
+  getDespesasFinanceiras(): any[] {
+    if (!this.balancete) return [];
+    return this.balancete.despesas.filter(d => d.categoria === 'Financeiras');
+  }
+
   formatarMes(valor: string): string {
     const ano = valor.substring(0, 4);
     const mes = valor.substring(4, 6);

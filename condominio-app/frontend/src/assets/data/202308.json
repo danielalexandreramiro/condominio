@@ -21,7 +21,7 @@
     },
     {
       "categoria": "Outras Taxas",
-      "subcategoria": "Taxa de Água Compesa",
+      "subcategoria": "Taxa de Água",
       "descricao": "",
       "valor": 5099.99
     },
@@ -47,7 +47,7 @@
     },
     {
       "categoria": "Pessoal",
-      "subcategoria": "Folguista",
+      "subcategoria": "Dias trabalhados - folguista",
       "descricao": "",
       "valor": 2800.0
     },
@@ -71,7 +71,7 @@
     },
     {
       "categoria": "Contratos",
-      "subcategoria": "Antena/Portões/Interfones/CFTV",
+      "subcategoria": "Antena-Portões-Interfones-CFTV",
       "descricao": "",
       "valor": 380.09
     },
@@ -107,13 +107,13 @@
     },
     {
       "categoria": "Contratos",
-      "subcategoria": "Assessoria síndico Profissional",
+      "subcategoria": "Assessoria síndico profissional",
       "descricao": "",
       "valor": 1320.0
     },
     {
       "categoria": "Conservação",
-      "subcategoria": "Antena/Portão/Interfone/CFTV - peças",
+      "subcategoria": "Antena-Portão-Interfone-CFTV - peças",
       "descricao": "",
       "valor": 877.49
     },
@@ -161,7 +161,7 @@
     },
     {
       "categoria": "Administrativas",
-      "subcategoria": "Transporte",
+      "subcategoria": "Transporte - Taxi - Ônibus",
       "descricao": "",
       "valor": 100.0
     },
@@ -185,24 +185,24 @@
     },
     {
       "categoria": "Obras/Reformas",
-      "subcategoria": "Móveis e Utensílios",
+      "subcategoria": "Móveis e utensílios",
       "descricao": "",
       "valor": 311.65
     },
     {
-      "categoria": "Outras",
+      "categoria": "Outras Despesas",
       "subcategoria": "PIS-COFINS-CSLL",
       "descricao": "",
       "valor": 120.54
     },
     {
-      "categoria": "Outras",
+      "categoria": "Outras Despesas",
       "subcategoria": "IOF",
       "descricao": "",
       "valor": 30.71
     },
     {
-      "categoria": "Outras",
+      "categoria": "Outras Despesas",
       "subcategoria": "IRRF",
       "descricao": "",
       "valor": 26.08
@@ -218,5 +218,47 @@
     "total_receitas": 49475.51,
     "total_despesas": 51613.52,
     "saldo": -2138.01
+  },
+  "resumo_financeiro": {
+    "periodo": {
+      "inicio": "2023-06-01",
+      "fim": "2023-06-30"
+    },
+    "contas": [
+      {
+        "nome": "CEF 1031 / 00004005-0",
+        "saldo_anterior": 2997.17,
+        "creditos": 73101.56,
+        "debitos": 76098.73,
+        "saldo_final": 0.0
+      },
+      {
+        "nome": "Aplicação",
+        "saldo_anterior": 19937.55,
+        "creditos": 17082.87,
+        "debitos": 23765.93,
+        "saldo_final": 13254.49
+      },
+      {
+        "nome": "Conta Investimento CDB Flex",
+        "saldo_anterior": 0.0,
+        "creditos": 7546.75,
+        "debitos": 4.53,
+        "saldo_final": 7542.22
+      },
+      {
+        "nome": "Caixa - Fundo Fixo",
+        "saldo_anterior": 58.14,
+        "creditos": 0.0,
+        "debitos": 0.0,
+        "saldo_final": 58.14
+      }
+    ],
+    "total": {
+      "saldo_anterior": 22992.86,
+      "creditos": 97731.18,
+      "debitos": 99869.19,
+      "saldo_final": 20854.85
+    }
   }
 }

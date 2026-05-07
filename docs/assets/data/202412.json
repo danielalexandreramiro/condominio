@@ -27,7 +27,7 @@
     },
     {
       "categoria": "Outras Taxas",
-      "subcategoria": "Taxa de Água Compesa",
+      "subcategoria": "Taxa de Água",
       "descricao": "",
       "valor": 6054.53
     },
@@ -65,7 +65,7 @@
     },
     {
       "categoria": "Pessoal",
-      "subcategoria": "Vale transporte",
+      "subcategoria": "Vale Transporte",
       "descricao": "",
       "valor": 123.0
     },
@@ -107,7 +107,7 @@
     },
     {
       "categoria": "Consumo Predial",
-      "subcategoria": "Energia solar",
+      "subcategoria": "Energia Solar",
       "descricao": "",
       "valor": 1324.3
     },
@@ -161,7 +161,7 @@
     },
     {
       "categoria": "Contratos",
-      "subcategoria": "Assessoria síndico Profissional",
+      "subcategoria": "Assessoria síndico profissional",
       "descricao": "",
       "valor": 3500.0
     },
@@ -238,27 +238,69 @@
       "valor": 1720.0
     },
     {
-      "categoria": "Financeiras",
-      "subcategoria": "Tarifas de cobranças",
-      "descricao": "",
-      "valor": 618.62
-    },
-    {
-      "categoria": "Outras",
+      "categoria": "Outras Despesas",
       "subcategoria": "PIS-COFINS-CSLL",
       "descricao": "",
       "valor": 120.54
     },
     {
-      "categoria": "Outras",
+      "categoria": "Outras Despesas",
       "subcategoria": "IRRF",
       "descricao": "",
       "valor": 14.0
+    },
+    {
+      "categoria": "Financeiras",
+      "subcategoria": "Tarifas de cobranças",
+      "descricao": "",
+      "valor": 618.62
     }
   ],
   "totais": {
     "total_receitas": 53171.34,
     "total_despesas": 57513.68,
     "saldo": -4342.34
+  },
+  "resumo_financeiro": {
+    "periodo": {
+      "inicio": "2024-10-01",
+      "fim": "2024-10-31"
+    },
+    "contas": [
+      {
+        "nome": "CEF 1031 / 00004005-0",
+        "saldo_anterior": 0.0,
+        "creditos": 72811.75,
+        "debitos": 57499.68,
+        "saldo_final": 15312.07
+      },
+      {
+        "nome": "Aplicação",
+        "saldo_anterior": 21938.94,
+        "creditos": 0.0,
+        "debitos": 19661.01,
+        "saldo_final": 2277.93
+      },
+      {
+        "nome": "Conta Investimento CDB Flex",
+        "saldo_anterior": 907.56,
+        "creditos": 6.6,
+        "debitos": 0.0,
+        "saldo_final": 914.16
+      },
+      {
+        "nome": "Caixa - Fundo Fixo",
+        "saldo_anterior": 58.14,
+        "creditos": 0.0,
+        "debitos": 0.0,
+        "saldo_final": 58.14
+      }
+    ],
+    "total": {
+      "saldo_anterior": 22904.64,
+      "creditos": 72818.35,
+      "debitos": 77160.69,
+      "saldo_final": 18562.3
+    }
   }
 }
