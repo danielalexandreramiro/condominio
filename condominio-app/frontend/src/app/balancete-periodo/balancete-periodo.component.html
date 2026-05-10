@@ -57,14 +57,107 @@
     </div>
   </div>
 
+
+
+<!-- RESUMO DO PERÍODO -->
+<div class="row mb-4 g-3">
+
+  <div class="col-12 col-md-4">
+
+    <div class="card shadow-sm border-0 h-100">
+
+      <div class="card-body text-center bg-success text-white rounded">
+
+        <h5 class="fw-bold mb-2">
+          Receitas
+        </h5>
+
+        <h3 class="fw-bold mb-0">
+          {{ totalReceitasPeriodo | currency:'BRL' }}
+        </h3>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="col-12 col-md-4">
+
+    <div class="card shadow-sm border-0 h-100">
+
+      <div class="card-body text-center bg-danger text-white rounded">
+
+        <h5 class="fw-bold mb-2">
+          Despesas
+        </h5>
+
+        <h3 class="fw-bold mb-0">
+          {{ totalDespesasPeriodo | currency:'BRL' }}
+        </h3>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="col-12 col-md-4">
+
+    <div class="card shadow-sm border-0 h-100">
+
+     <div class="card-body text-center rounded card-saldo"
+     [ngClass]="{
+       'bg-success': saldoPeriodo >= 0,
+       'bg-danger': saldoPeriodo < 0
+     }">
+
+        <h5 class="fw-bold mb-2">
+          Saldo
+        </h5>
+
+        <h3 class="fw-bold mb-0">
+          {{ saldoPeriodo | currency:'BRL' }}
+        </h3>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
   <!-- RECEITAS -->
   <div class="card shadow-sm mb-4">
 
-    <div class="card-header bg-success text-white fw-bold">
-      Receitas
-    </div>
+   <div class="card-header bg-success text-white fw-bold d-flex justify-content-between align-items-center">
 
-    <div class="table-responsive">
+  <span>Receitas</span>
+
+  <button class="btn btn-sm btn-light"
+          (click)="mostrarReceitas = !mostrarReceitas">
+
+    {{ mostrarReceitas ? '−' : '+' }}
+
+  </button>
+
+</div>
+
+    <div class="table-responsive"
+     *ngIf="mostrarReceitas">
 
       <table class="table table-striped table-hover align-middle mb-0">
 
@@ -133,11 +226,21 @@
   <!-- DESPESAS -->
   <div class="card shadow-sm mb-4">
 
-    <div class="card-header bg-danger text-white fw-bold">
-      Despesas
-    </div>
+    <div class="card-header bg-danger text-white fw-bold d-flex justify-content-between align-items-center">
 
-    <div class="table-responsive">
+  <span>Despesas</span>
+
+  <button class="btn btn-sm btn-light"
+          (click)="mostrarDespesas = !mostrarDespesas">
+
+    {{ mostrarDespesas ? '−' : '+' }}
+
+  </button>
+
+</div>
+
+    <div class="table-responsive"
+     *ngIf="mostrarDespesas">
 
       <table class="table table-striped table-hover align-middle mb-0">
 
@@ -190,6 +293,101 @@
     </div>
 
   </div>
+
+
+<!-- RESUMO FINANCEIRO -->
+ 
+<div class="row mb-4 g-3">
+
+  <div class="col-12 col-md-3">
+
+    <div class="card shadow-sm border-0 h-100">
+
+      <div class="card-body text-center text-white rounded"
+     [ngClass]="{
+       'bg-success': totalSaldoAnterior >= 0,
+       'bg-danger': totalSaldoAnterior < 0
+     }">
+
+        <h6 class="fw-bold mb-2">
+          Saldo Anterior
+        </h6>
+
+        <h4 class="fw-bold mb-0">
+          {{ totalSaldoAnterior | currency:'BRL' }}
+        </h4>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="col-12 col-md-3">
+
+    <div class="card shadow-sm border-0 h-100">
+
+      <div class="card-body text-center bg-primary text-white rounded">
+
+        <h6 class="fw-bold mb-2">
+          Créditos
+        </h6>
+
+        <h4 class="fw-bold mb-0">
+          {{ totalCreditos | currency:'BRL' }}
+        </h4>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="col-12 col-md-3">
+
+    <div class="card shadow-sm border-0 h-100">
+
+      <div class="card-body text-center bg-danger text-white rounded">
+
+        <h6 class="fw-bold mb-2">
+          Débitos
+        </h6>
+
+        <h4 class="fw-bold mb-0">
+          {{ totalDebitos | currency:'BRL' }}
+        </h4>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="col-12 col-md-3">
+
+    <div class="card shadow-sm border-0 h-100">
+
+      <div class="card-body text-center rounded card-saldo"
+           [ngClass]="{
+             'bg-success': totalSaldoFinal >= 0,
+             'bg-danger': totalSaldoFinal < 0
+           }">
+
+        <h6 class="fw-bold mb-2">
+          Saldo Final
+        </h6>
+
+        <h4 class="fw-bold mb-0">
+          {{ totalSaldoFinal | currency:'BRL' }}
+        </h4>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
 
   <!-- DESPESAS FINANCEIRAS POR MÊS -->
   <div class="card shadow-sm mb-4"
@@ -251,11 +449,21 @@
   <div class="card shadow-sm mb-4"
        *ngIf="mesesSelecionados.length > 0">
 
-    <div class="card-header bg-info text-white fw-bold">
-      Saldo das Contas Bancárias
-    </div>
+   <div class="card-header bg-info text-white fw-bold d-flex justify-content-between align-items-center">
 
-    <div class="table-responsive">
+  <span>Saldo das Contas Bancárias</span>
+
+  <button class="btn btn-sm btn-light"
+          (click)="mostrarSaldoContas = !mostrarSaldoContas">
+
+    {{ mostrarSaldoContas ? '−' : '+' }}
+
+  </button>
+
+</div>
+
+   <div class="table-responsive"
+     *ngIf="mostrarSaldoContas">
 
       <table class="table table-striped table-hover align-middle mb-0">
 
@@ -332,11 +540,21 @@
 <div class="card shadow-sm mb-4"
      *ngIf="mesesSelecionados.length > 0">
 
-  <div class="card-header bg-primary text-white fw-bold">
-    Evolução do Saldo das Contas
-  </div>
+  <div class="card-header bg-primary text-white fw-bold d-flex justify-content-between align-items-center">
 
-  <div class="card-body">
+  <span>Evolução do Saldo das Contas</span>
+
+  <button class="btn btn-sm btn-light"
+          (click)="mostrarGraficoSaldo = !mostrarGraficoSaldo">
+
+    {{ mostrarGraficoSaldo ? '−' : '+' }}
+
+  </button>
+
+</div>
+
+<div class="card-body"
+     [hidden]="!mostrarGraficoSaldo">
 
     <canvas id="graficoSaldoContas"></canvas>
 
@@ -347,11 +565,21 @@
   <!-- GRÁFICOS -->
   <div class="card shadow-sm">
 
-    <div class="card-header bg-dark text-white fw-bold">
-      Análise Gráfica
-    </div>
+    <div class="card-header bg-dark text-white fw-bold d-flex justify-content-between align-items-center">
 
-    <div class="card-body">
+  <span>Análise Gráfica</span>
+
+  <button class="btn btn-sm btn-light"
+          (click)="mostrarAnaliseGrafica = !mostrarAnaliseGrafica">
+
+    {{ mostrarAnaliseGrafica ? '−' : '+' }}
+
+  </button>
+
+</div>
+
+    <div class="card-body"
+     [hidden]="!mostrarAnaliseGrafica">
 
       <app-balancete-graficos
         [receitas]="receitasFiltradas"

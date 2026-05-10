@@ -45,6 +45,22 @@ export class BalancetePeriodoComponent implements OnInit {
 
   graficoSaldoContas: any;
 
+  totalReceitasPeriodo: number = 0;
+  totalDespesasPeriodo: number = 0;
+  saldoPeriodo: number = 0;
+
+  totalSaldoAnterior: number = 0;
+  totalCreditos: number = 0;
+  totalDebitos: number = 0;
+  totalSaldoFinal: number = 0;
+
+  mostrarReceitas = false;
+  mostrarDespesas = false;
+  mostrarSaldoContas = false;
+  mostrarGraficoSaldo = false;
+  mostrarAnaliseGrafica = false;
+  
+
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
@@ -143,6 +159,9 @@ export class BalancetePeriodoComponent implements OnInit {
     this.montarSaldosContasAgrupados();
 
     this.criarGraficoSaldoContas();
+
+    this.calcularResumoPeriodo();
+    this.calcularResumoFinanceiroPeriodo();
   }
 
   montarSaldosContasAgrupados() {
@@ -192,69 +211,91 @@ export class BalancetePeriodoComponent implements OnInit {
       );
 
     const datasets =
-      this.saldosContasAgrupados.map(conta => {
+      this.saldosContasAgrupados.map((conta, index) => {
 
+        const cor = this.getColor(index);
         return {
 
-          label: conta.nome,
+        label: conta.nome,
 
-          data: this.mesesSelecionados.map(m =>
-            conta.valores[m] || 0
-          ),
+        data: this.mesesSelecionados.map(m =>
+          conta.valores[m] || 0
+        ),
 
-          tension: 0.3
+        borderColor: cor,
+        backgroundColor: cor,
 
-        };
+        borderWidth: 3,
+        pointRadius: 4,
+        pointHoverRadius: 6,
+
+        fill: false,
+
+        tension: 0.3
+
+      };
 
       });
 
     this.graficoSaldoContas = new Chart(
       'graficoSaldoContas',
       {
-
         type: 'line',
-
         data: {
           labels,
           datasets
         },
-
         options: {
-
           responsive: true,
-
-          plugins: {
-
-            legend: {
-              position: 'bottom'
-            }
-
+         plugins: {
+          legend: {
+            position: 'bottom'
           },
+          tooltip: {
+            mode: 'nearest',
+            intersect: false,
+            callbacks: {
 
-          scales: {
+              label: function(context: any) { 
 
-            y: {
+                const valor = context.parsed.y || 0;
 
-              ticks: {
-
-                callback: function(value: any) {
-
-                  return 'R$ ' +
-                    Number(value).toLocaleString('pt-BR');
-
-                }
-
+                return `${context.dataset.label}: ${
+                  valor.toLocaleString('pt-BR', {
+                    style: 'currency',
+                    currency: 'BRL'
+                  })
+                }`;
               }
-
             }
-
           }
 
-        }
+      },
+     scales: {
+
+  y: {
+
+    grid: {
+      color: '#b0b0b0'
+    },
+
+    ticks: {
+
+      callback: function(value: any) {
+
+        return 'R$ ' +
+          Number(value).toLocaleString('pt-BR');
 
       }
-    );
 
+    }
+
+  }
+
+}
+        }
+      }
+    );
   }
 
   gerarSubcategorias() {
@@ -298,6 +339,17 @@ export class BalancetePeriodoComponent implements OnInit {
     this.mesesSelecionados = [];
     this.receitasFiltradas = [];
     this.despesasFiltradas = [];
+
+      // LIMPAR CARDS
+    this.totalReceitasPeriodo = 0;
+    this.totalDespesasPeriodo = 0;
+    this.saldoPeriodo = 0;
+
+
+    this.totalSaldoAnterior = 0;
+    this.totalCreditos = 0;
+    this.totalDebitos = 0;
+    this.totalSaldoFinal = 0;
   }
 
   selecionarTodosMeses() {
@@ -317,5 +369,108 @@ export class BalancetePeriodoComponent implements OnInit {
 
     return `${nomes[mes]}/${ano}`;
   }
+
+
+  calcularResumoPeriodo() {
+
+    this.totalReceitasPeriodo = 0;
+    this.totalDespesasPeriodo = 0;
+    this.saldoPeriodo = 0;
+
+    for (const mes of this.mesesSelecionados) {
+
+      if (!this.totais[mes]) {
+        continue;
+      }
+
+      this.totalReceitasPeriodo +=
+        this.totais[mes].total_receitas || 0;
+
+      this.totalDespesasPeriodo +=
+        this.totais[mes].total_despesas || 0;
+
+      this.saldoPeriodo +=
+        this.totais[mes].saldo || 0;
+
+    }
+
+  }
+
+
+calcularResumoFinanceiroPeriodo() {
+
+  this.totalSaldoAnterior = 0;
+  this.totalCreditos = 0;
+  this.totalDebitos = 0;
+  this.totalSaldoFinal = 0;
+
+  if (!this.mesesSelecionados.length) {
+    return;
+  }
+
+  // ordenar meses
+  const mesesOrdenados = [...this.mesesSelecionados].sort();
+
+  // PRIMEIRO mês selecionado
+  const primeiroMes = mesesOrdenados[0];
+
+  const resumoInicial =
+    this.resumosFinanceiros?.[primeiroMes]?.total;
+
+  // saldo inicial = somente do primeiro mês
+  this.totalSaldoAnterior =
+    resumoInicial?.saldo_anterior || 0;
+
+  // soma créditos e débitos do período
+  for (const mes of mesesOrdenados) {
+
+    const resumo = this.resumosFinanceiros?.[mes]?.total;
+
+    if (!resumo) {
+      continue;
+    }
+
+    this.totalCreditos += resumo.creditos || 0;
+    this.totalDebitos += resumo.debitos || 0;
+
+  }
+
+  // saldo final acumulado do período
+  this.totalSaldoFinal =
+    this.totalSaldoAnterior
+    + this.totalCreditos
+    - this.totalDebitos;
+
+}
+getColor(index: number): string {
+
+  const cores = [
+
+    '#0d6efd', // azul
+    '#198754', // verde
+    '#dc3545', // vermelho
+    '#ffc107', // amarelo
+    '#6f42c1', // roxo
+    '#20c997', // verde água
+    '#fd7e14', // laranja
+    '#0dcaf0', // ciano
+    '#6610f2', // violeta
+    '#ff5722', // laranja forte
+    '#795548', // marrom
+    '#e91e63', // rosa forte
+    '#009688', // teal
+    '#3f51b5', // índigo
+    '#8bc34a', // verde limão
+    '#ff9800', // laranja
+    '#9c27b0', // púrpura
+    '#607d8b', // azul acinzentado
+    '#c2185b', // pink escuro
+    '#4caf50'  // verde forte
+
+  ];
+
+  return cores[index % cores.length];
+
+}
 
 }

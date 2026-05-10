@@ -61,23 +61,64 @@ export class BalanceteGraficosComponent implements OnChanges {
               boxWidth: 12
             }
           },
-          tooltip: {
-            mode: 'index',
-            intersect: false
-          }
+        tooltip: {
+
+  mode: 'nearest',
+  intersect: false,
+
+  callbacks: {
+
+    label: function(context: any) {
+
+      const valor = context.parsed.y || 0;
+
+      return `${context.dataset.label}: ${
+        valor.toLocaleString('pt-BR', {
+          style: 'currency',
+          currency: 'BRL'
+        })
+      }`;
+
+    }
+
+  }
+
+}
         }
       }
     };
   }
 
-  getColor(index: number): string {
-    const cores = [
-      '#0d6efd', '#198754', '#dc3545', '#ffc107',
-      '#6f42c1', '#20c997', '#fd7e14', '#0dcaf0',
-      '#6610f2', '#adb5bd'
-    ];
-    return cores[index % cores.length];
-  }
+getColor(index: number): string {
+
+  const cores = [
+
+    '#0d6efd', // azul
+    '#198754', // verde
+    '#dc3545', // vermelho
+    '#ffc107', // amarelo
+    '#6f42c1', // roxo
+    '#20c997', // verde água
+    '#fd7e14', // laranja
+    '#0dcaf0', // ciano
+    '#6610f2', // violeta
+    '#ff5722', // laranja forte
+    '#795548', // marrom
+    '#e91e63', // rosa forte
+    '#009688', // teal
+    '#3f51b5', // índigo
+    '#8bc34a', // verde limão
+    '#ff9800', // laranja
+    '#9c27b0', // púrpura
+    '#607d8b', // azul acinzentado
+    '#c2185b', // pink escuro
+    '#4caf50'  // verde forte
+
+  ];
+
+  return cores[index % cores.length];
+
+}
 
   formatarMesCurto(valor: string): string {
     const ano = valor.substring(2, 4);
