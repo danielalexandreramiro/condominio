@@ -1,4 +1,7 @@
-/* FILTRO */
+/* =========================
+   FILTRO
+========================= */
+
 .filtro {
   margin-bottom: 20px;
 }
@@ -9,7 +12,7 @@ select {
 }
 
 /* =========================
-   CARDS (CORRIGIDO MOBILE)
+   CARDS
 ========================= */
 
 .cards {
@@ -27,8 +30,6 @@ select {
   font-weight: bold;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-
-  /* 🔥 ESSENCIAL para não quebrar layout */
   min-width: 0;
 }
 
@@ -42,29 +43,11 @@ select {
 .card p {
   font-size: 18px;
   font-weight: bold;
-
-  /* 🔥 evita quebra feia do número */
   word-break: break-word;
 }
 
-/* 📱 MOBILE */
-@media (max-width: 768px) {
-
-  .cards {
-    flex-direction: column;
-  }
-
-  .card {
-    width: 100%;
-  }
-
-  .card p {
-    font-size: 17px;
-  }
-}
-
 /* =========================
-   CORES (MANTIDAS)
+   CORES
 ========================= */
 
 .receita {
@@ -88,9 +71,17 @@ select {
 }
 
 /* =========================
-   TABELAS (INALTERADO)
+   TABELAS
 ========================= */
 
+/* scroll horizontal */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* tabela padrão */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -100,19 +91,35 @@ table {
   overflow: hidden;
 }
 
-th, td {
+/* células */
+th,
+td {
   padding: 10px;
   border: 1px solid #ddd;
 }
 
+/* cabeçalho */
 th {
   background: #3498db;
   color: white;
   text-align: left;
 }
 
+/* zebra */
 tr:nth-child(even) {
   background: #f9f9f9;
+}
+
+/* tabelas simples */
+td:first-child,
+th:first-child {
+  width: 70%;
+}
+
+td:last-child,
+th:last-child {
+  width: 30%;
+  white-space: nowrap;
 }
 
 /* =========================
@@ -126,4 +133,97 @@ h2 {
 h3 {
   margin-top: 20px;
   margin-bottom: 10px;
+}
+
+/* =========================
+   GRÁFICOS
+========================= */
+
+canvas {
+  width: 100% !important;
+  max-width: 100%;
+  height: auto !important;
+}
+
+/* =========================
+   RESPONSIVO CELULAR
+========================= */
+
+@media (max-width: 768px) {
+
+  /* container */
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  /* cards vertical */
+  .cards {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .card {
+    width: 100%;
+    padding: 14px;
+  }
+
+  .card h4 {
+    font-size: 14px;
+  }
+
+  .card p {
+    font-size: 17px;
+  }
+
+  /* títulos */
+  h2 {
+    font-size: 1.9rem;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  /* tabelas */
+  .table-responsive {
+    overflow-x: auto;
+    border-radius: 8px;
+  }
+
+  /* tabelas comuns */
+  .table-responsive table {
+    min-width: 100%;
+  }
+
+  /* apenas resumo financeiro */
+  .table-financeiro table {
+    min-width: 700px;
+  }
+
+  /* células */
+  th,
+  td {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  /* tabelas simples */
+  td:first-child,
+  th:first-child {
+    width: 70%;
+  }
+
+  td:last-child,
+  th:last-child {
+    width: 30%;
+    white-space: nowrap;
+  }
+
+  /* gráfico */
+  canvas {
+    width: 100% !important;
+    height: auto !important;
+  }
 }
