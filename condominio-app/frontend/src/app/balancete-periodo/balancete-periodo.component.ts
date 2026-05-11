@@ -88,6 +88,9 @@ export class BalancetePeriodoComponent implements OnInit {
   }
 
   carregar() {
+
+     this.filtroTexto = '';
+     
     const requests = this.mesesSelecionados.map(m =>
       this.http.get<any>(`assets/data/${m}.json`).toPromise()
     );
@@ -330,7 +333,9 @@ export class BalancetePeriodoComponent implements OnInit {
     }
 
     this.receitasFiltradas = receitas;
-    this.despesasFiltradas = despesas;
+this.despesasFiltradas = despesas;
+
+this.calcularResumoPeriodo();
   }
 
   limparFiltro() {
@@ -352,9 +357,14 @@ export class BalancetePeriodoComponent implements OnInit {
     this.totalSaldoFinal = 0;
   }
 
-  selecionarTodosMeses() {
-    this.mesesSelecionados = [...this.mesesDisponiveis];
-  }
+ selecionarTodosMeses() {
+
+  this.filtroTexto = '';
+
+  this.mesesSelecionados = [...this.mesesDisponiveis];
+
+  this.carregar();
+}
 
   formatarMesCurto(valor: string): string {
     const ano = valor.substring(2, 4);
@@ -373,9 +383,12 @@ export class BalancetePeriodoComponent implements OnInit {
 
   calcularResumoPeriodo() {
 
-    this.totalReceitasPeriodo = 0;
-    this.totalDespesasPeriodo = 0;
-    this.saldoPeriodo = 0;
+  this.totalReceitasPeriodo = 0;
+  this.totalDespesasPeriodo = 0;
+  this.saldoPeriodo = 0;
+
+  // SEM FILTRO → comportamento atual
+  if (!this.filtroTexto || this.filtroTexto.trim() === '') {
 
     for (const mes of this.mesesSelecionados) {
 
@@ -394,7 +407,37 @@ export class BalancetePeriodoComponent implements OnInit {
 
     }
 
+    return;
   }
+
+  // COM FILTRO → soma somente itens filtrados
+
+  for (const linha of this.receitasFiltradas) {
+
+    for (const mes of this.mesesSelecionados) {
+
+      this.totalReceitasPeriodo +=
+        linha.valores[mes] || 0;
+
+    }
+
+  }
+
+  for (const linha of this.despesasFiltradas) {
+
+    for (const mes of this.mesesSelecionados) {
+
+      this.totalDespesasPeriodo +=
+        linha.valores[mes] || 0;
+
+    }
+
+  }
+
+  this.saldoPeriodo =
+    this.totalReceitasPeriodo -
+    this.totalDespesasPeriodo;
+}
 
 
 calcularResumoFinanceiroPeriodo() {
@@ -472,5 +515,56 @@ getColor(index: number): string {
   return cores[index % cores.length];
 
 }
+filtrarAno(ano: string) {
 
+  this.filtroTexto = '';
+
+  this.mesesSelecionados =
+    this.mesesDisponiveis.filter(m =>
+      m.startsWith(ano)
+    );
+
+  this.carregar();
+}
+
+
+get mediaReceitasFiltro(): number {
+
+  if (!this.filtroTexto?.trim()) {
+    return 0;
+  }
+
+  const total = this.receitasFiltradas.reduce((acc, linha) => {
+
+    const somaLinha = this.mesesSelecionados.reduce(
+      (soma, mes) => soma + (linha.valores[mes] || 0),
+      0
+    );
+
+    return acc + somaLinha;
+
+  }, 0);
+
+  return total / this.mesesSelecionados.length;
+}
+
+get mediaDespesasFiltro(): number {
+
+  if (!this.filtroTexto?.trim()) {
+    return 0;
+  }
+
+  const total = this.despesasFiltradas.reduce((acc, linha) => {
+
+    const somaLinha = this.mesesSelecionados.reduce(
+      (soma, mes) => soma + (linha.valores[mes] || 0),
+      0
+    );
+
+    return acc + somaLinha;
+
+  }, 0);
+
+  return total / this.mesesSelecionados.length;
+}
 }
