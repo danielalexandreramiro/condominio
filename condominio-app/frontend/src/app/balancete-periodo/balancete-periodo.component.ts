@@ -82,7 +82,7 @@ export class BalancetePeriodoComponent implements OnInit {
     this.http.get<{ meses: string[] }>('assets/data/index.json')
       .subscribe(data => {
         this.mesesDisponiveis = data.meses;
-        this.mesesSelecionados = this.mesesDisponiveis.slice(-3);
+        this.mesesSelecionados = this.mesesDisponiveis.slice(-1);
         this.carregar();
       });
   }
