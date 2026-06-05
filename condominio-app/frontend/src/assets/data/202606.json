@@ -1,0 +1,246 @@
+{
+  "arquivo": "202606.xlsx",
+  "receitas": [
+    {
+      "categoria": "Taxa Condomínio",
+      "subcategoria": "Taxa Ordinária",
+      "descricao": "",
+      "valor": 53233.34
+    },
+    {
+      "categoria": "Taxa Condomínio",
+      "subcategoria": "Descontos",
+      "descricao": "",
+      "valor": -4879.01
+    },
+    {
+      "categoria": "Taxa Extraordinária",
+      "subcategoria": "Taxa Extra - Impermeabilização",
+      "descricao": "",
+      "valor": 10050.17
+    },
+    {
+      "categoria": "Outras Taxas",
+      "subcategoria": "Taxa de Água",
+      "descricao": "",
+      "valor": 6034.96
+    },
+    {
+      "categoria": "Receitas Diversas",
+      "subcategoria": "Multas e Juros p/ atraso",
+      "descricao": "",
+      "valor": 494.95
+    },
+    {
+      "categoria": "Receitas Diversas",
+      "subcategoria": "Multa por infração",
+      "descricao": "",
+      "valor": 159.45
+    },
+    {
+      "categoria": "Acordo",
+      "subcategoria": "Acordo Administrativo",
+      "descricao": "",
+      "valor": 5660.25
+    },
+    {
+      "categoria": "Receita de Aplicação",
+      "subcategoria": "Rendimento Financeiro",
+      "descricao": "",
+      "valor": 22.25
+    }
+  ],
+  "despesas": [
+    {
+      "categoria": "Despesas de Pessoal",
+      "subcategoria": "Terceirização de mão de obra",
+      "descricao": "",
+      "valor": 25465.66
+    },
+    {
+      "categoria": "Despesas de Pessoal",
+      "subcategoria": "Dias trabalhados - folguista",
+      "descricao": "",
+      "valor": 2834.0
+    },
+    {
+      "categoria": "Despesas de Pessoal",
+      "subcategoria": "Dias trabalhados - diarista",
+      "descricao": "",
+      "valor": 230.0
+    },
+    {
+      "categoria": "Consumo Predial",
+      "subcategoria": "Compesa",
+      "descricao": "",
+      "valor": 11859.84
+    },
+    {
+      "categoria": "Consumo Predial",
+      "subcategoria": "Celpe",
+      "descricao": "",
+      "valor": 2618.64
+    },
+    {
+      "categoria": "Consumo Predial",
+      "subcategoria": "Gás coletivo",
+      "descricao": "",
+      "valor": 2691.57
+    },
+    {
+      "categoria": "Consumo Predial",
+      "subcategoria": "Energia Solar",
+      "descricao": "",
+      "valor": 2306.37
+    },
+    {
+      "categoria": "Despesas Fixas - Contratos",
+      "subcategoria": "Elevadores",
+      "descricao": "",
+      "valor": 5638.95
+    },
+    {
+      "categoria": "Despesas Fixas - Contratos",
+      "subcategoria": "Piscina",
+      "descricao": "",
+      "valor": 500.0
+    },
+    {
+      "categoria": "Despesas Fixas - Contratos",
+      "subcategoria": "Assessoria administrativa",
+      "descricao": "",
+      "valor": 1765.5
+    },
+    {
+      "categoria": "Despesas Fixas - Contratos",
+      "subcategoria": "Leitura de consumo de água",
+      "descricao": "",
+      "valor": 708.7
+    },
+    {
+      "categoria": "Despesas Fixas - Contratos",
+      "subcategoria": "Assessoria síndico profissional",
+      "descricao": "",
+      "valor": 1700.0
+    },
+    {
+      "categoria": "Conservação Predial",
+      "subcategoria": "Material de limpeza",
+      "descricao": "",
+      "valor": 25.9
+    },
+    {
+      "categoria": "Conservação Predial",
+      "subcategoria": "Material hidráulico",
+      "descricao": "",
+      "valor": 576.8
+    },
+    {
+      "categoria": "Conservação Predial",
+      "subcategoria": "Serviços prestados",
+      "descricao": "",
+      "valor": 100.0
+    },
+    {
+      "categoria": "Despesas Administrativas",
+      "subcategoria": "Xerox-Correios",
+      "descricao": "",
+      "valor": 33.0
+    },
+    {
+      "categoria": "Despesas Administrativas",
+      "subcategoria": "Material expediente",
+      "descricao": "",
+      "valor": 15.4
+    },
+    {
+      "categoria": "Despesas Administrativas",
+      "subcategoria": "Transporte - Taxi - Ônibus",
+      "descricao": "",
+      "valor": 50.0
+    },
+    {
+      "categoria": "Despesas Administrativas",
+      "subcategoria": "Água dos funcionários",
+      "descricao": "",
+      "valor": 102.0
+    },
+    {
+      "categoria": "Despesas Administrativas",
+      "subcategoria": "Telefonia",
+      "descricao": "",
+      "valor": 104.64
+    },
+    {
+      "categoria": "Despesas Administrativas",
+      "subcategoria": "Seguro de vida",
+      "descricao": "",
+      "valor": 143.89
+    },
+    {
+      "categoria": "Obra-Reformas-Investimentos",
+      "subcategoria": "Despesas taxa extra",
+      "descricao": "",
+      "valor": 10000.0
+    },
+    {
+      "categoria": "Despesas Financeiras",
+      "subcategoria": "Tarifas de cobranças",
+      "descricao": "",
+      "valor": 573.0
+    },
+    {
+      "categoria": "Despesas Financeiras",
+      "subcategoria": "Despesas bancárias",
+      "descricao": "",
+      "valor": 108.01
+    }
+  ],
+  "totais": {
+    "total_receitas": 70776.36,
+    "total_despesas": 70151.87,
+    "saldo": 624.49
+  },
+  "resumo_financeiro": {
+    "periodo": {
+      "inicio": "2026-04-01",
+      "fim": "2026-04-30"
+    },
+    "contas": [
+      {
+        "nome": "Conta Digital PJBank",
+        "saldo_anterior": 0.0,
+        "creditos": 0.0,
+        "debitos": 0.0,
+        "saldo_final": 0.0
+      },
+      {
+        "nome": "CEF 1031 / 00004005-0",
+        "saldo_anterior": 703.62,
+        "creditos": 70754.11,
+        "debitos": 70151.87,
+        "saldo_final": 1305.86
+      },
+      {
+        "nome": "Aplicação",
+        "saldo_anterior": 103.51,
+        "creditos": 2.17,
+        "debitos": 0.0,
+        "saldo_final": 105.68
+      },
+      {
+        "nome": "Conta Investimento CDB Flex",
+        "saldo_anterior": 1055.33,
+        "creditos": 20.08,
+        "debitos": 0.0,
+        "saldo_final": 1075.41
+      }
+    ],
+    "total": {
+      "saldo_anterior": 1862.46,
+      "creditos": 70776.36,
+      "debitos": 70151.87,
+      "saldo_final": 2486.95
+    }
+  }
+}
