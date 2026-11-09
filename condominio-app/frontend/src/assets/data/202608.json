@@ -21,7 +21,7 @@
     },
     {
       "categoria": "Outras Taxas",
-      "subcategoria": "Taxa de Água",
+      "subcategoria": "Taxa de Água Compesa",
       "descricao": "",
       "valor": 6464.02
     },
@@ -46,25 +46,25 @@
   ],
   "despesas": [
     {
-      "categoria": "Despesas de Pessoal",
+      "categoria": "Pessoal",
       "subcategoria": "Terceirização de mão de obra",
       "descricao": "",
       "valor": 25465.66
     },
     {
-      "categoria": "Despesas de Pessoal",
+      "categoria": "Pessoal",
       "subcategoria": "Fardamentos",
       "descricao": "",
       "valor": 183.72
     },
     {
-      "categoria": "Despesas de Pessoal",
+      "categoria": "Pessoal",
       "subcategoria": "Dias trabalhados - folguista",
       "descricao": "",
       "valor": 917.0
     },
     {
-      "categoria": "Despesas de Pessoal",
+      "categoria": "Pessoal",
       "subcategoria": "Dias trabalhados - diarista",
       "descricao": "",
       "valor": 110.0
@@ -94,97 +94,97 @@
       "valor": 2238.6
     },
     {
-      "categoria": "Despesas Fixas - Contratos",
+      "categoria": "Contratos",
       "subcategoria": "Jardim",
       "descricao": "",
       "valor": 350.0
     },
     {
-      "categoria": "Despesas Fixas - Contratos",
+      "categoria": "Contratos",
       "subcategoria": "Piscina",
       "descricao": "",
       "valor": 500.0
     },
     {
-      "categoria": "Despesas Fixas - Contratos",
+      "categoria": "Contratos",
       "subcategoria": "Assessoria administrativa",
       "descricao": "",
       "valor": 1765.5
     },
     {
-      "categoria": "Despesas Fixas - Contratos",
+      "categoria": "Contratos",
       "subcategoria": "Leitura de consumo de água",
       "descricao": "",
       "valor": 708.7
     },
     {
-      "categoria": "Despesas Fixas - Contratos",
+      "categoria": "Contratos",
       "subcategoria": "Assessoria síndico profissional",
       "descricao": "",
       "valor": 1700.0
     },
     {
-      "categoria": "Despesas Fixas - Contratos",
+      "categoria": "Contratos",
       "subcategoria": "Telefonia",
       "descricao": "",
       "valor": 84.24
     },
     {
-      "categoria": "Despesas Fixas - Contratos",
+      "categoria": "Contratos",
       "subcategoria": "Água dos funcionários",
       "descricao": "",
       "valor": 192.0
     },
     {
-      "categoria": "Conservação Predial",
+      "categoria": "Conservação",
       "subcategoria": "Dedetização e sanitização",
       "descricao": "",
       "valor": 236.66
     },
     {
-      "categoria": "Conservação Predial",
+      "categoria": "Conservação",
       "subcategoria": "Material de limpeza",
       "descricao": "",
       "valor": 34.0
     },
     {
-      "categoria": "Conservação Predial",
+      "categoria": "Conservação",
       "subcategoria": "Extintores peças",
       "descricao": "",
       "valor": 830.38
     },
     {
-      "categoria": "Conservação Predial",
+      "categoria": "Conservação",
       "subcategoria": "Seguro predial",
       "descricao": "",
       "valor": 1095.15
     },
     {
-      "categoria": "Despesas Administrativas",
+      "categoria": "Administrativas",
       "subcategoria": "Transporte - Taxi - Ônibus",
       "descricao": "",
       "valor": 50.0
     },
     {
-      "categoria": "Despesas Administrativas",
+      "categoria": "Administrativas",
       "subcategoria": "Seguro de vida",
       "descricao": "",
       "valor": 147.11
     },
     {
-      "categoria": "Obra-Reformas-Investimentos",
+      "categoria": "Obras/Reformas",
       "subcategoria": "Despesas taxa extra",
       "descricao": "",
       "valor": 10000.0
     },
     {
-      "categoria": "Despesas Financeiras",
+      "categoria": "Financeiras",
       "subcategoria": "Tarifas de cobranças",
       "descricao": "",
       "valor": 549.0
     },
     {
-      "categoria": "Despesas Financeiras",
+      "categoria": "Financeiras",
       "subcategoria": "Despesas bancárias",
       "descricao": "",
       "valor": 43.86
