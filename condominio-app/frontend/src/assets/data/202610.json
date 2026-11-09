@@ -1,0 +1,306 @@
+{
+  "arquivo": "202610.xlsx",
+  "receitas": [
+    {
+      "categoria": "Taxa Condomínio",
+      "subcategoria": "Taxa Ordinária",
+      "descricao": "",
+      "valor": 51040.85
+    },
+    {
+      "categoria": "Taxa Condomínio",
+      "subcategoria": "Taxa Ordinária - Diferença",
+      "descricao": "",
+      "valor": 93.91
+    },
+    {
+      "categoria": "Taxa Condomínio",
+      "subcategoria": "Descontos",
+      "descricao": "",
+      "valor": -5004.57
+    },
+    {
+      "categoria": "Taxa Extraordinária",
+      "subcategoria": "Taxa Extra",
+      "descricao": "",
+      "valor": 1036.1
+    },
+    {
+      "categoria": "Taxa Extraordinária",
+      "subcategoria": "Taxa Extra - Impermeabilização",
+      "descricao": "",
+      "valor": 8496.02
+    },
+    {
+      "categoria": "Outras Taxas",
+      "subcategoria": "Taxa de Água",
+      "descricao": "",
+      "valor": 7110.9
+    },
+    {
+      "categoria": "Receitas Diversas",
+      "subcategoria": "Multas e Juros p/ atraso",
+      "descricao": "",
+      "valor": 41.82
+    },
+    {
+      "categoria": "Receitas Diversas",
+      "subcategoria": "Devolução de pagamento",
+      "descricao": "",
+      "valor": 29.63
+    },
+    {
+      "categoria": "Acordo",
+      "subcategoria": "Acordo Extrajudicial",
+      "descricao": "",
+      "valor": 1988.65
+    }
+  ],
+  "despesas": [
+    {
+      "categoria": "Despesas de Pessoal",
+      "subcategoria": "Terceirização de mão de obra",
+      "descricao": "",
+      "valor": 25465.66
+    },
+    {
+      "categoria": "Consumo Predial",
+      "subcategoria": "Celpe",
+      "descricao": "",
+      "valor": 328.82
+    },
+    {
+      "categoria": "Consumo Predial",
+      "subcategoria": "Gás coletivo",
+      "descricao": "",
+      "valor": 2029.27
+    },
+    {
+      "categoria": "Consumo Predial",
+      "subcategoria": "Energia Solar",
+      "descricao": "",
+      "valor": 2303.91
+    },
+    {
+      "categoria": "Despesas Fixas - Contratos",
+      "subcategoria": "Antena-Portões-Interfones-CFTV",
+      "descricao": "",
+      "valor": 433.98
+    },
+    {
+      "categoria": "Despesas Fixas - Contratos",
+      "subcategoria": "Jardim",
+      "descricao": "",
+      "valor": 350.0
+    },
+    {
+      "categoria": "Despesas Fixas - Contratos",
+      "subcategoria": "Elevadores",
+      "descricao": "",
+      "valor": 7816.49
+    },
+    {
+      "categoria": "Despesas Fixas - Contratos",
+      "subcategoria": "Piscina",
+      "descricao": "",
+      "valor": 500.0
+    },
+    {
+      "categoria": "Despesas Fixas - Contratos",
+      "subcategoria": "Assessoria administrativa",
+      "descricao": "",
+      "valor": 1765.5
+    },
+    {
+      "categoria": "Despesas Fixas - Contratos",
+      "subcategoria": "Gerador mensalidade",
+      "descricao": "",
+      "valor": 200.0
+    },
+    {
+      "categoria": "Despesas Fixas - Contratos",
+      "subcategoria": "Leitura de consumo de água",
+      "descricao": "",
+      "valor": 708.7
+    },
+    {
+      "categoria": "Despesas Fixas - Contratos",
+      "subcategoria": "Assessoria síndico profissional",
+      "descricao": "",
+      "valor": 1700.0
+    },
+    {
+      "categoria": "Despesas Fixas - Contratos",
+      "subcategoria": "Telefonia",
+      "descricao": "",
+      "valor": 82.78
+    },
+    {
+      "categoria": "Conservação Predial",
+      "subcategoria": "Material de limpeza",
+      "descricao": "",
+      "valor": 532.3
+    },
+    {
+      "categoria": "Conservação Predial",
+      "subcategoria": "Elevadores peças",
+      "descricao": "",
+      "valor": 243.55
+    },
+    {
+      "categoria": "Conservação Predial",
+      "subcategoria": "Extintores peças",
+      "descricao": "",
+      "valor": 812.5
+    },
+    {
+      "categoria": "Conservação Predial",
+      "subcategoria": "Prestador de serviços",
+      "descricao": "",
+      "valor": 200.0
+    },
+    {
+      "categoria": "Conservação Predial",
+      "subcategoria": "Seguro predial",
+      "descricao": "",
+      "valor": 1095.17
+    },
+    {
+      "categoria": "Conservação Predial",
+      "subcategoria": "Extintor recarga",
+      "descricao": "",
+      "valor": 785.53
+    },
+    {
+      "categoria": "Conservação Predial",
+      "subcategoria": "Material elétrico",
+      "descricao": "",
+      "valor": 291.91
+    },
+    {
+      "categoria": "Conservação Predial",
+      "subcategoria": "Material hidráulico",
+      "descricao": "",
+      "valor": 10.0
+    },
+    {
+      "categoria": "Conservação Predial",
+      "subcategoria": "Serviços prestados",
+      "descricao": "",
+      "valor": 662.0
+    },
+    {
+      "categoria": "Conservação Predial",
+      "subcategoria": "Serviços hidráulico",
+      "descricao": "",
+      "valor": 1000.0
+    },
+    {
+      "categoria": "Conservação Predial",
+      "subcategoria": "Para-raios",
+      "descricao": "",
+      "valor": 833.5
+    },
+    {
+      "categoria": "Conservação Predial",
+      "subcategoria": "Material de manutenção",
+      "descricao": "",
+      "valor": 614.5
+    },
+    {
+      "categoria": "Despesas Administrativas",
+      "subcategoria": "Serviços prestados",
+      "descricao": "",
+      "valor": 700.0
+    },
+    {
+      "categoria": "Despesas Administrativas",
+      "subcategoria": "Descontos",
+      "descricao": "",
+      "valor": 168.01
+    },
+    {
+      "categoria": "Despesas Administrativas",
+      "subcategoria": "Seguro de vida",
+      "descricao": "",
+      "valor": 147.11
+    },
+    {
+      "categoria": "Obra-Reformas-Investimentos",
+      "subcategoria": "Despesas taxa extra",
+      "descricao": "",
+      "valor": 10000.0
+    },
+    {
+      "categoria": "Outras Despesas",
+      "subcategoria": "Reembolso",
+      "descricao": "",
+      "valor": 1000.0
+    },
+    {
+      "categoria": "Despesas Financeiras",
+      "subcategoria": "Tarifas de cobranças",
+      "descricao": "",
+      "valor": 412.0
+    },
+    {
+      "categoria": "Despesas Financeiras",
+      "subcategoria": "Despesas bancárias",
+      "descricao": "",
+      "valor": 93.81
+    },
+    {
+      "categoria": "Despesas Financeiras",
+      "subcategoria": "Cesta de serviço manutenção de conta",
+      "descricao": "",
+      "valor": 125.0
+    }
+  ],
+  "totais": {
+    "total_receitas": 64833.31,
+    "total_despesas": 63412.0,
+    "saldo": 1421.31
+  },
+  "resumo_financeiro": {
+    "periodo": {
+      "inicio": "2026-08-01",
+      "fim": "2026-08-31"
+    },
+    "contas": [
+      {
+        "nome": "Conta Digital PJBank",
+        "saldo_anterior": 0.0,
+        "creditos": 0.0,
+        "debitos": 0.0,
+        "saldo_final": 0.0
+      },
+      {
+        "nome": "034-CEF 1031 / 00004005-0",
+        "saldo_anterior": 667.49,
+        "creditos": 64833.31,
+        "debitos": 63412.0,
+        "saldo_final": 2088.8
+      },
+      {
+        "nome": "Aplicação",
+        "saldo_anterior": 107.98,
+        "creditos": 0.0,
+        "debitos": 0.0,
+        "saldo_final": 107.98
+      },
+      {
+        "nome": "Conta Investimento CDB Flex - Fundo de Reserva",
+        "saldo_anterior": 1105.94,
+        "creditos": 0.0,
+        "debitos": 0.0,
+        "saldo_final": 1105.94
+      }
+    ],
+    "total": {
+      "saldo_anterior": 1881.41,
+      "creditos": 64833.31,
+      "debitos": 63412.0,
+      "saldo_final": 3302.72
+    }
+  }
+}
