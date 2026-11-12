@@ -118,13 +118,13 @@
       "valor": 3400.0
     },
     {
-      "categoria": "Contratos",
+      "categoria": "Administrativas",
       "subcategoria": "Telefonia",
       "descricao": "",
       "valor": 88.12
     },
     {
-      "categoria": "Contratos",
+      "categoria": "Administrativas",
       "subcategoria": "Água dos funcionários",
       "descricao": "",
       "valor": 174.0
@@ -209,7 +209,7 @@
     },
     {
       "categoria": "Outras Despesas",
-      "subcategoria": "PIS- COFINS- CSLL",
+      "subcategoria": "PIS-COFINS-CSLL",
       "descricao": "",
       "valor": 972.23
     },
@@ -227,7 +227,7 @@
     },
     {
       "categoria": "Financeiras",
-      "subcategoria": "Cesta de serviço manutenção de conta",
+      "subcategoria": "Cesta de serviço manut. de conta",
       "descricao": "",
       "valor": 125.0
     }
