@@ -151,11 +151,25 @@ export class BalancetePeriodoComponent implements OnInit {
 
     });
 
-    this.receitasOriginal = Array.from(receitasMap.values());
-    this.despesasOriginal = Array.from(despesasMap.values());
+    // Ordenar receitas alfabeticamente
+this.receitasOriginal = Array.from(receitasMap.values())
+  .sort((a, b) =>
+    a.subcategoria.localeCompare(b.subcategoria, 'pt-BR', {
+      sensitivity: 'base'
+    })
+  );
 
-    this.receitasFiltradas = [...this.receitasOriginal];
-    this.despesasFiltradas = [...this.despesasOriginal];
+// Ordenar despesas alfabeticamente
+this.despesasOriginal = Array.from(despesasMap.values())
+  .sort((a, b) =>
+    a.subcategoria.localeCompare(b.subcategoria, 'pt-BR', {
+      sensitivity: 'base'
+    })
+  );
+
+// Aplicar ordenação nas tabelas
+this.receitasFiltradas = [...this.receitasOriginal];
+this.despesasFiltradas = [...this.despesasOriginal];
 
     this.gerarSubcategorias();
 

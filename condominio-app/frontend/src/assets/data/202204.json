@@ -41,7 +41,7 @@
     },
     {
       "categoria": "Pessoal",
-      "subcategoria": "Fardamento",
+      "subcategoria": "Fardamentos",
       "descricao": "",
       "valor": 100.0
     },
@@ -106,7 +106,7 @@
       "valor": 342.97
     },
     {
-      "categoria": "Conservação",
+      "categoria": "Contratos",
       "subcategoria": "Jardim",
       "descricao": "",
       "valor": 350.0

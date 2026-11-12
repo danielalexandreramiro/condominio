@@ -2,6 +2,33 @@
   overflow-x: auto;
 }
 
+.table-scroll-top {
+  height: 16px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.table-scroll-top > div {
+  height: 1px;
+}
+
+.receitas-table-scroll,
+.despesas-table-scroll,
+.saldo-contas-table-scroll {
+  max-height: 70vh;
+  overflow-x: scroll;
+  overflow-y: auto;
+}
+
+.receitas-table-scroll thead th,
+.despesas-table-scroll thead th,
+.saldo-contas-table-scroll thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #f8f9fa;
+}
+
 table {
   min-width: 700px;
 }
