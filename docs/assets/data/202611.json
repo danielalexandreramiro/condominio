@@ -118,13 +118,13 @@
       "valor": 3400.0
     },
     {
-      "categoria": "Administrativas",
+      "categoria": "Contratos",
       "subcategoria": "Telefonia",
       "descricao": "",
       "valor": 88.12
     },
     {
-      "categoria": "Administrativas",
+      "categoria": "Contratos",
       "subcategoria": "Água dos funcionários",
       "descricao": "",
       "valor": 174.0
@@ -227,7 +227,7 @@
     },
     {
       "categoria": "Financeiras",
-      "subcategoria": "Cesta de serviço manut. de conta",
+      "subcategoria": "Cesta de serviço manutenção de conta",
       "descricao": "",
       "valor": 125.0
     }
