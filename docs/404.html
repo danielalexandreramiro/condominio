@@ -1,1 +1,15 @@
-<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=/condominio/" /></head><body></body></html>
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><title>Redirecionando</title></head>
+<body>
+<p>Redirecionando para o aplicativo...</p>
+<script>
+  if (location.pathname === '/condominio/auditoria-comparativa') {
+    location.replace('/condominio/?auditoria-retorno=' + encodeURIComponent(location.pathname + location.search + location.hash));
+  } else {
+    location.replace('/condominio/');
+  }
+</script>
+<noscript>Ative o JavaScript para acessar o aplicativo.</noscript>
+</body>
+</html>
