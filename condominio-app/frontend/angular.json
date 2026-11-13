@@ -29,7 +29,13 @@
               {
                 "glob": "**/*",
                 "input": "src/assets",
-                "output": "/assets/"
+                "output": "/assets/",
+                "ignore": ["data/**/*"]
+              },
+              {
+                "glob": "**/*",
+                "input": "../../docs/assets/data",
+                "output": "/assets/data/"
               }
             ],
            "styles": [

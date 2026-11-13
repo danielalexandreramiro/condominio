@@ -91,6 +91,21 @@ http://localhost:4200
 
 # Build
 
+Os dados financeiros têm como fonte única a pasta
+[`docs/assets/data`](docs/assets/data). Para adicionar ou corrigir um mês,
+edite o JSON nessa pasta e mantenha `index.json` atualizado. Não edite os
+arquivos gerados em `dist`: o servidor local e o build usam os dados de `docs`.
+Ao adicionar ou remover arquivos JSON, reinicie `ng serve` para que a lista
+de arquivos seja atualizada.
+
+O deploy valida os JSONs gerados antes de recriar `docs` com o resultado do
+build. Para verificar localmente após gerar o build, execute na pasta
+`condominio-app/frontend`:
+
+```bash
+node scripts/verify-data.mjs
+```
+
 ```bash
 ng build
 ```
