@@ -82,7 +82,7 @@ jobs:
           echo "" > docs/.nojekyll
 
       - name: Create 404 redirect
-        run: echo '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=/condominio/" /></head><body></body></html>' > docs/404.html
+        run: cp condominio-app/frontend/src/auditoria-404.html docs/404.html
 
       - name: Commit and push changes
         run: |

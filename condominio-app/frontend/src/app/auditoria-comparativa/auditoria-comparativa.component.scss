@@ -1,0 +1,13 @@
+.auditoria { max-width: 1500px; }
+.acesso { width: 350px; max-width: 100%; }
+.abas { display: flex; flex-wrap: wrap; gap: .5rem; }
+.indicador { padding: 1rem; gap: .5rem; }
+.indicador strong { font-size: 1.2rem; }
+.grafico { display: flex; align-items: flex-end; gap: .4rem; overflow-x: auto; min-height: 200px; padding: 0 .5rem; }
+.coluna { min-width: 48px; text-align: center; font-size: .7rem; }
+.barras { height: 160px; display: flex; justify-content: center; align-items: flex-end; gap: 2px; }
+.barra { width: 14px; min-height: 2px; }
+.receita { background: #198754; }
+.despesa { background: #dc3545; }
+th { white-space: nowrap; }
+details summary { cursor: pointer; }

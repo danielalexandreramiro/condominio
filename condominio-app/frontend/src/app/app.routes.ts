@@ -13,5 +13,6 @@ export const routes: Routes = [
   { path: 'balancete-periodo', component: BalancetePeriodoComponent },
   { path: 'entity/:destino', component: EntityComponent },
   { path: 'analise-grafica', component: AnaliseGraficaComponent },  
-  { path: 'previsao', component: PrevisaoComponent }
+  { path: 'previsao', component: PrevisaoComponent },
+  { path: 'auditoria-comparativa', loadComponent: () => import('./auditoria-comparativa/auditoria-comparativa.component').then(m => m.AuditoriaComparativaComponent) }
 ];
