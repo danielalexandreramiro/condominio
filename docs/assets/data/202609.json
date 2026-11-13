@@ -136,13 +136,13 @@
       "valor": 1700.0
     },
     {
-      "categoria": "Contratos",
+      "categoria": "Administrativas",
       "subcategoria": "Telefonia",
       "descricao": "",
       "valor": 76.47
     },
     {
-      "categoria": "Contratos",
+      "categoria": "Administrativas",
       "subcategoria": "Água dos funcionários",
       "descricao": "",
       "valor": 84.0
@@ -209,7 +209,7 @@
     },
     {
       "categoria": "Administrativas",
-      "subcategoria": "Xerox-Correios",
+      "subcategoria": "Xerox/Correios",
       "descricao": "",
       "valor": 60.0
     },

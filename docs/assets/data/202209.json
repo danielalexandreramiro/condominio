@@ -131,7 +131,7 @@
     },
     {
       "categoria": "Conservação",
-      "subcategoria": "Dedetização e sanatização",
+      "subcategoria": "Dedetização e sanitização",
       "descricao": "",
       "valor": 236.67
     },
@@ -148,8 +148,8 @@
       "valor": 518.07
     },
     {
-      "categoria": "Conservação",
-      "subcategoria": "Água portaria",
+      "categoria": "Administrativas",
+      "subcategoria": "Água dos funcionários",
       "descricao": "",
       "valor": 27.0
     },
