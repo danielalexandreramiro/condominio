@@ -29,6 +29,12 @@
   background-color: #f8f9fa;
 }
 
+.receitas-table-scroll tr > :not(:first-child),
+.despesas-table-scroll tr > :not(:first-child),
+.saldo-contas-table-scroll tr > :not(:first-child) {
+  background-image: linear-gradient(to right, #dee2e6 1px, transparent 1px);
+}
+
 table {
   min-width: 700px;
 }
@@ -57,6 +63,33 @@ tfoot .fixa {
 .card-saldo h5,
 .card-saldo h3 {
   color: #fff !important;
+}
+
+@media (min-width: 768px) {
+  .receitas-table-scroll tr > :first-child,
+  .despesas-table-scroll tr > :first-child,
+  .saldo-contas-table-scroll tr > :first-child {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    background-color: #fff;
+  }
+
+  .receitas-table-scroll thead tr > :first-child,
+  .despesas-table-scroll thead tr > :first-child,
+  .saldo-contas-table-scroll thead tr > :first-child {
+    z-index: 2;
+    background-color: #f8f9fa;
+  }
+
+  .receitas-table-scroll tfoot tr > :first-child,
+  .saldo-contas-table-scroll tfoot tr > :first-child {
+    background-color: #cfe2ff;
+  }
+
+  .despesas-table-scroll tfoot tr > :first-child {
+    background-color: #fff3cd;
+  }
 }
 
 @media (max-width: 767.98px) {
