@@ -58,3 +58,92 @@ tfoot .fixa {
 .card-saldo h3 {
   color: #fff !important;
 }
+
+@media (max-width: 767.98px) {
+  .filtros-body {
+    padding: 1rem !important;
+  }
+
+  .filtros-acoes {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .filtros-acoes .btn {
+    padding: 0.5rem 0.25rem;
+    font-size: 1rem;
+    min-height: 44px;
+  }
+
+  .resumo-header {
+    padding-right: 3.75rem;
+  }
+
+  .resumo-header .fs-1 {
+    font-size: clamp(1.25rem, 6vw, 2rem) !important;
+    overflow-wrap: anywhere;
+  }
+
+  .resumo-header .btn {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .receitas-table-scroll,
+  .despesas-table-scroll,
+  .saldo-contas-table-scroll {
+    max-height: 60vh;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .receitas-table-scroll table,
+  .despesas-table-scroll table,
+  .saldo-contas-table-scroll table {
+    min-width: 0;
+  }
+
+  .receitas-table-scroll th,
+  .receitas-table-scroll td,
+  .despesas-table-scroll th,
+  .despesas-table-scroll td,
+  .saldo-contas-table-scroll th,
+  .saldo-contas-table-scroll td {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  .receitas-table-scroll tr > :first-child,
+  .despesas-table-scroll tr > :first-child,
+  .saldo-contas-table-scroll tr > :first-child {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    width: 9rem;
+    min-width: 9rem;
+    max-width: 9rem;
+    overflow-wrap: anywhere;
+    background-color: #fff;
+  }
+
+  .receitas-table-scroll tr > :not(:first-child),
+  .despesas-table-scroll tr > :not(:first-child),
+  .saldo-contas-table-scroll tr > :not(:first-child) {
+    min-width: 6rem;
+    white-space: nowrap;
+  }
+
+  .receitas-table-scroll thead tr > :first-child,
+  .despesas-table-scroll thead tr > :first-child,
+  .saldo-contas-table-scroll thead tr > :first-child {
+    z-index: 2;
+    background-color: #f8f9fa;
+  }
+
+  .receitas-table-scroll tfoot tr > :first-child,
+  .saldo-contas-table-scroll tfoot tr > :first-child {
+    background-color: #cfe2ff;
+  }
+
+  .despesas-table-scroll tfoot tr > :first-child {
+    background-color: #fff3cd;
+  }
+}

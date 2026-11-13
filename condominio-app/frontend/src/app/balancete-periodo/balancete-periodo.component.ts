@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { BalanceteGraficosComponent } from '../balancete-graficos/balancete-graficos.component';
+import { ScrollSyncWidthDirective } from './scroll-sync-width.directive';
 
 import {
   Chart,
@@ -18,7 +19,7 @@ import {
 @Component({
   selector: 'app-balancete-periodo',
   standalone: true,
-  imports: [CommonModule, FormsModule, BalanceteGraficosComponent],
+  imports: [CommonModule, FormsModule, BalanceteGraficosComponent, ScrollSyncWidthDirective],
   templateUrl: './balancete-periodo.component.html',
   styleUrls: ['./balancete-periodo.component.scss']
 })

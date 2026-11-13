@@ -3,7 +3,7 @@
 
   <!-- FILTROS -->
   <div class="card shadow-sm mb-4 border-0">
-    <div class="card-body p-4">
+    <div class="card-body p-4 filtros-body">
       <div class="row g-4">
         <!-- BUSCAR -->
         <div class="col-12">
@@ -79,7 +79,7 @@
                 </button>
               </div>
 
-              <div class="d-grid gap-2">
+              <div class="d-grid gap-2 filtros-acoes">
                 <button
                   class="btn btn-primary btn-lg fw-bold"
                   (click)="carregar()"
@@ -147,7 +147,7 @@
 
   <!-- RECEITAS -->
   <div class="card shadow-sm mb-4">
-    <div class="card-header bg-success text-white fw-bold position-relative">
+    <div class="card-header bg-success text-white fw-bold position-relative resumo-header">
       <span class="d-block text-center fs-5"> Receitas </span>
 
       <span class="d-block text-center fs-1 fw-bold">
@@ -157,6 +157,8 @@
       <button
         class="btn btn-sm btn-light position-absolute top-50 end-0 translate-middle-y me-2"
         (click)="mostrarReceitas = !mostrarReceitas"
+        [attr.aria-expanded]="mostrarReceitas"
+        aria-label="Mostrar ou ocultar receitas"
       >
         {{ mostrarReceitas ? "−" : "+" }}
       </button>
@@ -167,14 +169,20 @@
         class="table-scroll-top"
         (scroll)="receitasScroll.scrollLeft = receitasScrollTop.scrollLeft"
         #receitasScrollTop
+        [appScrollSyncWidth]="receitasScroll"
+        role="region"
+        tabindex="0"
         aria-label="Rolagem horizontal da tabela de receitas"
       >
-        <div [style.width.px]="receitasScroll.scrollWidth + 1"></div>
+        <div></div>
       </div>
       <div
         class="table-responsive receitas-table-scroll"
         (scroll)="receitasScrollTop.scrollLeft = receitasScroll.scrollLeft"
         #receitasScroll
+        role="region"
+        tabindex="0"
+        aria-label="Tabela de receitas"
       >
         <table class="table table-striped table-hover align-middle mb-0">
           <thead class="table-light">
@@ -223,7 +231,7 @@
 
   <!-- DESPESAS -->
   <div class="card shadow-sm mb-4">
-    <div class="card-header bg-danger text-white fw-bold position-relative">
+    <div class="card-header bg-danger text-white fw-bold position-relative resumo-header">
       <span class="d-block text-center fs-5"> Despesas </span>
 
       <span class="d-block text-center fs-1 fw-bold">
@@ -233,6 +241,8 @@
       <button
         class="btn btn-sm btn-light position-absolute top-50 end-0 translate-middle-y me-2"
         (click)="mostrarDespesas = !mostrarDespesas"
+        [attr.aria-expanded]="mostrarDespesas"
+        aria-label="Mostrar ou ocultar despesas"
       >
         {{ mostrarDespesas ? "−" : "+" }}
       </button>
@@ -243,14 +253,20 @@
         class="table-scroll-top"
         (scroll)="despesasScroll.scrollLeft = despesasScrollTop.scrollLeft"
         #despesasScrollTop
+        [appScrollSyncWidth]="despesasScroll"
+        role="region"
+        tabindex="0"
         aria-label="Rolagem horizontal da tabela de despesas"
       >
-        <div [style.width.px]="despesasScroll.scrollWidth + 1"></div>
+        <div></div>
       </div>
       <div
         class="table-responsive despesas-table-scroll"
         (scroll)="despesasScrollTop.scrollLeft = despesasScroll.scrollLeft"
         #despesasScroll
+        role="region"
+        tabindex="0"
+        aria-label="Tabela de despesas"
       >
         <table class="table table-striped table-hover align-middle mb-0">
           <thead class="table-light">
@@ -312,12 +328,14 @@
 
   <!-- SALDOS DAS CONTAS -->
   <div class="card shadow-sm mb-4" *ngIf="mesesSelecionados.length > 0">
-    <div class="card-header bg-info text-white fw-bold position-relative">
+    <div class="card-header bg-info text-white fw-bold position-relative resumo-header">
       <span class="d-block text-center fs-5"> Saldo das Contas Bancárias </span>
 
       <button
         class="btn btn-sm btn-light position-absolute top-50 end-0 translate-middle-y me-2"
         (click)="mostrarSaldoContas = !mostrarSaldoContas"
+        [attr.aria-expanded]="mostrarSaldoContas"
+        aria-label="Mostrar ou ocultar saldo das contas"
       >
         {{ mostrarSaldoContas ? "−" : "+" }}
       </button>
@@ -368,14 +386,20 @@
         class="table-scroll-top"
         (scroll)="saldoContasScroll.scrollLeft = saldoContasScrollTop.scrollLeft"
         #saldoContasScrollTop
+        [appScrollSyncWidth]="saldoContasScroll"
+        role="region"
+        tabindex="0"
         aria-label="Rolagem horizontal da tabela de saldo das contas"
       >
-        <div [style.width.px]="saldoContasScroll.scrollWidth + 1"></div>
+        <div></div>
       </div>
       <div
         class="table-responsive saldo-contas-table-scroll"
         (scroll)="saldoContasScrollTop.scrollLeft = saldoContasScroll.scrollLeft"
         #saldoContasScroll
+        role="region"
+        tabindex="0"
+        aria-label="Tabela de saldo das contas"
       >
         <table class="table table-striped table-hover align-middle mb-0">
           <thead class="table-light">
